@@ -1,18 +1,20 @@
-import Header from '../components/Header'
-import HeroSection from '../components/HeroSection'
-import AboutSection from '../components/AboutSection'
-import MenuSection from '../components/MenuSection'
-import ContactSection from '../components/ContactSection'
-import Footer from '../components/Footer'
+import Header from '../components/layout/Header'
+import HeroScreen from '../screens/HeroScreen'
+import AboutScreen from '../screens/AboutScreen'
+import MenuScreen from '../screens/MenuScreen'
+import ContactScreen from '../screens/ContactScreen'
+import Footer from '../components/layout/Footer'
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen text-gray-900 bg-orange-50">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <HeroSection />
-      <AboutSection />
-      <MenuSection />
-      <ContactSection />
+      <main>
+        <HeroScreen />
+        <AboutScreen />
+        <MenuScreen />
+        <ContactScreen />
+      </main>
       <Footer />
     </div>
   )
