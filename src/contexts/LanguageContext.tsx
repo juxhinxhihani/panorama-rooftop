@@ -32,18 +32,83 @@ const translations: Record<Language, Record<string, string>> = {
     menuDescription: 'Discover our carefully crafted selection of drinks and dishes, perfect for any time of day.',
     drinks: 'Drinks & Cocktails',
     food: 'Pizza, Burgers & Crepes',
-    signatureCocktails: 'Handcrafted cocktails with premium spirits',
+    signatureCocktails: 'Signature Cocktails',
     freshCoffee: 'Locally roasted coffee beans',
     smoothies: 'Fresh fruit smoothies and healthy blends',
     freshJuices: 'Squeezed daily from local fruits',
     milkshakes: 'Creamy milkshakes with various flavors',
-    woodFiredPizza: 'Authentic Italian-style pizza',
-    gourmetBurgers: 'Premium beef burgers with fresh ingredients',
-    frenchCrepes: 'Sweet and savory crepes made to order',
+    woodFiredPizza: 'Wood-fired Pizza',
+    gourmetBurgers: 'Gourmet Burgers',
+    frenchCrepes: 'French Crepes',
     lightSnacks: 'Perfect for sharing and light dining',
     specialOffers: 'Special Offers',
     specialOffersDescription: 'Join us during sunset hours for exclusive discounts and special menu items.',
     viewFullMenu: 'View Full Menu',
+    
+    // Full Menu Screen
+    fullMenuTitle: 'Complete Menu',
+    fullMenuDescription: 'Explore our full selection of handcrafted cocktails, artisanal coffee, wood-fired pizzas, gourmet burgers, and delicious crepes.',
+    backToHome: 'Back to Home',
+    popular: 'Popular',
+    vegetarian: 'Vegetarian',
+    spicy: 'Spicy',
+    addToOrder: 'Add to Order',
+    readyToOrder: 'Ready to Order?',
+    contactUsToOrder: 'Contact us to make a reservation or place your order for pickup.',
+    makeReservation: 'Make Reservation',
+    callNow: 'Call Now',
+    
+    // Menu Categories
+    coffeeAndTea: 'Coffee & Tea',
+    smoothiesAndJuices: 'Smoothies & Juices',
+    
+    // Cocktails
+    cocktailPanoramaSunset: 'Our signature cocktail with rum, passion fruit, and a sunset gradient',
+    cocktailDivjakaBreeze: 'Refreshing gin-based cocktail with cucumber and mint',
+    cocktailRooftopMojito: 'Classic mojito with a rooftop twist and fresh herbs',
+    cocktailAlbanianSpritz: 'Local aperitif with prosecco and Albanian herbs',
+    cocktailForestView: 'Whiskey-based cocktail with forest berry infusion',
+    cocktailCoastalMule: 'Moscow mule variation with coastal herbs',
+    
+    // Coffee & Tea
+    coffeeEspresso: 'Rich, full-bodied espresso from locally roasted beans',
+    coffeeCappuccino: 'Perfect balance of espresso, steamed milk, and foam',
+    coffeeLatte: 'Smooth espresso with steamed milk and light foam',
+    coffeeMacchiato: 'Espresso "marked" with a dollop of foamed milk',
+    coffeeTurkish: 'Traditional Turkish coffee, finely ground and aromatic',
+    coffeeIced: 'Cold brew coffee served over ice with milk',
+    teaGreen: 'Premium green tea with antioxidants',
+    teaHerbal: 'Relaxing herbal blend with chamomile and mint',
+    
+    // Smoothies & Juices
+    smoothieTropical: 'Mango, pineapple, coconut milk, and banana',
+    smoothieBerry: 'Mixed berries, yogurt, and honey',
+    smoothieGreen: 'Spinach, apple, banana, and ginger',
+    juiceOrange: 'Freshly squeezed orange juice',
+    juiceApple: 'Pure apple juice from local orchards',
+    juiceBerry: 'Mixed berry juice with natural sweetness',
+    
+    // Pizza
+    pizzaMargherita: 'Classic tomato sauce, mozzarella, and fresh basil',
+    pizzaPanorama: 'Prosciutto, arugula, cherry tomatoes, and parmesan',
+    pizzaQuattro: 'Four seasons with ham, mushrooms, artichokes, and olives',
+    pizzaProsciutto: 'Prosciutto di Parma and mushrooms',
+    pizzaVegetarian: 'Bell peppers, zucchini, eggplant, and mozzarella',
+    pizzaDiavola: 'Spicy salami, chili peppers, and mozzarella',
+    
+    // Burgers
+    burgerPanorama: 'Angus beef, caramelized onions, bacon, and special sauce',
+    burgerClassic: 'Beef patty, lettuce, tomato, onion, and cheese',
+    burgerBBQ: 'BBQ sauce, bacon, onion rings, and cheddar cheese',
+    burgerChicken: 'Grilled chicken breast, avocado, and herb mayo',
+    burgerVeggie: 'Plant-based patty with fresh vegetables',
+    
+    // Crepes
+    crepeNutella: 'Classic crepe with Nutella and powdered sugar',
+    crepeFruit: 'Seasonal fresh fruits with whipped cream',
+    crepeHamCheese: 'Savory crepe with ham and melted cheese',
+    crepeSpinach: 'Spinach, feta cheese, and herbs',
+    crepeChocolate: 'Dark chocolate and sliced banana',
     
     // Contact Section
     contact: 'Contact Us',
@@ -89,18 +154,83 @@ const translations: Record<Language, Record<string, string>> = {
     menuDescription: 'Zbuloni përzgjedhjen tonë të kujdesshme të pijeve dhe ushqimeve, të përsosura për çdo kohë të ditës.',
     drinks: 'Pije & Kokteje',
     food: 'Pizza, Burger & Krepa',
-    signatureCocktails: 'Kokteje të punuara me duar me alkool premium',
+    signatureCocktails: 'Kokteje Speciale',
     freshCoffee: 'Kafe e pjekur lokalisht',
     smoothies: 'Smoothie frutash të freskëta dhe përzierje të shëndetshme',
     freshJuices: 'Të shtrydhura çdo ditë nga frutat lokale',
     milkshakes: 'Milkshake kremoz me aroma të ndryshme',
-    woodFiredPizza: 'Pizza autentike në stil italian',
-    gourmetBurgers: 'Burger mishi premium me përbërës të freskët',
-    frenchCrepes: 'Krepa të ëmbla dhe të kripura të bëra sipas porosisë',
+    woodFiredPizza: 'Pizza në Dru',
+    gourmetBurgers: 'Burger Gourmet',
+    frenchCrepes: 'Krepa Franceze',
     lightSnacks: 'Të përsosura për ndarje dhe darkë të lehtë',
     specialOffers: 'Ofertat Speciale',
     specialOffersDescription: 'Bashkohuni me ne gjatë orëve të perëndimit për zbritje ekskluzive dhe artikuj specialë menuje.',
     viewFullMenu: 'Shiko Menunë e Plotë',
+    
+    // Full Menu Screen
+    fullMenuTitle: 'Menuja e Plotë',
+    fullMenuDescription: 'Eksploroni përzgjedhjen tonë të plotë të koktejeve të punuara me dorë, kafesë artizanale, pizzave në dru, burgerëve gourmet dhe krepave të shijshme.',
+    backToHome: 'Kthehu në Shtëpi',
+    popular: 'Popullore',
+    vegetarian: 'Vegetariane',
+    spicy: 'Djegëse',
+    addToOrder: 'Shto në Porosi',
+    readyToOrder: 'Gati për të Porositur?',
+    contactUsToOrder: 'Na kontaktoni për të bërë një rezervim ose për të bërë porosinë tuaj.',
+    makeReservation: 'Bëj Rezervim',
+    callNow: 'Telefono Tani',
+    
+    // Menu Categories
+    coffeeAndTea: 'Kafe & Çaj',
+    smoothiesAndJuices: 'Smoothie & Lëngje',
+    
+    // Cocktails
+    cocktailPanoramaSunset: 'Kokteli ynë special me rum, frutë pasioni dhe gradient perëndimi',
+    cocktailDivjakaBreeze: 'Koktel freskues me bazë xhin me kastravec dhe mente',
+    cocktailRooftopMojito: 'Mojito klasike me një prekje çatie dhe bimë të freskëta',
+    cocktailAlbanianSpritz: 'Aperitiv lokal me prosecco dhe bimë shqiptare',
+    cocktailForestView: 'Koktel me bazë uiski me infuzion mjedre pylli',
+    cocktailCoastalMule: 'Variacion i Moscow mule me bimë bregdetare',
+    
+    // Coffee & Tea
+    coffeeEspresso: 'Espresso i pasur nga kokrra të pjekura lokalisht',
+    coffeeCappuccino: 'Ekuilibër i përsosur i espresso, qumësht të avulluar dhe shkumë',
+    coffeeLatte: 'Espresso i butë me qumësht të avulluar dhe shkumë të lehtë',
+    coffeeMacchiato: 'Espresso "i shënuar" me një pikë shkume qumështi',
+    coffeeTurkish: 'Kafe turke tradicionale, e bluar imët dhe aromatike',
+    coffeeIced: 'Kafe e ftohtë e shërbyer mbi akull me qumësht',
+    teaGreen: 'Çaj jeshil premium me antioksidantë',
+    teaHerbal: 'Përzierje qetësuese bimore me kamomil dhe mente',
+    
+    // Smoothies & Juices
+    smoothieTropical: 'Mango, ananas, qumësht kokosi dhe banane',
+    smoothieBerry: 'Mjedra të përziera, kos dhe mjaltë',
+    smoothieGreen: 'Spinaq, mollë, banane dhe xhenxhefil',
+    juiceOrange: 'Lëng portokalli i sapo shtrydh',
+    juiceApple: 'Lëng molle i pastër nga kopshtet lokale',
+    juiceBerry: 'Lëng mjedrash të përziera me ëmbëlsi natyrale',
+    
+    // Pizza
+    pizzaMargherita: 'Salcë domatesh klasike, mozzarella dhe borzilok i freskët',
+    pizzaPanorama: 'Proshutë, rucola, domate qershi dhe parmesan',
+    pizzaQuattro: 'Katër stinë me proshutë, kërpudha, anginare dhe ullinj',
+    pizzaProsciutto: 'Prosciutto di Parma dhe kërpudha',
+    pizzaVegetarian: 'Speca, kungull, patëllxhan dhe mozzarella',
+    pizzaDiavola: 'Sallam djegës, spec djegës dhe mozzarella',
+    
+    // Burgers
+    burgerPanorama: 'Mish Angus, qepë të karamelizuara, proshutë dhe salcë speciale',
+    burgerClassic: 'Hamburger mishi, sallatë, domate, qepë dhe djathë',
+    burgerBBQ: 'Salcë BBQ, proshutë, unaza qepe dhe djathë cheddar',
+    burgerChicken: 'Gjoks pule në skarë, avokado dhe majonezë bimore',
+    burgerVeggie: 'Hamburger bimor me perime të freskëta',
+    
+    // Crepes
+    crepeNutella: 'Krepë klasike me Nutella dhe sheqer pluhur',
+    crepeFruit: 'Fruta të freskëta stinore me krem të rrahur',
+    crepeHamCheese: 'Krepë e kripur me proshutë dhe djathë të shkrirë',
+    crepeSpinach: 'Spinaq, djathë feta dhe bimë',
+    crepeChocolate: 'Çokollatë e errët dhe banane të prera',
     
     // Contact Section
     contact: 'Na Kontaktoni',
@@ -146,18 +276,83 @@ const translations: Record<Language, Record<string, string>> = {
     menuDescription: 'Scopri la nostra selezione accuratamente preparata di bevande e piatti, perfetta per ogni momento della giornata.',
     drinks: 'Bevande & Cocktail',
     food: 'Pizza, Burger & Crepes',
-    signatureCocktails: 'Cocktail artigianali con liquori premium',
+    signatureCocktails: 'Cocktail Speciali',
     freshCoffee: 'Chicchi di caffè tostati localmente',
     smoothies: 'Frullati di frutta fresca e miscele salutari',
     freshJuices: 'Spremuti quotidianamente da frutti locali',
     milkshakes: 'Frappè cremosi con vari gusti',
-    woodFiredPizza: 'Pizza autentica in stile italiano',
-    gourmetBurgers: 'Hamburger di manzo premium con ingredienti freschi',
-    frenchCrepes: 'Crepes dolci e salate fatte su ordinazione',
+    woodFiredPizza: 'Pizza a Legna',
+    gourmetBurgers: 'Hamburger Gourmet',
+    frenchCrepes: 'Crepes Francesi',
     lightSnacks: 'Perfetti per condividere e cenare leggero',
     specialOffers: 'Offerte Speciali',
     specialOffersDescription: 'Unisciti a noi durante le ore del tramonto per sconti esclusivi e articoli speciali del menu.',
     viewFullMenu: 'Vedi Menu Completo',
+    
+    // Full Menu Screen
+    fullMenuTitle: 'Menu Completo',
+    fullMenuDescription: 'Esplora la nostra selezione completa di cocktail artigianali, caffè artigianale, pizze a legna, hamburger gourmet e deliziose crepes.',
+    backToHome: 'Torna a Casa',
+    popular: 'Popolare',
+    vegetarian: 'Vegetariano',
+    spicy: 'Piccante',
+    addToOrder: 'Aggiungi all\'Ordine',
+    readyToOrder: 'Pronto per Ordinare?',
+    contactUsToOrder: 'Contattaci per fare una prenotazione o effettuare il tuo ordine.',
+    makeReservation: 'Fai Prenotazione',
+    callNow: 'Chiama Ora',
+    
+    // Menu Categories
+    coffeeAndTea: 'Caffè & Tè',
+    smoothiesAndJuices: 'Frullati & Succhi',
+    
+    // Cocktails
+    cocktailPanoramaSunset: 'Il nostro cocktail speciale con rum, frutto della passione e gradiente tramonto',
+    cocktailDivjakaBreeze: 'Cocktail rinfrescante a base gin con cetriolo e menta',
+    cocktailRooftopMojito: 'Mojito classico con un tocco da terrazza e erbe fresche',
+    cocktailAlbanianSpritz: 'Aperitivo locale con prosecco ed erbe albanesi',
+    cocktailForestView: 'Cocktail a base whiskey con infusione di frutti di bosco',
+    cocktailCoastalMule: 'Variazione del Moscow mule con erbe costiere',
+    
+    // Coffee & Tea
+    coffeeEspresso: 'Espresso ricco e corposo da chicchi tostati localmente',
+    coffeeCappuccino: 'Perfetto equilibrio di espresso, latte montato e schiuma',
+    coffeeLatte: 'Espresso morbido con latte montato e schiuma leggera',
+    coffeeMacchiato: 'Espresso "macchiato" con una goccia di schiuma di latte',
+    coffeeTurkish: 'Caffè turco tradizionale, finemente macinato e aromatico',
+    coffeeIced: 'Caffè freddo servito su ghiaccio con latte',
+    teaGreen: 'Tè verde premium con antiossidanti',
+    teaHerbal: 'Miscela rilassante di erbe con camomilla e menta',
+    
+    // Smoothies & Juices
+    smoothieTropical: 'Mango, ananas, latte di cocco e banana',
+    smoothieBerry: 'Frutti di bosco misti, yogurt e miele',
+    smoothieGreen: 'Spinaci, mela, banana e zenzero',
+    juiceOrange: 'Succo d\'arancia appena spremuto',
+    juiceApple: 'Succo di mela puro da frutteti locali',
+    juiceBerry: 'Succo di frutti di bosco misti con dolcezza naturale',
+    
+    // Pizza
+    pizzaMargherita: 'Salsa di pomodoro classica, mozzarella e basilico fresco',
+    pizzaPanorama: 'Prosciutto, rucola, pomodorini e parmigiano',
+    pizzaQuattro: 'Quattro stagioni con prosciutto, funghi, carciofi e olive',
+    pizzaProsciutto: 'Prosciutto di Parma e funghi',
+    pizzaVegetarian: 'Peperoni, zucchine, melanzane e mozzarella',
+    pizzaDiavola: 'Salame piccante, peperoncini e mozzarella',
+    
+    // Burgers
+    burgerPanorama: 'Manzo Angus, cipolle caramellate, pancetta e salsa speciale',
+    burgerClassic: 'Hamburger di manzo, lattuga, pomodoro, cipolla e formaggio',
+    burgerBBQ: 'Salsa BBQ, pancetta, anelli di cipolla e formaggio cheddar',
+    burgerChicken: 'Petto di pollo grigliato, avocado e maionese alle erbe',
+    burgerVeggie: 'Hamburger vegetale con verdure fresche',
+    
+    // Crepes
+    crepeNutella: 'Crepe classica con Nutella e zucchero a velo',
+    crepeFruit: 'Frutta fresca di stagione con panna montata',
+    crepeHamCheese: 'Crepe salata con prosciutto e formaggio fuso',
+    crepeSpinach: 'Spinaci, formaggio feta ed erbe',
+    crepeChocolate: 'Cioccolato fondente e banana a fette',
     
     // Contact Section
     contact: 'Contattaci',

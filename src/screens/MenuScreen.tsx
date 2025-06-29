@@ -1,5 +1,6 @@
 'use client'
 import { useLanguage } from '@/contexts/LanguageContext'
+import Link from 'next/link'
 
 export default function MenuScreen() {
   const { t } = useLanguage()
@@ -76,9 +77,12 @@ export default function MenuScreen() {
           <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('specialOffers')}</h3>
             <p className="text-gray-600 mb-6">{t('specialOffersDescription')}</p>
-            <button className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200">
+            <Link
+              href="/menu"
+              className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200"
+            >
               {t('viewFullMenu')}
-            </button>
+            </Link>
           </div>
         </div>
       </div>
