@@ -34,34 +34,34 @@ export default function FullMenuScreen() {
         {
           name: 'Panorama Sunset',
           description: t('cocktailPanoramaSunset'),
-          price: '1,200 ALL',
+          price: '600 ALL',
           popular: true
         },
         {
           name: 'Divjaka Breeze',
           description: t('cocktailDivjakaBreeze'),
-          price: '1,100 ALL'
+          price: '600 ALL'
         },
         {
           name: 'Rooftop Mojito',
           description: t('cocktailRooftopMojito'),
-          price: '1,000 ALL',
+          price: '600 ALL',
           popular: true
         },
         {
           name: 'Albanian Spritz',
           description: t('cocktailAlbanianSpritz'),
-          price: '950 ALL'
+          price: '450 ALL'
         },
         {
           name: 'Forest View',
           description: t('cocktailForestView'),
-          price: '1,150 ALL'
+          price: '550 ALL'
         },
         {
           name: 'Coastal Mule',
           description: t('cocktailCoastalMule'),
-          price: '1,050 ALL'
+          price: '500 ALL'
         }
       ]
     },
@@ -74,43 +74,33 @@ export default function FullMenuScreen() {
         {
           name: 'Espresso',
           description: t('coffeeEspresso'),
-          price: '200 ALL'
+          price: '70 ALL'
         },
         {
           name: 'Cappuccino',
           description: t('coffeeCappuccino'),
-          price: '300 ALL',
+          price: '150 ALL',
           popular: true
         },
         {
           name: 'Latte',
           description: t('coffeeLatte'),
-          price: '350 ALL'
+          price: '150 ALL'
         },
         {
           name: 'Macchiato',
           description: t('coffeeMacchiato'),
-          price: '320 ALL'
+          price: '80 ALL'
         },
         {
           name: 'Turkish Coffee',
           description: t('coffeeTurkish'),
-          price: '250 ALL'
+          price: '80 ALL'
         },
         {
           name: 'Iced Coffee',
           description: t('coffeeIced'),
-          price: '400 ALL'
-        },
-        {
-          name: 'Green Tea',
-          description: t('teaGreen'),
-          price: '280 ALL'
-        },
-        {
-          name: 'Herbal Tea',
-          description: t('teaHerbal'),
-          price: '300 ALL'
+          price: '200 ALL'
         }
       ]
     },
@@ -123,34 +113,34 @@ export default function FullMenuScreen() {
         {
           name: 'Tropical Paradise',
           description: t('smoothieTropical'),
-          price: '650 ALL',
+          price: '250 ALL',
           popular: true
         },
         {
           name: 'Berry Blast',
           description: t('smoothieBerry'),
-          price: '600 ALL'
+          price: '250 ALL'
         },
         {
           name: 'Green Goddess',
           description: t('smoothieGreen'),
-          price: '700 ALL',
+          price: '300 ALL',
           vegetarian: true
         },
         {
           name: 'Orange Juice',
           description: t('juiceOrange'),
-          price: '400 ALL'
+          price: '200 ALL'
         },
         {
           name: 'Apple Juice',
           description: t('juiceApple'),
-          price: '380 ALL'
+          price: '200 ALL'
         },
         {
           name: 'Mixed Berry Juice',
           description: t('juiceBerry'),
-          price: '450 ALL'
+          price: '400 ALL'
         }
       ]
     },
@@ -163,36 +153,36 @@ export default function FullMenuScreen() {
         {
           name: 'Margherita',
           description: t('pizzaMargherita'),
-          price: '1,200 ALL',
+          price: '450 ALL',
           popular: true,
           vegetarian: true
         },
         {
           name: 'Panorama Special',
           description: t('pizzaPanorama'),
-          price: '1,600 ALL',
+          price: '650 ALL',
           popular: true
         },
         {
           name: 'Quattro Stagioni',
           description: t('pizzaQuattro'),
-          price: '1,500 ALL'
+          price: '600 ALL'
         },
         {
           name: 'Prosciutto e Funghi',
           description: t('pizzaProsciutto'),
-          price: '1,450 ALL'
+          price: '550 ALL'
         },
         {
           name: 'Vegetariana',
           description: t('pizzaVegetarian'),
-          price: '1,350 ALL',
+          price: '500 ALL',
           vegetarian: true
         },
         {
           name: 'Diavola',
           description: t('pizzaDiavola'),
-          price: '1,400 ALL',
+          price: '600 ALL',
           spicy: true
         }
       ]
@@ -206,28 +196,28 @@ export default function FullMenuScreen() {
         {
           name: 'Panorama Burger',
           description: t('burgerPanorama'),
-          price: '1,400 ALL',
+          price: '500 ALL',
           popular: true
         },
         {
           name: 'Classic Cheeseburger',
           description: t('burgerClassic'),
-          price: '1,200 ALL'
+          price: '450 ALL'
         },
         {
           name: 'BBQ Bacon Burger',
           description: t('burgerBBQ'),
-          price: '1,500 ALL'
+          price: '600 ALL'
         },
         {
           name: 'Chicken Burger',
           description: t('burgerChicken'),
-          price: '1,300 ALL'
+          price: '550 ALL'
         },
         {
           name: 'Veggie Burger',
           description: t('burgerVeggie'),
-          price: '1,100 ALL',
+          price: '400 ALL',
           vegetarian: true
         }
       ]
@@ -241,29 +231,29 @@ export default function FullMenuScreen() {
         {
           name: 'Nutella Crepe',
           description: t('crepeNutella'),
-          price: '800 ALL',
+          price: '180 ALL',
           popular: true
         },
         {
           name: 'Fresh Fruit Crepe',
           description: t('crepeFruit'),
-          price: '900 ALL'
+          price: '250 ALL'
         },
         {
           name: 'Ham & Cheese Crepe',
           description: t('crepeHamCheese'),
-          price: '950 ALL'
+          price: '250 ALL'
         },
         {
           name: 'Spinach & Feta Crepe',
           description: t('crepeSpinach'),
-          price: '900 ALL',
+          price: '300 ALL',
           vegetarian: true
         },
         {
-          name: 'Chocolate Banana Crepe',
+          name: 'Nutella Banana Crepe',
           description: t('crepeChocolate'),
-          price: '850 ALL'
+          price: '220 ALL'
         }
       ]
     }
