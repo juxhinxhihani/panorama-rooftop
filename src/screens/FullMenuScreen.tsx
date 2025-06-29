@@ -10,7 +10,6 @@ interface MenuItem {
   popular?: boolean
   spicy?: boolean
   vegetarian?: boolean
-  image?: string
 }
 
 interface MenuCategory {
@@ -23,7 +22,7 @@ interface MenuCategory {
 
 export default function FullMenuScreen() {
   const { t } = useLanguage()
-  const [activeCategory, setActiveCategory] = useState('cocktails')
+  const [activeCategory, setActiveCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
 
   const menuCategories: MenuCategory[] = [
@@ -435,12 +434,28 @@ export default function FullMenuScreen() {
     }
   ]
 
-  const activeMenu = menuCategories.find(cat => cat.id === activeCategory) || menuCategories[0]
-
-  const filteredItems = activeMenu.items.filter(item =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.description.toLowerCase().includes(searchTerm.toLowerCase())
+  // Get all items for "View All" option
+  const allItems = menuCategories.flatMap(category => 
+    category.items.map(item => ({ ...item, category: category.title }))
   )
+
+  // Filter items based on active category and search term
+  const getFilteredItems = () => {
+    let items = activeCategory === 'all' ? allItems : 
+      menuCategories.find(cat => cat.id === activeCategory)?.items || []
+    
+    if (searchTerm) {
+      items = items.filter(item =>
+        item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    }
+    
+    return items
+  }
+
+  const filteredItems = getFilteredItems()
+  const activeMenu = menuCategories.find(cat => cat.id === activeCategory)
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50">
@@ -480,6 +495,17 @@ export default function FullMenuScreen() {
           {/* Category Tabs - Horizontal Scroll */}
           <div className="overflow-x-auto pb-2">
             <div className="flex space-x-2 min-w-max">
+              <button
+                onClick={() => setActiveCategory('all')}
+                className={`flex items-center space-x-2 px-4 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 ${
+                  activeCategory === 'all'
+                    ? 'bg-gradient-to-r from-gray-700 to-gray-900 text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                <span className="text-lg">📋</span>
+                <span className="text-sm">Të Gjitha</span>
+              </button>
               {menuCategories.map((category) => (
                 <button
                   key={category.id}
@@ -502,65 +528,73 @@ export default function FullMenuScreen() {
       {/* Menu Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         {/* Category Header */}
-        <div className={`bg-gradient-to-r ${activeMenu.gradient} rounded-2xl p-6 text-white mb-6 mt-4`}>
-          <div className="flex items-center justify-center space-x-3">
-            <span className="text-4xl">{activeMenu.icon}</span>
-            <div className="text-center">
-              <h2 className="text-2xl font-bold">{activeMenu.title}</h2>
-              <p className="text-white/80 text-sm">{filteredItems.length} artikuj</p>
+        {activeCategory !== 'all' && activeMenu && (
+          <div className={`bg-gradient-to-r ${activeMenu.gradient} rounded-2xl p-6 text-white mb-6 mt-4`}>
+            <div className="flex items-center justify-center space-x-3">
+              <span className="text-4xl">{activeMenu.icon}</span>
+              <div className="text-center">
+                <h2 className="text-2xl font-bold">{activeMenu.title}</h2>
+                <p className="text-white/80 text-sm">{filteredItems.length} artikuj</p>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
-        {/* Menu Items - Mobile Optimized */}
-        <div className="space-y-4">
+        {activeCategory === 'all' && (
+          <div className="bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl p-6 text-white mb-6 mt-4">
+            <div className="flex items-center justify-center space-x-3">
+              <span className="text-4xl">📋</span>
+              <div className="text-center">
+                <h2 className="text-2xl font-bold">Menuja e Plotë</h2>
+                <p className="text-white/80 text-sm">{filteredItems.length} artikuj gjithsej</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Menu Items Grid - Responsive */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {filteredItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100"
+              className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100 group"
             >
-              <div className="flex justify-between items-start mb-2">
-                <div className="flex-1 pr-4">
-                  <div className="flex items-center space-x-2 mb-1">
-                    <h3 className="text-lg font-bold text-gray-900">{item.name}</h3>
-                    {item.popular && (
-                      <span className="bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-                        {t('popular')}
-                      </span>
-                    )}
-                  </div>
-                  
-                  <div className="flex items-center space-x-2 mb-2">
-                    {item.vegetarian && (
-                      <span className="text-green-500 text-sm flex items-center">
-                        <span className="mr-1">🌱</span>
-                        <span className="text-xs">{t('vegetarian')}</span>
-                      </span>
-                    )}
-                    {item.spicy && (
-                      <span className="text-red-500 text-sm flex items-center">
-                        <span className="mr-1">🌶️</span>
-                        <span className="text-xs">{t('spicy')}</span>
-                      </span>
-                    )}
-                  </div>
+              <div className="mb-3">
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-sm font-bold text-gray-900 leading-tight line-clamp-2 group-hover:text-orange-600 transition-colors">
+                    {item.name}
+                  </h3>
+                  {item.popular && (
+                    <span className="bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full ml-2 flex-shrink-0">
+                      ⭐
+                    </span>
+                  )}
                 </div>
                 
-                <div className="text-right">
-                  <span className="text-xl font-bold text-orange-600">{item.price}</span>
+                <div className="flex items-center space-x-1 mb-2">
+                  {item.vegetarian && (
+                    <span className="text-green-500 text-xs" title="Vegetarian">🌱</span>
+                  )}
+                  {item.spicy && (
+                    <span className="text-red-500 text-xs" title="Spicy">🌶️</span>
+                  )}
+                  {activeCategory === 'all' && (
+                    <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                      {item.category}
+                    </span>
+                  )}
                 </div>
               </div>
 
-              <p className="text-gray-600 text-sm leading-relaxed mb-3">
+              <p className="text-gray-600 text-xs leading-relaxed mb-3 line-clamp-3">
                 {item.description}
               </p>
 
-              <button className="w-full bg-gradient-to-r from-orange-500 to-pink-500 text-white py-3 rounded-xl font-semibold hover:from-orange-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center space-x-2">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-                <span>{t('addToOrder')}</span>
-              </button>
+              <div className="text-center">
+                <span className="text-lg font-bold text-orange-600">
+                  {item.price}
+                </span>
+              </div>
             </div>
           ))}
         </div>
@@ -575,19 +609,7 @@ export default function FullMenuScreen() {
         )}
       </div>
 
-      {/* Floating Action Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <a
-          href="tel:+355695687575"
-          className="bg-gradient-to-r from-orange-500 to-pink-500 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transform hover:scale-110 transition-all duration-200"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-          </svg>
-        </a>
-      </div>
-
-      {/* Bottom CTA */}
+      {/* Bottom CTA - Updated */}
       <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200 p-4 z-40">
         <div className="max-w-md mx-auto">
           <div className="flex space-x-3">
@@ -595,13 +617,19 @@ export default function FullMenuScreen() {
               href="/#contact"
               className="flex-1 bg-gradient-to-r from-orange-500 to-pink-500 text-white py-3 rounded-xl font-semibold text-center hover:from-orange-600 hover:to-pink-600 transition-all duration-200"
             >
-              {t('makeReservation')}
+              Rezervo Tavolinë
             </Link>
             <a
-              href="tel:+355695687575"
-              className="flex-1 border-2 border-orange-500 text-orange-600 py-3 rounded-xl font-semibold text-center hover:bg-orange-500 hover:text-white transition-all duration-200"
+              href="https://maps.app.goo.gl/zAChtNyijUZ6sVU68"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 border-2 border-orange-500 text-orange-600 py-3 rounded-xl font-semibold text-center hover:bg-orange-500 hover:text-white transition-all duration-200 flex items-center justify-center space-x-2"
             >
-              {t('callNow')}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>Harta</span>
             </a>
           </div>
         </div>
