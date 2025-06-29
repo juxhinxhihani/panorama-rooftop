@@ -1,7 +1,6 @@
 'use client'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { useLanguage } from '../../contexts/LanguageContext'
 import LanguageSelector from '../ui/LanguageSelector'
 import MobileMenu from '../ui/MobileMenu'
 

@@ -1,5 +1,5 @@
 'use client'
-import { useLanguage } from '../../contexts/LanguageContext'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Footer() {
   const { t } = useLanguage()
@@ -25,9 +25,22 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">{t('contact')}</h3>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>📍 9th Floor, Center of Divjaka</p>
-              <p>📞 +355 XX XXX XXX</p>
-              <p>✉️ info@panoramarooftop.al</p>
+              <p>
+                📍 <a
+                  href="https://maps.app.goo.gl/zAChtNyijUZ6sVU68"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+              >
+                9th Floor, Center of Divjaka
+              </a>
+              </p>
+              <p>
+                📞 <a href="tel:+355695687575" className="hover:underline">+355 69 568 7575</a>
+              </p>
+              <p>
+                ✉️ <a href="mailto:panoramadivjake@gmail.com" className="hover:underline">panoramadivjake@gmail.com</a>
+              </p>
             </div>
           </div>
 

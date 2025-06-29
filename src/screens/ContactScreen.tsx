@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { useLanguage } from '../contexts/LanguageContext'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ContactScreen() {
   const { t } = useLanguage()
@@ -45,42 +45,56 @@ export default function ContactScreen() {
               <h3 className="text-2xl font-bold mb-6">{t('getInTouch')}</h3>
               
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
+                <a
+                    href="https://maps.app.goo.gl/zAChtNyijUZ6sVU68"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start space-x-4 hover:bg-gray-800 p-2 rounded-lg transition-colors duration-200"
+                >
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <span className="text-xl">📍</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">{t('location')}</h4>
-                    <p className="text-gray-300">9th Floor, Center of Divjaka<br />Divjaka, Albania</p>
+                    <h4 className="font-semibold mb-1 text-white">{t('location')}</h4>
+                    <p className="text-gray-300">
+                      9th Floor, Center of Divjaka<br />
+                      Divjakë, Albania
+                    </p>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-start space-x-4">
+                <a
+                    href="tel:+355695687575"
+                    className="flex items-start space-x-4 hover:bg-gray-800 p-2 rounded-lg transition-colors duration-200"
+                >
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <span className="text-xl">📞</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">{t('phone')}</h4>
-                    <p className="text-gray-300">+355 XX XXX XXX</p>
+                    <h4 className="font-semibold mb-1 text-white">{t('phone')}</h4>
+                    <p className="text-gray-300">+355 69 568 7575</p>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-start space-x-4">
+                <a
+                    href="mailto:panoramadivjake@gmail.com"
+                    className="flex items-start space-x-4 hover:bg-gray-800 p-2 rounded-lg transition-colors duration-200"
+                >
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <span className="text-xl">✉️</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">{t('email')}</h4>
-                    <p className="text-gray-300">info@panoramarooftop.al</p>
+                    <h4 className="font-semibold mb-1 text-white">{t('email')}</h4>
+                    <p className="text-gray-300">panoramadivjake@gmail.com</p>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-4 hover:bg-gray-800 p-2 rounded-lg transition-colors duration-200">
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <span className="text-xl">🕒</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">{t('hours')}</h4>
+                    <h4 className="font-semibold mb-1 text-white">{t('hours')}</h4>
                     <p className="text-gray-300">{t('dailyHours')}</p>
                   </div>
                 </div>

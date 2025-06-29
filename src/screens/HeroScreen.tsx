@@ -1,5 +1,5 @@
 'use client'
-import { useLanguage } from '../contexts/LanguageContext'
+import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
 
 export default function HeroScreen() {
