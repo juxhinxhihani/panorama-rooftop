@@ -37,9 +37,9 @@ export default function AboutScreen() {
           <div className="relative">
             <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                alt="Panorama Rooftop View"
-                className="w-full h-full object-cover"
+                  src="/images/template.png"
+                  alt="Panorama Rooftop View"
+                  className="w-full h-full object-cover"
               />
             </div>
             
