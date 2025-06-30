@@ -1,7 +1,6 @@
 import Header from '../components/layout/Header'
 import HeroScreen from '../screens/HeroScreen'
 import AboutScreen from '../screens/AboutScreen'
-import ContactScreen from '../screens/ContactScreen'
 import Footer from '../components/layout/Footer'
 
 export default function Home() {
@@ -11,7 +10,6 @@ export default function Home() {
       <main>
         <HeroScreen />
         <AboutScreen />
-        <ContactScreen />
       </main>
       <Footer />
     </div>

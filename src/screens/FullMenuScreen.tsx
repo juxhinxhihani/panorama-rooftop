@@ -1,8 +1,6 @@
 'use client'
 import { useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
-import Link from 'next/link'
-import Header from "@/components/layout/Header";
 
 interface MenuItem {
   name: string
@@ -11,7 +9,7 @@ interface MenuItem {
   popular?: boolean
   spicy?: boolean
   vegetarian?: boolean
-  category?: string // Added this property
+  category?: string
 }
 
 interface MenuCategory {
@@ -460,64 +458,56 @@ export default function FullMenuScreen() {
   const activeMenu = menuCategories.find(cat => cat.id === activeCategory)
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50">
-      {/* Fixed Header */}
-      <div className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Header />
+    <section className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Search Bar */}
+        <div className="relative mb-6">
+          <input
+            type="text"
+            placeholder="Kërko në menu..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full px-4 py-3 pl-10 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all shadow-sm"
+          />
+          <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
 
-          {/* Search Bar */}
-          <div className="relative mb-4">
-            <input
-              type="text"
-              placeholder="Kërko në menu..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-3 pl-10 bg-gray-100 border-0 rounded-xl focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all"
-            />
-            <svg className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
-
-          {/* Category Tabs - Horizontal Scroll */}
-          <div className="overflow-x-auto pb-2">
-            <div className="flex space-x-2 min-w-max">
+        {/* Category Tabs - Horizontal Scroll */}
+        <div className="overflow-x-auto pb-4 mb-6">
+          <div className="flex space-x-2 min-w-max">
+            <button
+              onClick={() => setActiveCategory('all')}
+              className={`flex items-center space-x-2 px-4 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 ${
+                activeCategory === 'all'
+                  ? 'bg-gradient-to-r from-gray-700 to-gray-900 text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'
+              }`}
+            >
+              <span className="text-lg">📋</span>
+              <span className="text-sm">Të Gjitha</span>
+            </button>
+            {menuCategories.map((category) => (
               <button
-                onClick={() => setActiveCategory('all')}
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 ${
-                  activeCategory === 'all'
-                    ? 'bg-gradient-to-r from-gray-700 to-gray-900 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  activeCategory === category.id
+                    ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
+                    : 'bg-white text-gray-700 hover:bg-gray-50 shadow-sm'
                 }`}
               >
-                <span className="text-lg">📋</span>
-                <span className="text-sm">Të Gjitha</span>
+                <span className="text-lg">{category.icon}</span>
+                <span className="text-sm">{category.title}</span>
               </button>
-              {menuCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-full font-medium whitespace-nowrap transition-all duration-200 ${
-                    activeCategory === category.id
-                      ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  <span className="text-lg">{category.icon}</span>
-                  <span className="text-sm">{category.title}</span>
-                </button>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
-      </div>
 
-      {/* Menu Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
         {/* Category Header */}
         {activeCategory !== 'all' && activeMenu && (
-          <div className={`bg-gradient-to-r ${activeMenu.gradient} rounded-2xl p-6 text-white mb-6 mt-4`}>
+          <div className={`bg-gradient-to-r ${activeMenu.gradient} rounded-2xl p-6 text-white mb-6`}>
             <div className="flex items-center justify-center space-x-3">
               <span className="text-4xl">{activeMenu.icon}</span>
               <div className="text-center">
@@ -529,7 +519,7 @@ export default function FullMenuScreen() {
         )}
 
         {activeCategory === 'all' && (
-          <div className="bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl p-6 text-white mb-6 mt-4">
+          <div className="bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl p-6 text-white mb-6">
             <div className="flex items-center justify-center space-x-3">
               <span className="text-4xl">📋</span>
               <div className="text-center">

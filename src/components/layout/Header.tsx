@@ -1,12 +1,14 @@
 'use client'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import LanguageSelector from '../ui/LanguageSelector'
 import MobileMenu from '../ui/MobileMenu'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,15 +20,14 @@ export default function Header() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '#about', label: 'About' },
     { href: '/menu', label: 'Menu' },
-    { href: '#contact', label: 'Contact' }
+    { href: '/contact', label: 'Contact' }
   ]
 
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
+        isScrolled || pathname !== '/'
           ? 'bg-white/95 backdrop-blur-md shadow-lg' 
           : 'bg-transparent'
       }`}>
@@ -38,7 +39,7 @@ export default function Header() {
                 <span className="text-white font-bold text-lg">P</span>
               </div>
               <span className={`font-bold text-xl transition-colors ${
-                isScrolled ? 'text-gray-900' : 'text-white'
+                isScrolled || pathname !== '/' ? 'text-gray-900' : 'text-white'
               }`}>
                 Panorama
               </span>
@@ -51,7 +52,11 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   className={`font-medium transition-colors hover:text-orange-500 ${
-                    isScrolled ? 'text-gray-700' : 'text-white/90'
+                    pathname === item.href 
+                      ? 'text-orange-500' 
+                      : isScrolled || pathname !== '/' 
+                        ? 'text-gray-700' 
+                        : 'text-white/90'
                   }`}
                 >
                   {item.label}
@@ -61,13 +66,13 @@ export default function Header() {
 
             {/* Right side - Language selector and mobile menu */}
             <div className="flex items-center space-x-4">
-              <LanguageSelector isScrolled={isScrolled} />
+              <LanguageSelector isScrolled={isScrolled || pathname !== '/'} />
               
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className={`md:hidden p-2 rounded-lg transition-colors ${
-                  isScrolled 
+                  isScrolled || pathname !== '/'
                     ? 'text-gray-700 hover:bg-gray-100' 
                     : 'text-white hover:bg-white/10'
                 }`}
