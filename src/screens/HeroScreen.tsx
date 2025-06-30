@@ -32,14 +32,14 @@ export default function HeroScreen() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
-            href="#menu"
+            href="/menu"
             className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
           >
             {t('viewMenu')}
           </Link>
           
           <Link
-            href="#contact"
+            href="/contact"
             className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-200"
           >
             {t('bookTable')}
