@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Link from 'next/link'
+import Header from "@/components/layout/Header";
 
 interface MenuItem {
   name: string
@@ -463,21 +464,7 @@ export default function FullMenuScreen() {
       {/* Fixed Header */}
       <div className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between mb-4">
-            <Link 
-              href="/"
-              className="flex items-center text-orange-600 hover:text-orange-700 transition-colors"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              <span className="font-medium">{t('backToHome')}</span>
-            </Link>
-            
-            <h1 className="text-xl font-bold text-gray-900">
-              {t('fullMenuTitle')}
-            </h1>
-          </div>
+          <Header />
 
           {/* Search Bar */}
           <div className="relative mb-4">
