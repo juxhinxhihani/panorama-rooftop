@@ -10,6 +10,7 @@ interface MenuItem {
   popular?: boolean
   spicy?: boolean
   vegetarian?: boolean
+  category?: string // Added this property
 }
 
 interface MenuCategory {
@@ -578,7 +579,7 @@ export default function FullMenuScreen() {
                   {item.spicy && (
                     <span className="text-red-500 text-xs" title="Spicy">🌶️</span>
                   )}
-                  {activeCategory === 'all' && (
+                  {activeCategory === 'all' && item.category && (
                     <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
                       {item.category}
                     </span>
