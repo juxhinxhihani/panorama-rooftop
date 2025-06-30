@@ -189,21 +189,20 @@ export default function ContactFormScreen() {
         <div className="mt-16">
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="p-6 border-b border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Na Gjeni Këtu</h3>
-              <p className="text-gray-600">Kati i 9-të, Qendra e Divjakës</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Na gjeni këtu</h3>
             </div>
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.8234567890123!2d19.5234567!3d40.9876543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzE1LjYiTiAxOcKwMzEnMjQuNCJF!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-                width="100%"
-                height="400"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Panorama Rooftop Location"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1501.0101!2d19.533167!3d40.99625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1719828000000!5m2!1sen!2s"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Panorama Rooftop Location"
               />
-            </div>
+          </div>
           </div>
         </div>
       </div>

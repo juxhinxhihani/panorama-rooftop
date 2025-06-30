@@ -35,44 +35,44 @@ export default function FullMenuScreen() {
         {
           name: 'Panorama Sunset',
           description: t('cocktailPanoramaSunset'),
-          price: '950 ALL',
+          price: '1 ALL',
           popular: true
         },
         {
           name: 'Divjaka Breeze',
           description: t('cocktailDivjakaBreeze'),
-          price: '900 ALL'
+          price: '1 ALL',
         },
         {
           name: 'Rooftop Mojito',
           description: t('cocktailRooftopMojito'),
-          price: '850 ALL',
+          price: '1 ALL',
           popular: true
         },
         {
           name: 'Albanian Spritz',
           description: t('cocktailAlbanianSpritz'),
-          price: '800 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Forest View',
           description: t('cocktailForestView'),
-          price: '900 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Coastal Mule',
           description: t('cocktailCoastalMule'),
-          price: '850 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Negroni Panorama',
           description: 'Gin, Campari, vermouth me një prekje lokale',
-          price: '950 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Aperol Spritz',
           description: 'Aperol, prosecco, soda dhe portokall',
-          price: '750 ALL'
+          price: '1 ALL'
         }
       ]
     },
@@ -85,54 +85,54 @@ export default function FullMenuScreen() {
         {
           name: 'Espresso',
           description: t('coffeeEspresso'),
-          price: '200 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Cappuccino',
           description: t('coffeeCappuccino'),
-          price: '300 ALL',
+          price: '1 ALL',
           popular: true
         },
         {
           name: 'Latte',
           description: t('coffeeLatte'),
-          price: '350 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Macchiato',
           description: t('coffeeMacchiato'),
-          price: '250 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Turkish Coffee',
           description: t('coffeeTurkish'),
-          price: '200 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Iced Coffee',
           description: t('coffeeIced'),
-          price: '400 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Americano',
           description: 'Espresso me ujë të nxehtë',
-          price: '250 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Flat White',
           description: 'Espresso me qumësht të mikroshkumëzuar',
-          price: '380 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Green Tea',
           description: t('teaGreen'),
-          price: '200 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Herbal Tea',
           description: t('teaHerbal'),
-          price: '200 ALL',
+          price: '1 ALL',
           vegetarian: true
         }
       ]
@@ -146,50 +146,50 @@ export default function FullMenuScreen() {
         {
           name: 'Tropical Paradise',
           description: t('smoothieTropical'),
-          price: '500 ALL',
+          price: '1 ALL',
           popular: true,
           vegetarian: true
         },
         {
           name: 'Berry Blast',
           description: t('smoothieBerry'),
-          price: '450 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Green Goddess',
           description: t('smoothieGreen'),
-          price: '550 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Protein Power',
           description: 'Banane, bajame, protein pluhur dhe qumësht',
-          price: '600 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Orange Juice',
           description: t('juiceOrange'),
-          price: '300 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Apple Juice',
           description: t('juiceApple'),
-          price: '300 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Mixed Berry Juice',
           description: t('juiceBerry'),
-          price: '400 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Lemonade',
           description: 'Limonada e freskët me mente',
-          price: '250 ALL',
+          price: '1 ALL',
           vegetarian: true
         }
       ]
@@ -203,53 +203,53 @@ export default function FullMenuScreen() {
         {
           name: 'Margherita',
           description: t('pizzaMargherita'),
-          price: '1200 ALL',
+          price: '1 ALL',
           popular: true,
           vegetarian: true
         },
         {
           name: 'Panorama Special',
           description: t('pizzaPanorama'),
-          price: '1600 ALL',
+          price: '1 ALL',
           popular: true
         },
         {
           name: 'Quattro Stagioni',
           description: t('pizzaQuattro'),
-          price: '1500 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Prosciutto e Funghi',
           description: t('pizzaProsciutto'),
-          price: '1400 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Vegetariana',
           description: t('pizzaVegetarian'),
-          price: '1300 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Diavola',
           description: t('pizzaDiavola'),
-          price: '1400 ALL',
+          price: '1 ALL',
           spicy: true
         },
         {
           name: 'Capricciosa',
           description: 'Proshutë, kërpudha, anginare, ullinj',
-          price: '1500 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Marinara',
           description: 'Domate, hudhra, oregano, vaj ulliri',
-          price: '1000 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Quattro Formaggi',
           description: 'Katër lloje djathërash',
-          price: '1400 ALL',
+          price: '1 ALL',
           vegetarian: true
         }
       ]
@@ -263,39 +263,39 @@ export default function FullMenuScreen() {
         {
           name: 'Panorama Burger',
           description: t('burgerPanorama'),
-          price: '1500 ALL',
+          price: '1 ALL',
           popular: true
         },
         {
           name: 'Classic Cheeseburger',
           description: t('burgerClassic'),
-          price: '1200 ALL'
+          price: '1 ALL'
         },
         {
           name: 'BBQ Bacon Burger',
           description: t('burgerBBQ'),
-          price: '1400 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Chicken Burger',
           description: t('burgerChicken'),
-          price: '1300 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Veggie Burger',
           description: t('burgerVeggie'),
-          price: '1100 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Fish Burger',
           description: 'Peshk i grilluar, sallatë, domate, salcë tartare',
-          price: '1400 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Double Cheese',
           description: 'Dy hamburgerë, djathë i dyfishtë, qepë',
-          price: '1800 ALL'
+          price: '1 ALL'
         }
       ]
     },
@@ -308,42 +308,42 @@ export default function FullMenuScreen() {
         {
           name: 'Nutella Crepe',
           description: t('crepeNutella'),
-          price: '800 ALL',
+          price: '1 ALL',
           popular: true,
           vegetarian: true
         },
         {
           name: 'Fresh Fruit Crepe',
           description: t('crepeFruit'),
-          price: '900 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Ham & Cheese Crepe',
           description: t('crepeHamCheese'),
-          price: '950 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Spinach & Feta Crepe',
           description: t('crepeSpinach'),
-          price: '900 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Chocolate Banana Crepe',
           description: t('crepeChocolate'),
-          price: '850 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Chicken & Mushroom',
           description: 'Mish pule, kërpudha, djathë krem',
-          price: '1000 ALL'
+          price: '1 ALL'
         },
         {
           name: 'Apple Cinnamon',
           description: 'Mollë, kanellë, mjaltë, krem',
-          price: '800 ALL',
+          price: '1 ALL',
           vegetarian: true
         }
       ]
@@ -357,25 +357,25 @@ export default function FullMenuScreen() {
         {
           name: 'Bruschetta',
           description: 'Bukë e pjekur, domate, borzilok, hudhra',
-          price: '600 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Cheese Platter',
           description: 'Përzgjedhje djathrash lokalë me mjaltë',
-          price: '1200 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Olives & Peppers',
           description: 'Ullinj dhe speca të marinuar',
-          price: '500 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Chicken Wings',
           description: 'Krahë pule me salcë BBQ ose buffalo',
-          price: '800 ALL',
+          price: '1 ALL',
           spicy: true
         },
         {
@@ -388,7 +388,7 @@ export default function FullMenuScreen() {
         {
           name: 'Garlic Bread',
           description: 'Bukë me hudhra dhe borzilok',
-          price: '400 ALL',
+          price: '1 ALL',
           vegetarian: true
         }
       ]
@@ -402,32 +402,32 @@ export default function FullMenuScreen() {
         {
           name: 'Tiramisu',
           description: 'Tiramisu klasike italiane',
-          price: '600 ALL',
+          price: '1 ALL',
           popular: true,
           vegetarian: true
         },
         {
           name: 'Panna Cotta',
           description: 'Krem i butë me fruta pylli',
-          price: '550 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Chocolate Lava Cake',
           description: 'Kek çokollate me zemër të lëngshme',
-          price: '650 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Ice Cream',
           description: 'Akullore artizanale - 3 topa',
-          price: '400 ALL',
+          price: '1 ALL',
           vegetarian: true
         },
         {
           name: 'Fruit Salad',
           description: 'Sallatë frutash stinore',
-          price: '450 ALL',
+          price: '1 ALL',
           vegetarian: true
         }
       ]
