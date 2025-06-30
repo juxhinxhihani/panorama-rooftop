@@ -464,7 +464,7 @@ export default function FullMenuScreen() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between mb-4">
             <Link 
-              href="/#menu"
+              href="/"
               className="flex items-center text-orange-600 hover:text-orange-700 transition-colors"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -526,7 +526,7 @@ export default function FullMenuScreen() {
       </div>
 
       {/* Menu Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
         {/* Category Header */}
         {activeCategory !== 'all' && activeMenu && (
           <div className={`bg-gradient-to-r ${activeMenu.gradient} rounded-2xl p-6 text-white mb-6 mt-4`}>
@@ -609,31 +609,19 @@ export default function FullMenuScreen() {
         )}
       </div>
 
-      {/* Bottom CTA - Updated */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200 p-4 z-40">
-        <div className="max-w-md mx-auto">
-          <div className="flex space-x-3">
-            <Link
-              href="/#contact"
-              className="flex-1 bg-gradient-to-r from-orange-500 to-pink-500 text-white py-3 rounded-xl font-semibold text-center hover:from-orange-600 hover:to-pink-600 transition-all duration-200"
-            >
-              Rezervo Tavolinë
-            </Link>
-            <a
-              href="https://maps.app.goo.gl/zAChtNyijUZ6sVU68"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 border-2 border-orange-500 text-orange-600 py-3 rounded-xl font-semibold text-center hover:bg-orange-500 hover:text-white transition-all duration-200 flex items-center justify-center space-x-2"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <span>Harta</span>
-            </a>
-          </div>
-        </div>
-      </div>
+      {/* Floating Map Button - Bottom Right Corner */}
+      <a
+        href="https://maps.app.goo.gl/zAChtNyijUZ6sVU68"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-200 flex items-center justify-center z-50"
+        title="Shiko në Hartë"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </a>
     </section>
   )
 }
