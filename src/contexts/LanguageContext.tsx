@@ -18,6 +18,15 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero Section
     viewMenu: 'View Menu',
     bookTable: 'Book Table',
+    bookDescription: 'Book a table, or place an order for pickup or delivery.',
+    dineIn: 'Dine In',
+    pickup: 'Pickup',
+    delivery: 'Delivery',
+    date: 'Date',
+    time: 'Time',
+    guests: 'Guests',
+    orderType: 'Order Type',
+    bookNow: 'Submit',
     
     // About Section
     aboutTitle: 'Experience Divjaka from Above',
@@ -140,6 +149,15 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero Section
     viewMenu: 'Shiko Menune',
     bookTable: 'Rezervo Tavoline',
+    bookDescription: 'Rezervoni një tavolinë ose bëni porosi për të marrë ose për dërgesë.',
+    dineIn: 'Në lokal',
+    pickup: 'Merr vetë',
+    delivery: 'Dërgesë',
+    date: 'Data',
+    time: 'Ora',
+    guests: 'Persona',
+    orderType: 'Lloji i Porosisë',
+    bookNow: 'Dërgo',
     
     // About Section
     aboutTitle: 'Përjetoni Divjakën nga Lart',
@@ -262,6 +280,15 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero Section
     viewMenu: 'Vedi Menu',
     bookTable: 'Prenota Tavolo',
+    bookDescription: 'Prenota un tavolo o effettua un ordine da asporto o con consegna.',
+    dineIn: 'Al tavolo',
+    pickup: 'Asporto',
+    delivery: 'Consegna',
+    date: 'Data',
+    time: 'Ora',
+    guests: 'Persone',
+    orderType: 'Tipo di Ordine',
+    bookNow: 'Invia',
     
     // About Section
     aboutTitle: 'Vivi Divjaka dall\'Alto',
