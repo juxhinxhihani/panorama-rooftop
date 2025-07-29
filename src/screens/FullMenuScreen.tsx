@@ -29,7 +29,6 @@ export default function FullMenuScreen() {
   const { t } = useLanguage()
   const [activeCategory, setActiveCategory] = useState('pizza')
   const [searchTerm, setSearchTerm] = useState('')
-  const [caloriePopup, setCaloriePopup] = useState<{ item: MenuItem; position: { x: number; y: number } } | null>(null)
 
   const menuCategories: MenuCategory[] = [
     {
@@ -483,22 +482,6 @@ export default function FullMenuScreen() {
   const filteredItems = getFilteredItems()
   const activeMenu = menuCategories.find(cat => cat.id === activeCategory)
 
-  const handleInfoClick = (item: MenuItem, event: React.MouseEvent) => {
-    event.stopPropagation()
-    const rect = (event.target as HTMLElement).getBoundingClientRect()
-    setCaloriePopup({
-      item,
-      position: {
-        x: rect.left + rect.width / 2,
-        y: rect.top - 10
-      }
-    })
-  }
-
-  const closeInfoPopup = () => {
-    setCaloriePopup(null)
-  }
-
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50 to-pink-50 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -599,36 +582,11 @@ export default function FullMenuScreen() {
                     </div>
                   </div>
 
-                  {/* Info Button - Only show for food items or show different content for drinks */}
-                  <button
-                    onClick={(e) => handleInfoClick(item, e)}
-                    className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold hover:scale-110 transition-transform shadow-lg"
-                    title={item.type === 'food' ? "View nutritional info" : "View drink info"}
-                  >
-                    i
-                  </button>
                 </div>
 
                 <p className="text-gray-600 leading-relaxed mb-4 text-sm">
                   {item.description}
                 </p>
-
-                {/* Ingredients - Only for food items */}
-                {item.type === 'food' && item.ingredients && (
-                  <div className="mb-4">
-                    <p className="text-xs font-semibold text-gray-500 mb-2">Main ingredients:</p>
-                    <div className="flex flex-wrap gap-1">
-                      {item.ingredients.slice(0, 4).map((ingredient, idx) => (
-                        <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full">
-                          {ingredient}
-                        </span>
-                      ))}
-                      {item.ingredients.length > 4 && (
-                        <span className="text-xs text-gray-500">+{item.ingredients.length - 4} more</span>
-                      )}
-                    </div>
-                  </div>
-                )}
 
                 {/* Price */}
                 <div className="flex items-center justify-between">
@@ -675,85 +633,6 @@ export default function FullMenuScreen() {
           </div>
         </div>
       </div>
-
-      {/* Info Popup */}
-      {caloriePopup && (
-        <>
-          <div 
-            className="fixed inset-0 z-40"
-            onClick={closeInfoPopup}
-          />
-          <div
-            className="fixed z-50 bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 max-w-sm w-80"
-            style={{
-              left: `${caloriePopup.position.x}px`,
-              top: `${caloriePopup.position.y}px`,
-              transform: 'translate(-50%, -100%)'
-            }}
-          >
-            <div className="text-center mb-4">
-              <h4 className="font-bold text-lg text-gray-900 mb-2">{caloriePopup.item.name}</h4>
-              
-              {/* For Food Items - Show Calories */}
-              {caloriePopup.item.type === 'food' && caloriePopup.item.calories && (
-                <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl p-3 mb-4">
-                  <div className="text-3xl font-bold">{caloriePopup.item.calories}</div>
-                  <div className="text-sm opacity-90">calories</div>
-                </div>
-              )}
-
-              {/* For Drinks - Show Just Name */}
-              {caloriePopup.item.type === 'drink' && (
-                <div className="bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-xl p-4 mb-4">
-                  <div className="text-xl font-bold">{caloriePopup.item.name}</div>
-                  <div className="text-sm opacity-90">Refreshing drink</div>
-                </div>
-              )}
-            </div>
-
-            {/* Show allergens only for food items */}
-            {caloriePopup.item.type === 'food' && caloriePopup.item.allergens && caloriePopup.item.allergens.length > 0 && (
-              <div className="mb-4">
-                <p className="text-sm font-semibold text-gray-700 mb-2">⚠️ Allergens:</p>
-                <div className="flex flex-wrap gap-1">
-                  {caloriePopup.item.allergens.map((allergen, idx) => (
-                    <span key={idx} className="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full">
-                      {allergen}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Show ingredients only for food items */}
-            {caloriePopup.item.type === 'food' && caloriePopup.item.ingredients && (
-              <div className="mb-4">
-                <p className="text-sm font-semibold text-gray-700 mb-2">🥘 Ingredients:</p>
-                <div className="text-sm text-gray-600 space-y-1">
-                  {caloriePopup.item.ingredients.map((ingredient, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
-                      <span>{ingredient}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <button
-              onClick={closeInfoPopup}
-              className="w-full bg-gradient-to-r from-gray-500 to-gray-600 text-white py-2 rounded-xl font-semibold hover:from-gray-600 hover:to-gray-700 transition-all"
-            >
-              Close
-            </button>
-
-            {/* Arrow pointing down */}
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2">
-              <div className="w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-white"></div>
-            </div>
-          </div>
-        </>
-      )}
 
       {/* Floating Contact Button */}
       <a
