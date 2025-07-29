@@ -59,13 +59,13 @@ export default function LanguageSelector({ isScrolled = false }: LanguageSelecto
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-white/20 py-2 z-50">
+        <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
           {languages.map((language) => (
             <button
               key={language.code}
               onClick={() => handleLanguageChange(language.code)}
-              className={`w-full flex items-center space-x-3 px-4 py-2 text-left hover:bg-white/50 transition-colors rounded-lg mx-1 ${
-                lang === language.code ? 'bg-orange-500/10 text-orange-600' : 'text-gray-700'
+              className={`w-full flex items-center space-x-3 px-4 py-2 text-left hover:bg-gray-50 transition-colors ${
+                lang === language.code ? 'bg-orange-50 text-orange-600' : 'text-gray-700'
               }`}
             >
               <span className="text-lg">{language.flag}</span>
