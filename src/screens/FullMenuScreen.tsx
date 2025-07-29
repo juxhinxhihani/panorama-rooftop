@@ -27,10 +27,17 @@ interface MenuCategory {
 
 export default function FullMenuScreen() {
   const { t } = useLanguage()
-  const [activeCategory, setActiveCategory] = useState('pizza')
+  const [activeCategory, setActiveCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
 
   const menuCategories: MenuCategory[] = [
+    {
+      id: 'all',
+      title: 'All Menu',
+      icon: '🍽️',
+      gradient: 'from-gray-600 via-gray-700 to-gray-800',
+      items: []
+    },
     {
       id: 'pizza',
       title: 'Pizza',
@@ -512,20 +519,20 @@ export default function FullMenuScreen() {
 
         {/* Category Tabs */}
         <div className="flex justify-center mb-12">
-          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-2 shadow-lg border border-white/20">
-            <div className="flex flex-wrap justify-center gap-2">
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-1.5 shadow-lg border border-white/20 max-w-full overflow-x-auto">
+            <div className="flex gap-1 min-w-max px-2">
               {menuCategories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center space-x-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg font-medium text-sm transition-all duration-300 whitespace-nowrap ${
                     activeCategory === category.id
                       ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
                       : 'text-gray-700 hover:bg-white/80 hover:shadow-md'
                   }`}
                 >
-                  <span className="text-2xl">{category.icon}</span>
-                  <span className="hidden sm:inline">{category.title}</span>
+                  <span className="text-lg">{category.icon}</span>
+                  <span>{category.title}</span>
                 </button>
               ))}
             </div>
@@ -533,67 +540,81 @@ export default function FullMenuScreen() {
         </div>
 
         {/* Category Header */}
-        {activeMenu && (
-          <div className={`bg-gradient-to-r ${activeMenu.gradient} rounded-3xl p-8 text-white mb-12 shadow-2xl`}>
+        {activeMenu && activeCategory !== 'all' && (
+          <div className={`bg-gradient-to-r ${activeMenu.gradient} rounded-2xl p-4 text-white mb-8 shadow-xl`}>
             <div className="text-center">
-              <span className="text-6xl mb-4 block">{activeMenu.icon}</span>
-              <h2 className="text-3xl font-bold mb-2">{activeMenu.title}</h2>
-              <p className="text-white/90 text-lg">{filteredItems.length} items available</p>
+              <div className="flex items-center justify-center gap-3">
+                <span className="text-2xl">{activeMenu.icon}</span>
+                <div>
+                  <h2 className="text-xl font-bold">{activeMenu.title}</h2>
+                  <p className="text-white/90 text-sm">{filteredItems.length} items available</p>
+                </div>
+              </div>
             </div>
           </div>
         )}
 
+        {/* All Menu Header */}
+        {activeCategory === 'all' && (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8">
+            {menuCategories.slice(1).map((category) => (
+              <div key={category.id} className={`bg-gradient-to-r ${category.gradient} rounded-xl p-3 text-white shadow-lg`}>
+                <div className="text-center">
+                  <span className="text-2xl block mb-1">{category.icon}</span>
+                  <h3 className="text-sm font-bold mb-1">{category.title}</h3>
+                  <p className="text-white/90 text-xs">{category.items.length} items available</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
         {/* Menu Items Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredItems.map((item, index) => (
             <div
               key={index}
-              className="group bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-white/20"
+              className="group bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20 h-full flex flex-col"
             >
               {/* Item Header */}
-              <div className="relative p-6 pb-4">
-                <div className="flex items-start justify-between mb-3">
+              <div className="relative p-4 flex-1 flex flex-col">
+                <div className="flex items-start justify-between mb-2">
                   <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="text-lg font-bold text-gray-900 group-hover:text-orange-600 transition-colors line-clamp-1">
                         {item.name}
                       </h3>
                       {item.popular && (
-                        <span className="bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                        <span className="bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1 flex-shrink-0">
                           <span>⭐</span>
-                          <span>{t('popular')}</span>
                         </span>
                       )}
                     </div>
                     
-                    <div className="flex items-center gap-2 mb-3">
+                    <div className="flex items-center gap-1 mb-2">
                       {item.vegetarian && (
-                        <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full flex items-center gap-1">
+                        <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
                           <span>🌱</span>
-                          <span>{t('vegetarian')}</span>
                         </span>
                       )}
                       {item.spicy && (
-                        <span className="bg-red-100 text-red-700 text-xs font-semibold px-2 py-1 rounded-full flex items-center gap-1">
+                        <span className="bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
                           <span>🌶️</span>
-                          <span>{t('spicy')}</span>
                         </span>
                       )}
                     </div>
                   </div>
-
                 </div>
 
-                <p className="text-gray-600 leading-relaxed mb-4 text-sm">
+                <p className="text-gray-600 leading-relaxed mb-4 text-sm flex-1 line-clamp-2">
                   {item.description}
                 </p>
 
                 {/* Price */}
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-orange-600">
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="text-xl font-bold text-orange-600">
                     {item.price}
                   </span>
-                  <button className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-4 py-2 rounded-xl font-semibold hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200 shadow-md">
+                  <button className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1.5 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200 shadow-md">
                     {t('addToOrder')}
                   </button>
                 </div>
@@ -604,28 +625,28 @@ export default function FullMenuScreen() {
 
         {/* No Results */}
         {filteredItems.length === 0 && (
-          <div className="text-center py-16">
-            <div className="text-8xl mb-6">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">No items found</h3>
-            <p className="text-gray-600 text-lg">Try searching with different keywords or select another category</p>
+          <div className="text-center py-12">
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">No items found</h3>
+            <p className="text-gray-600">Try searching with different keywords or select another category</p>
           </div>
         )}
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 max-w-2xl mx-auto border border-white/20">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">{t('readyToOrder')}</h3>
-            <p className="text-gray-600 mb-8 text-lg">{t('contactUsToOrder')}</p>
+        <div className="text-center mt-12">
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 max-w-2xl mx-auto border border-white/20">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('readyToOrder')}</h3>
+            <p className="text-gray-600 mb-6">{t('contactUsToOrder')}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
+                className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
               >
                 {t('makeReservation')}
               </a>
               <a
                 href="tel:+355695687575"
-                className="border-2 border-orange-500 text-orange-600 px-8 py-4 rounded-2xl font-semibold hover:bg-orange-500 hover:text-white transition-all duration-200"
+                className="border-2 border-orange-500 text-orange-600 px-6 py-3 rounded-xl font-semibold hover:bg-orange-500 hover:text-white transition-all duration-200"
               >
                 {t('callNow')}
               </a>
