@@ -36,12 +36,12 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
               <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform">
-                <span className="text-white font-bold text-lg">P</span>
+                <span className="text-white font-bold text-lg">🌅</span>
               </div>
               <span className={`font-bold text-xl transition-colors ${
                 isScrolled || pathname !== '/' ? 'text-gray-900' : 'text-white'
               }`}>
-                Panorama
+                Panorama Rooftop
               </span>
             </Link>
 
