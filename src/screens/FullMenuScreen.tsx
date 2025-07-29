@@ -332,20 +332,6 @@ export default function FullMenuScreen() {
           type: 'food'
         }
       ]
-    },
-    {
-      id: 'crepes',
-      title: 'Crepes',
-      icon: '🥞',
-      gradient: 'from-slate-600 via-slate-700 to-slate-800',
-      items: [
-        {
-          name: 'Coming Soon',
-          description: 'Delicious crepes coming to our menu soon!',
-          price: 'Soon',
-          type: 'food'
-        }
-      ]
     }
   ]
 
