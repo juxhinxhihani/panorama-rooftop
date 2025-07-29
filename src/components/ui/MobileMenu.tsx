@@ -64,7 +64,6 @@ export default function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProp
           ))}
           </nav>
         </div>
-        </nav>
       </div>
     </div>
   )
