@@ -35,14 +35,14 @@ export default function FullMenuScreen() {
       id: 'all',
       title: 'All Menu',
       icon: '🍽️',
-      gradient: 'from-gray-600 via-gray-700 to-gray-800',
+      gradient: 'from-slate-600 via-slate-700 to-slate-800',
       items: []
     },
     {
       id: 'coffee',
       title: 'Coffee & Tea',
       icon: '☕',
-      gradient: 'from-amber-600 via-yellow-600 to-orange-600',
+      gradient: 'from-amber-700 via-amber-800 to-amber-900',
       items: [
         {
           name: 'Espresso',
@@ -99,7 +99,7 @@ export default function FullMenuScreen() {
       id: 'smoothies',
       title: 'Smoothies & Juices',
       icon: '🥤',
-      gradient: 'from-green-500 via-teal-500 to-blue-500',
+      gradient: 'from-teal-600 via-cyan-700 to-blue-800',
       items: [
         {
           name: 'Tropical Smoothie',
@@ -156,7 +156,7 @@ export default function FullMenuScreen() {
       id: 'cocktails',
       title: 'Cocktails',
       icon: '🍹',
-      gradient: 'from-purple-500 via-pink-500 to-red-500',
+      gradient: 'from-blue-700 via-indigo-800 to-slate-800',
       items: [
         {
           name: 'Panorama Sunset',
@@ -202,7 +202,7 @@ export default function FullMenuScreen() {
       id: 'pizza',
       title: 'Pizza',
       icon: '🍕',
-      gradient: 'from-red-500 via-orange-500 to-yellow-500',
+      gradient: 'from-stone-600 via-stone-700 to-stone-800',
       items: [
         {
           name: 'Pizza Rucola',
@@ -252,7 +252,7 @@ export default function FullMenuScreen() {
       id: 'scacciata',
       title: 'Scacciata',
       icon: '🥖',
-      gradient: 'from-amber-500 via-yellow-500 to-orange-500',
+      gradient: 'from-amber-600 via-amber-700 to-amber-800',
       items: [
         {
           name: 'Scacciata Milano',
@@ -286,7 +286,7 @@ export default function FullMenuScreen() {
       id: 'desserts',
       title: 'Desserts',
       icon: '🍰',
-      gradient: 'from-pink-500 via-rose-500 to-red-500',
+      gradient: 'from-rose-700 via-rose-800 to-rose-900',
       items: [
         {
           name: 'Tiramisu Panorama',
@@ -323,7 +323,7 @@ export default function FullMenuScreen() {
       id: 'burgers',
       title: 'Burgers',
       icon: '🍔',
-      gradient: 'from-yellow-500 via-orange-500 to-red-500',
+      gradient: 'from-stone-600 via-stone-700 to-stone-800',
       items: [
         {
           name: 'Coming Soon',
@@ -337,7 +337,7 @@ export default function FullMenuScreen() {
       id: 'crepes',
       title: 'Crepes',
       icon: '🥞',
-      gradient: 'from-pink-500 via-purple-500 to-indigo-500',
+      gradient: 'from-slate-600 via-slate-700 to-slate-800',
       items: [
         {
           name: 'Coming Soon',
@@ -373,14 +373,14 @@ export default function FullMenuScreen() {
   const activeMenu = menuCategories.find(cat => cat.id === activeCategory)
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-slate-50 via-orange-50 to-pink-50 pt-20">
+    <section className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             {t('fullMenuTitle')}
           </h1>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full mx-auto mb-6" />
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mx-auto mb-6" />
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             {t('fullMenuDescription')}
           </p>
@@ -393,7 +393,7 @@ export default function FullMenuScreen() {
             placeholder="Search menu..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-6 py-4 pl-12 bg-white/80 backdrop-blur-sm border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-lg text-gray-900 placeholder-gray-500"
+           className="w-full px-6 py-4 pl-12 bg-white/80 backdrop-blur-sm border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-blue-500/20 focus:border-blue-600 transition-all shadow-lg text-gray-900 placeholder-gray-500"
           />
           <svg className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -467,7 +467,7 @@ export default function FullMenuScreen() {
                         {item.name}
                       </h3>
                       {item.popular && (
-                        <span className="bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1 flex-shrink-0">
+                       <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1 flex-shrink-0">
                           <span>⭐</span>
                         </span>
                       )}
@@ -494,7 +494,7 @@ export default function FullMenuScreen() {
 
                 {/* Price */}
                 <div className="flex items-center justify-between mt-auto">
-                  <span className="text-xl font-bold text-orange-600">
+                  <span className="text-xl font-bold text-blue-700">
                     {item.price}
                   </span>
                 </div>
@@ -520,13 +520,13 @@ export default function FullMenuScreen() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
               >
                 {t('makeReservation')}
               </a>
               <a
                 href="tel:+355695687575"
-                className="border-2 border-orange-500 text-orange-600 px-6 py-3 rounded-xl font-semibold hover:bg-orange-500 hover:text-white transition-all duration-200"
+                className="border-2 border-blue-600 text-blue-700 px-6 py-3 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200"
               >
                 {t('callNow')}
               </a>
@@ -538,7 +538,7 @@ export default function FullMenuScreen() {
       {/* Floating Contact Button */}
       <a
         href="tel:+355695687575"
-        className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-40"
+        className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-40"
         title="Call for Orders"
       >
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
