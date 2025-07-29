@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 
 interface MobileMenuProps {
@@ -9,6 +10,8 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
+  const pathname = usePathname()
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
