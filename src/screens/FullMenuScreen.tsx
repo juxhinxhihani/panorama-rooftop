@@ -332,20 +332,6 @@ export default function FullMenuScreen() {
           type: 'food'
         }
       ]
-    },
-    {
-      id: 'crepes',
-      title: 'Crepes',
-      icon: '🥞',
-      gradient: 'from-slate-600 via-slate-700 to-slate-800',
-      items: [
-        {
-          name: 'Coming Soon',
-          description: 'Delicious crepes coming to our menu soon!',
-          price: 'Soon',
-          type: 'food'
-        }
-      ]
     }
   ]
 
@@ -400,37 +386,49 @@ export default function FullMenuScreen() {
           </svg>
         </div>
 
-        {/* Category Cards - Always Visible */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8">
-          {/* All Menu Card */}
-          <button
-            onClick={() => setActiveCategory('all')}
-            className={`bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 rounded-xl p-3 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ${
-              activeCategory === 'all' ? 'ring-4 ring-white/30' : ''
-            }`}
-          >
-            <div className="text-center">
-              <span className="text-2xl block mb-1">🍽️</span>
-              <h3 className="text-sm font-bold mb-1">All Menu</h3>
-              <p className="text-white/90 text-xs">{allItems.length} items available</p>
-            </div>
-          </button>
-          
-          {menuCategories.slice(1).map((category) => (
+        {/* Modern Navigation Bar */}
+        <div className="bg-white/90 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/20 p-2 mb-12 sticky top-24 z-30">
+          <div className="flex overflow-x-auto scrollbar-hide gap-2">
+            {/* All Menu Button */}
             <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`bg-gradient-to-r ${category.gradient} rounded-xl p-3 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ${
-                activeCategory === category.id ? 'ring-4 ring-white/30' : ''
+              onClick={() => setActiveCategory('all')}
+              className={`flex-shrink-0 flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${
+                activeCategory === 'all'
+                  ? 'bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 text-white shadow-lg transform scale-105'
+                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/80'
               }`}
             >
-              <div className="text-center">
-                <span className="text-2xl block mb-1">{category.icon}</span>
-                <h3 className="text-sm font-bold mb-1">{category.title}</h3>
-                <p className="text-white/90 text-xs">{category.items.length} items available</p>
+              <span className="text-xl">🍽️</span>
+              <div className="text-left">
+                <div className="text-sm font-bold">All Menu</div>
+                <div className={`text-xs ${activeCategory === 'all' ? 'text-white/80' : 'text-gray-500'}`}>
+                  {allItems.length} items
+                </div>
               </div>
             </button>
-          ))}
+            
+            {menuCategories.slice(1).map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`flex-shrink-0 flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${
+                  activeCategory === category.id
+                    ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg transform scale-105`
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100/80'
+                }`}
+              >
+                <span className="text-xl">{category.icon}</span>
+                <div className="text-left">
+                  <div className="text-sm font-bold">{category.title}</div>
+                  <div className={`text-xs ${
+                    activeCategory === category.id ? 'text-white/80' : 'text-gray-500'
+                  }`}>
+                    {category.items.length} items
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Menu Items Grid */}
