@@ -36,10 +36,10 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2 group">
               <div className="relative w-12 h-12 bg-gradient-to-br from-slate-800 via-blue-900 to-cyan-800 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl border border-white/20">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-pink-400/20 rounded-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-xl"></div>
                 <div className="relative flex flex-col items-center justify-center">
-                  <span className="text-orange-400 text-xs font-bold leading-none">P</span>
-                  <div className="w-6 h-0.5 bg-gradient-to-r from-orange-400 to-pink-400 rounded-full"></div>
+                  <span className="text-blue-300 text-xs font-bold leading-none">P</span>
+                  <div className="w-6 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full"></div>
                   <span className="text-cyan-300 text-xs font-bold leading-none">R</span>
                 </div>
               </div>
