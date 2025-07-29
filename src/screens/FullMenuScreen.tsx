@@ -400,60 +400,28 @@ export default function FullMenuScreen() {
           </svg>
         </div>
 
-        {/* Category Tabs */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-1.5 shadow-lg border border-white/20 max-w-full overflow-x-auto">
-            <div className="flex gap-1 min-w-max px-2">
-              {menuCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-lg font-medium text-sm transition-all duration-300 whitespace-nowrap ${
-                    activeCategory === category.id
-                      ? `bg-gradient-to-r ${category.gradient} text-white shadow-lg`
-                      : 'text-gray-700 hover:bg-white/80 hover:shadow-md'
-                  }`}
-                >
-                  <span className="text-lg">{category.icon}</span>
-                  <span>{category.title}</span>
-                </button>
-              ))}
-            </div>
-          </div>
+        {/* Category Cards - Always Visible */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8">
+          {menuCategories.slice(1).map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`bg-gradient-to-r ${category.gradient} rounded-xl p-3 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ${
+                activeCategory === category.id ? 'ring-4 ring-white/30' : ''
+              }`}
+            >
+              <div className="text-center">
+                <span className="text-2xl block mb-1">{category.icon}</span>
+                <h3 className="text-sm font-bold mb-1">{category.title}</h3>
+                <p className="text-white/90 text-xs">{category.items.length} items available</p>
+              </div>
+            </button>
+          ))}
         </div>
 
-        {/* Category Header */}
-        {activeMenu && activeCategory !== 'all' && (
-          <div className={`bg-gradient-to-r ${activeMenu.gradient} rounded-2xl p-4 text-white mb-8 shadow-xl`}>
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-3">
-                <span className="text-2xl">{activeMenu.icon}</span>
-                <div>
-                  <h2 className="text-xl font-bold">{activeMenu.title}</h2>
-                  <p className="text-white/90 text-sm">{filteredItems.length} items available</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* All Menu Header */}
-        {activeCategory === 'all' && (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8">
-            {menuCategories.slice(1).map((category) => (
-              <div key={category.id} className={`bg-gradient-to-r ${category.gradient} rounded-xl p-3 text-white shadow-lg`}>
-                <div className="text-center">
-                  <span className="text-2xl block mb-1">{category.icon}</span>
-                  <h3 className="text-sm font-bold mb-1">{category.title}</h3>
-                  <p className="text-white/90 text-xs">{category.items.length} items available</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
         {/* Menu Items Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredItems.map((item, index) => (
+          {(activeCategory === 'all' ? allItems : filteredItems).map((item, index) => (
             <div
               key={index}
               className="group bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20 h-full flex flex-col"
