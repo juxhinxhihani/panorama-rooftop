@@ -39,269 +39,6 @@ export default function FullMenuScreen() {
       items: []
     },
     {
-      id: 'pizza',
-      title: 'Pizza',
-      icon: '🍕',
-      gradient: 'from-red-500 via-orange-500 to-yellow-500',
-      items: [
-        {
-          name: 'Pizza Rucola',
-          description: 'Rucola, Crudo, Parmigiano, Pomodorini, Mozzarella, Sauce',
-          price: '700 ALL',
-          calories: 850,
-          popular: true,
-          ingredients: ['Rucola', 'Crudo', 'Parmigiano', 'Pomodorini', 'Mozzarella', 'Sauce'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'Margherita',
-          description: t('pizzaMargherita'),
-          price: '1,200 ALL',
-          calories: 850,
-          popular: true,
-          vegetarian: true,
-          ingredients: ['Domate', 'Mozzarella', 'Borzilok', 'Vaj ulliri'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'Panorama Special',
-          description: t('pizzaPanorama'),
-          price: '1,800 ALL',
-          calories: 1150,
-          popular: true,
-          ingredients: ['Proshutë', 'Rucola', 'Domate qershi', 'Parmesan', 'Mozzarella'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'Quattro Stagioni',
-          description: t('pizzaQuattro'),
-          price: '1,600 ALL',
-          calories: 1050,
-          ingredients: ['Proshutë', 'Kërpudha', 'Anginare', 'Ullinj', 'Mozzarella'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'Vegetariana',
-          description: t('pizzaVegetarian'),
-          price: '1,400 ALL',
-          calories: 750,
-          vegetarian: true,
-          ingredients: ['Speca', 'Kungull', 'Patëllxhan', 'Mozzarella', 'Domate'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'Diavola',
-          description: t('pizzaDiavola'),
-          price: '1,500 ALL',
-          calories: 1100,
-          spicy: true,
-          ingredients: ['Sallam djegës', 'Spec djegës', 'Mozzarella', 'Domate'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        }
-      ]
-    },
-    {
-      id: 'burgers',
-      title: t('gourmetBurgers'),
-      icon: '🍔',
-      gradient: 'from-yellow-500 via-orange-500 to-red-500',
-      items: [
-        {
-          name: 'Panorama Burger',
-          description: t('burgerPanorama'),
-          price: '1,400 ALL',
-          calories: 950,
-          popular: true,
-          ingredients: ['Mish Angus 200g', 'Qepë karamelizuar', 'Proshutë', 'Salcë speciale', 'Sallatë'],
-          allergens: ['Gluten', 'Vezë'],
-          type: 'food'
-        },
-        {
-          name: 'Classic Cheeseburger',
-          description: t('burgerClassic'),
-          price: '1,200 ALL',
-          calories: 850,
-          ingredients: ['Hamburger mishi 180g', 'Djathë cheddar', 'Sallatë', 'Domate', 'Qepë'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'BBQ Bacon Burger',
-          description: t('burgerBBQ'),
-          price: '1,500 ALL',
-          calories: 1100,
-          ingredients: ['Mish 200g', 'Proshutë', 'Unaza qepe', 'Salcë BBQ', 'Djathë cheddar'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'Chicken Burger',
-          description: t('burgerChicken'),
-          price: '1,300 ALL',
-          calories: 750,
-          ingredients: ['Gjoks pule 180g', 'Avokado', 'Majonezë bimore', 'Sallatë', 'Domate'],
-          allergens: ['Gluten', 'Vezë'],
-          type: 'food'
-        },
-        {
-          name: 'Veggie Burger',
-          description: t('burgerVeggie'),
-          price: '1,100 ALL',
-          calories: 650,
-          vegetarian: true,
-          ingredients: ['Hamburger bimor', 'Avokado', 'Sallatë', 'Domate', 'Qepë e kuqe'],
-          allergens: ['Gluten', 'Soja'],
-          type: 'food'
-        }
-      ]
-    },
-    {
-      id: 'scachiata',
-      title: 'Scachiata',
-      icon: '🥖',
-      gradient: 'from-amber-500 via-yellow-500 to-orange-500',
-      items: [
-        {
-          name: 'Scachiata Milano',
-          description: 'Milanese salami, mozzarella, philadelphia, olive cream',
-          price: '300 ALL',
-          calories: 420,
-          popular: true,
-          ingredients: ['Milanese salami', 'Mozzarella', 'Philadelphia', 'Olive cream'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'Scachiata Prosciutto',
-          description: 'Prosciutto di Parma, mozzarella, rucola, pomodorini',
-          price: '350 ALL',
-          calories: 380,
-          ingredients: ['Prosciutto di Parma', 'Mozzarella', 'Rucola', 'Pomodorini'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'Scachiata Vegetariana',
-          description: 'Zucchine grigliate, melanzane, peperoni, mozzarella',
-          price: '280 ALL',
-          calories: 320,
-          vegetarian: true,
-          ingredients: ['Zucchine grigliate', 'Melanzane', 'Peperoni', 'Mozzarella'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'Scachiata Tonno',
-          description: 'Tonno, mozzarella, pomodorini, olive, capperi',
-          price: '320 ALL',
-          calories: 360,
-          ingredients: ['Tonno', 'Mozzarella', 'Pomodorini', 'Olive', 'Capperi'],
-          allergens: ['Gluten', 'Qumësht', 'Peshk'],
-          type: 'food'
-        }
-      ]
-    },
-    {
-      id: 'crepes',
-      title: t('frenchCrepes'),
-      icon: '🥞',
-      gradient: 'from-pink-500 via-purple-500 to-indigo-500',
-      items: [
-        {
-          name: 'Nutella Crepe',
-          description: t('crepeNutella'),
-          price: '800 ALL',
-          calories: 650,
-          popular: true,
-          vegetarian: true,
-          ingredients: ['Nutella', 'Sheqer pluhur', 'Krem'],
-          allergens: ['Gluten', 'Qumësht', 'Bajame'],
-          type: 'food'
-        },
-        {
-          name: 'Fresh Fruit Crepe',
-          description: t('crepeFruit'),
-          price: '900 ALL',
-          calories: 550,
-          vegetarian: true,
-          ingredients: ['Fruta stinore', 'Krem të rrahur', 'Mjaltë'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'Ham & Cheese Crepe',
-          description: t('crepeHamCheese'),
-          price: '1,000 ALL',
-          calories: 750,
-          ingredients: ['Proshutë', 'Djathë emmental', 'Krem djathri'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        },
-        {
-          name: 'Spinach & Feta Crepe',
-          description: t('crepeSpinach'),
-          price: '950 ALL',
-          calories: 600,
-          vegetarian: true,
-          ingredients: ['Spinaq i freskët', 'Djathë feta', 'Bimë aromatike'],
-          allergens: ['Gluten', 'Qumësht'],
-          type: 'food'
-        }
-      ]
-    },
-    {
-      id: 'cocktails',
-      title: 'Cocktails',
-      icon: '🍹',
-      gradient: 'from-purple-500 via-pink-500 to-red-500',
-      items: [
-        {
-          name: 'Panorama Sunset',
-          description: t('cocktailPanoramaSunset'),
-          price: '800 ALL',
-          popular: true,
-          type: 'drink'
-        },
-        {
-          name: 'Divjaka Breeze',
-          description: t('cocktailDivjakaBreeze'),
-          price: '750 ALL',
-          type: 'drink'
-        },
-        {
-          name: 'Rooftop Mojito',
-          description: t('cocktailRooftopMojito'),
-          price: '700 ALL',
-          popular: true,
-          type: 'drink'
-        },
-        {
-          name: 'Albanian Spritz',
-          description: t('cocktailAlbanianSpritz'),
-          price: '650 ALL',
-          type: 'drink'
-        },
-        {
-          name: 'Forest View',
-          description: t('cocktailForestView'),
-          price: '850 ALL',
-          type: 'drink'
-        },
-        {
-          name: 'Coastal Mule',
-          description: t('cocktailCoastalMule'),
-          price: '720 ALL',
-          type: 'drink'
-        }
-      ]
-    },
-    {
       id: 'coffee',
       title: 'Coffee & Tea',
       icon: '☕',
@@ -367,51 +104,181 @@ export default function FullMenuScreen() {
         {
           name: 'Tropical Smoothie',
           description: t('smoothieTropical'),
-          price: '400 ALL',
+          price: '300 ALL',
           popular: true,
           type: 'drink'
         },
         {
           name: 'Berry Smoothie',
           description: t('smoothieBerry'),
-          price: '380 ALL',
+          price: '280 ALL',
           type: 'drink'
         },
         {
           name: 'Green Smoothie',
           description: t('smoothieGreen'),
-          price: '420 ALL',
+          price: '320 ALL',
           type: 'drink'
         },
         {
           name: 'Orange Juice',
           description: t('juiceOrange'),
-          price: '250 ALL',
+          price: '200 ALL',
           type: 'drink'
         },
         {
           name: 'Apple Juice',
           description: t('juiceApple'),
-          price: '230 ALL',
+          price: '180 ALL',
           type: 'drink'
         },
         {
           name: 'Mixed Berry Juice',
           description: t('juiceBerry'),
-          price: '280 ALL',
+          price: '250 ALL',
           type: 'drink'
         },
         {
           name: 'Lemonade',
           description: 'Fresh lemon juice with mint and sparkling water',
-          price: '200 ALL',
+          price: '150 ALL',
           type: 'drink'
         },
         {
           name: 'Iced Tea',
           description: 'Refreshing iced tea with lemon and mint',
-          price: '180 ALL',
+          price: '120 ALL',
           type: 'drink'
+        }
+      ]
+    },
+    {
+      id: 'cocktails',
+      title: 'Cocktails',
+      icon: '🍹',
+      gradient: 'from-purple-500 via-pink-500 to-red-500',
+      items: [
+        {
+          name: 'Panorama Sunset',
+          description: t('cocktailPanoramaSunset'),
+          price: '600 ALL',
+          popular: true,
+          type: 'drink'
+        },
+        {
+          name: 'Divjaka Breeze',
+          description: t('cocktailDivjakaBreeze'),
+          price: '550 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Rooftop Mojito',
+          description: t('cocktailRooftopMojito'),
+          price: '500 ALL',
+          popular: true,
+          type: 'drink'
+        },
+        {
+          name: 'Albanian Spritz',
+          description: t('cocktailAlbanianSpritz'),
+          price: '450 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Forest View',
+          description: t('cocktailForestView'),
+          price: '650 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Coastal Mule',
+          description: t('cocktailCoastalMule'),
+          price: '520 ALL',
+          type: 'drink'
+        }
+      ]
+    },
+    {
+      id: 'pizza',
+      title: 'Pizza',
+      icon: '🍕',
+      gradient: 'from-red-500 via-orange-500 to-yellow-500',
+      items: [
+        {
+          name: 'Pizza Rucola',
+          description: 'Rucola, Crudo, Parmigiano, Pomodorini, Mozzarella, Sauce',
+          price: '700 ALL',
+          popular: true,
+          type: 'food'
+        },
+        {
+          name: 'Margherita',
+          description: t('pizzaMargherita'),
+          price: '500 ALL',
+          popular: true,
+          vegetarian: true,
+          type: 'food'
+        },
+        {
+          name: 'Panorama Special',
+          description: t('pizzaPanorama'),
+          price: '800 ALL',
+          popular: true,
+          type: 'food'
+        },
+        {
+          name: 'Quattro Stagioni',
+          description: t('pizzaQuattro'),
+          price: '750 ALL',
+          type: 'food'
+        },
+        {
+          name: 'Vegetariana',
+          description: t('pizzaVegetarian'),
+          price: '650 ALL',
+          vegetarian: true,
+          type: 'food'
+        },
+        {
+          name: 'Diavola',
+          description: t('pizzaDiavola'),
+          price: '700 ALL',
+          spicy: true,
+          type: 'food'
+        }
+      ]
+    },
+    {
+      id: 'scacciata',
+      title: 'Scacciata',
+      icon: '🥖',
+      gradient: 'from-amber-500 via-yellow-500 to-orange-500',
+      items: [
+        {
+          name: 'Scacciata Milano',
+          description: 'Milanese salami, mozzarella, philadelphia, olive cream',
+          price: '300 ALL',
+          popular: true,
+          type: 'food'
+        },
+        {
+          name: 'Scacciata Prosciutto',
+          description: 'Prosciutto di Parma, mozzarella, rucola, pomodorini',
+          price: '350 ALL',
+          type: 'food'
+        },
+        {
+          name: 'Scacciata Vegetariana',
+          description: 'Zucchine grigliate, melanzane, peperoni, mozzarella',
+          price: '280 ALL',
+          vegetarian: true,
+          type: 'food'
+        },
+        {
+          name: 'Scacciata Tonno',
+          description: 'Tonno, mozzarella, pomodorini, olive, capperi',
+          price: '320 ALL',
+          type: 'food'
         }
       ]
     },
@@ -424,42 +291,58 @@ export default function FullMenuScreen() {
         {
           name: 'Tiramisu Panorama',
           description: 'Tiramisu klasike me prekje speciale të shtëpisë',
-          price: '950 ALL',
-          calories: 480,
+          price: '450 ALL',
           popular: true,
           vegetarian: true,
-          ingredients: ['Mascarpone', 'Kafe espresso', 'Savoiardi', 'Kakao', 'Marsala'],
-          allergens: ['Gluten', 'Qumësht', 'Vezë', 'Alkool'],
           type: 'food'
         },
         {
           name: 'Panna Cotta Berry',
           description: 'Krem i butë me fruta pylli dhe coulis',
-          price: '800 ALL',
-          calories: 350,
+          price: '400 ALL',
           vegetarian: true,
-          ingredients: ['Krem', 'Sheqer', 'Gelatinë', 'Fruta pylli', 'Vanilie'],
-          allergens: ['Qumësht'],
           type: 'food'
         },
         {
           name: 'Chocolate Lava Cake',
           description: 'Kek çokollate me zemër të lëngshme dhe akullore vanilie',
-          price: '900 ALL',
-          calories: 650,
+          price: '500 ALL',
           vegetarian: true,
-          ingredients: ['Çokollatë e errët', 'Gjalpë', 'Vezë', 'Sheqer', 'Akullore vanilie'],
-          allergens: ['Gluten', 'Qumësht', 'Vezë'],
           type: 'food'
         },
         {
           name: 'Gelato Selection',
           description: 'Tre topa akullore artizanale me aroma të zgjedhura',
-          price: '750 ALL',
-          calories: 420,
+          price: '350 ALL',
           vegetarian: true,
-          ingredients: ['Qumësht', 'Krem', 'Sheqer', 'Aroma natyrale'],
-          allergens: ['Qumësht'],
+          type: 'food'
+        }
+      ]
+    },
+    {
+      id: 'burgers',
+      title: 'Burgers',
+      icon: '🍔',
+      gradient: 'from-yellow-500 via-orange-500 to-red-500',
+      items: [
+        {
+          name: 'Coming Soon',
+          description: 'Delicious burgers coming to our menu soon!',
+          price: 'Soon',
+          type: 'food'
+        }
+      ]
+    },
+    {
+      id: 'crepes',
+      title: 'Crepes',
+      icon: '🥞',
+      gradient: 'from-pink-500 via-purple-500 to-indigo-500',
+      items: [
+        {
+          name: 'Coming Soon',
+          description: 'Delicious crepes coming to our menu soon!',
+          price: 'Soon',
           type: 'food'
         }
       ]
@@ -614,9 +497,6 @@ export default function FullMenuScreen() {
                   <span className="text-xl font-bold text-orange-600">
                     {item.price}
                   </span>
-                  <button className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1.5 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200 shadow-md">
-                    {t('addToOrder')}
-                  </button>
                 </div>
               </div>
             </div>
