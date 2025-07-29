@@ -32,14 +32,14 @@ export default function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProp
       />
       
       {/* Menu */}
-      <div className="fixed top-16 left-0 right-0 bg-white shadow-xl">
+      <div className="fixed top-20 left-4 right-4 bg-white/95 backdrop-blur-md shadow-xl rounded-2xl border border-white/20">
         <nav className="px-4 py-6 space-y-4">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={onClose}
-              className="block py-3 px-4 text-gray-700 font-medium hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors"
+              className="block py-3 px-4 text-gray-700 font-medium hover:bg-orange-500/10 hover:text-orange-600 rounded-xl transition-colors"
             >
               {item.label}
             </Link>
