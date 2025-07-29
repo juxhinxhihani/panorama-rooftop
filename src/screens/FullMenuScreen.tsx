@@ -402,6 +402,20 @@ export default function FullMenuScreen() {
 
         {/* Category Cards - Always Visible */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-8">
+          {/* All Menu Card */}
+          <button
+            onClick={() => setActiveCategory('all')}
+            className={`bg-gradient-to-r from-slate-600 via-slate-700 to-slate-800 rounded-xl p-3 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ${
+              activeCategory === 'all' ? 'ring-4 ring-white/30' : ''
+            }`}
+          >
+            <div className="text-center">
+              <span className="text-2xl block mb-1">🍽️</span>
+              <h3 className="text-sm font-bold mb-1">All Menu</h3>
+              <p className="text-white/90 text-xs">{allItems.length} items available</p>
+            </div>
+          </button>
+          
           {menuCategories.slice(1).map((category) => (
             <button
               key={category.id}
