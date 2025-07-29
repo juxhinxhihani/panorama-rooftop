@@ -6,7 +6,7 @@ interface MenuItem {
   name: string
   description: string
   price: string
-  calories: number
+  calories?: number
   popular?: boolean
   spicy?: boolean
   vegetarian?: boolean
@@ -14,6 +14,7 @@ interface MenuItem {
   image?: string
   ingredients?: string[]
   allergens?: string[]
+  type: 'food' | 'drink'
 }
 
 interface MenuCategory {
@@ -33,10 +34,20 @@ export default function FullMenuScreen() {
   const menuCategories: MenuCategory[] = [
     {
       id: 'pizza',
-      title: t('woodFiredPizza'),
+      title: 'Pizza',
       icon: '🍕',
       gradient: 'from-red-500 via-orange-500 to-yellow-500',
       items: [
+        {
+          name: 'Pizza Rucola',
+          description: 'Rucola, Crudo, Parmigiano, Pomodorini, Mozzarella, Sauce',
+          price: '700 ALL',
+          calories: 850,
+          popular: true,
+          ingredients: ['Rucola', 'Crudo', 'Parmigiano', 'Pomodorini', 'Mozzarella', 'Sauce'],
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
+        },
         {
           name: 'Margherita',
           description: t('pizzaMargherita'),
@@ -45,7 +56,8 @@ export default function FullMenuScreen() {
           popular: true,
           vegetarian: true,
           ingredients: ['Domate', 'Mozzarella', 'Borzilok', 'Vaj ulliri'],
-          allergens: ['Gluten', 'Qumësht']
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         },
         {
           name: 'Panorama Special',
@@ -54,7 +66,8 @@ export default function FullMenuScreen() {
           calories: 1150,
           popular: true,
           ingredients: ['Proshutë', 'Rucola', 'Domate qershi', 'Parmesan', 'Mozzarella'],
-          allergens: ['Gluten', 'Qumësht']
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         },
         {
           name: 'Quattro Stagioni',
@@ -62,15 +75,8 @@ export default function FullMenuScreen() {
           price: '1,600 ALL',
           calories: 1050,
           ingredients: ['Proshutë', 'Kërpudha', 'Anginare', 'Ullinj', 'Mozzarella'],
-          allergens: ['Gluten', 'Qumësht']
-        },
-        {
-          name: 'Prosciutto e Funghi',
-          description: t('pizzaProsciutto'),
-          price: '1,500 ALL',
-          calories: 980,
-          ingredients: ['Prosciutto di Parma', 'Kërpudha porcini', 'Mozzarella'],
-          allergens: ['Gluten', 'Qumësht']
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         },
         {
           name: 'Vegetariana',
@@ -79,7 +85,8 @@ export default function FullMenuScreen() {
           calories: 750,
           vegetarian: true,
           ingredients: ['Speca', 'Kungull', 'Patëllxhan', 'Mozzarella', 'Domate'],
-          allergens: ['Gluten', 'Qumësht']
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         },
         {
           name: 'Diavola',
@@ -88,24 +95,8 @@ export default function FullMenuScreen() {
           calories: 1100,
           spicy: true,
           ingredients: ['Sallam djegës', 'Spec djegës', 'Mozzarella', 'Domate'],
-          allergens: ['Gluten', 'Qumësht']
-        },
-        {
-          name: 'Capricciosa',
-          description: 'Proshutë, kërpudha, anginare, ullinj',
-          price: '1,650 ALL',
-          calories: 1080,
-          ingredients: ['Proshutë', 'Kërpudha', 'Anginare', 'Ullinj', 'Mozzarella'],
-          allergens: ['Gluten', 'Qumësht']
-        },
-        {
-          name: 'Quattro Formaggi',
-          description: 'Katër lloje djathërash',
-          price: '1,550 ALL',
-          calories: 1200,
-          vegetarian: true,
-          ingredients: ['Mozzarella', 'Gorgonzola', 'Parmesan', 'Ricotta'],
-          allergens: ['Gluten', 'Qumësht']
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         }
       ]
     },
@@ -122,7 +113,8 @@ export default function FullMenuScreen() {
           calories: 950,
           popular: true,
           ingredients: ['Mish Angus 200g', 'Qepë karamelizuar', 'Proshutë', 'Salcë speciale', 'Sallatë'],
-          allergens: ['Gluten', 'Vezë']
+          allergens: ['Gluten', 'Vezë'],
+          type: 'food'
         },
         {
           name: 'Classic Cheeseburger',
@@ -130,7 +122,8 @@ export default function FullMenuScreen() {
           price: '1,200 ALL',
           calories: 850,
           ingredients: ['Hamburger mishi 180g', 'Djathë cheddar', 'Sallatë', 'Domate', 'Qepë'],
-          allergens: ['Gluten', 'Qumësht']
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         },
         {
           name: 'BBQ Bacon Burger',
@@ -138,7 +131,8 @@ export default function FullMenuScreen() {
           price: '1,500 ALL',
           calories: 1100,
           ingredients: ['Mish 200g', 'Proshutë', 'Unaza qepe', 'Salcë BBQ', 'Djathë cheddar'],
-          allergens: ['Gluten', 'Qumësht']
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         },
         {
           name: 'Chicken Burger',
@@ -146,7 +140,8 @@ export default function FullMenuScreen() {
           price: '1,300 ALL',
           calories: 750,
           ingredients: ['Gjoks pule 180g', 'Avokado', 'Majonezë bimore', 'Sallatë', 'Domate'],
-          allergens: ['Gluten', 'Vezë']
+          allergens: ['Gluten', 'Vezë'],
+          type: 'food'
         },
         {
           name: 'Veggie Burger',
@@ -155,23 +150,54 @@ export default function FullMenuScreen() {
           calories: 650,
           vegetarian: true,
           ingredients: ['Hamburger bimor', 'Avokado', 'Sallatë', 'Domate', 'Qepë e kuqe'],
-          allergens: ['Gluten', 'Soja']
+          allergens: ['Gluten', 'Soja'],
+          type: 'food'
+        }
+      ]
+    },
+    {
+      id: 'scachiata',
+      title: 'Scachiata',
+      icon: '🥖',
+      gradient: 'from-amber-500 via-yellow-500 to-orange-500',
+      items: [
+        {
+          name: 'Scachiata Milano',
+          description: 'Milanese salami, mozzarella, philadelphia, olive cream',
+          price: '300 ALL',
+          calories: 420,
+          popular: true,
+          ingredients: ['Milanese salami', 'Mozzarella', 'Philadelphia', 'Olive cream'],
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         },
         {
-          name: 'Fish Burger',
-          description: 'Peshk i grilluar, sallatë, domate, salcë tartare',
-          price: '1,350 ALL',
-          calories: 800,
-          ingredients: ['Filet peshku 180g', 'Salcë tartare', 'Sallatë', 'Domate', 'Qepë'],
-          allergens: ['Gluten', 'Peshk', 'Vezë']
+          name: 'Scachiata Prosciutto',
+          description: 'Prosciutto di Parma, mozzarella, rucola, pomodorini',
+          price: '350 ALL',
+          calories: 380,
+          ingredients: ['Prosciutto di Parma', 'Mozzarella', 'Rucola', 'Pomodorini'],
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         },
         {
-          name: 'Double Cheese',
-          description: 'Dy hamburgerë, djathë i dyfishtë, qepë',
-          price: '1,800 ALL',
-          calories: 1350,
-          ingredients: ['2x Hamburger mishi 150g', '2x Djathë cheddar', 'Qepë', 'Sallatë'],
-          allergens: ['Gluten', 'Qumësht']
+          name: 'Scachiata Vegetariana',
+          description: 'Zucchine grigliate, melanzane, peperoni, mozzarella',
+          price: '280 ALL',
+          calories: 320,
+          vegetarian: true,
+          ingredients: ['Zucchine grigliate', 'Melanzane', 'Peperoni', 'Mozzarella'],
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
+        },
+        {
+          name: 'Scachiata Tonno',
+          description: 'Tonno, mozzarella, pomodorini, olive, capperi',
+          price: '320 ALL',
+          calories: 360,
+          ingredients: ['Tonno', 'Mozzarella', 'Pomodorini', 'Olive', 'Capperi'],
+          allergens: ['Gluten', 'Qumësht', 'Peshk'],
+          type: 'food'
         }
       ]
     },
@@ -189,7 +215,8 @@ export default function FullMenuScreen() {
           popular: true,
           vegetarian: true,
           ingredients: ['Nutella', 'Sheqer pluhur', 'Krem'],
-          allergens: ['Gluten', 'Qumësht', 'Bajame']
+          allergens: ['Gluten', 'Qumësht', 'Bajame'],
+          type: 'food'
         },
         {
           name: 'Fresh Fruit Crepe',
@@ -198,7 +225,8 @@ export default function FullMenuScreen() {
           calories: 550,
           vegetarian: true,
           ingredients: ['Fruta stinore', 'Krem të rrahur', 'Mjaltë'],
-          allergens: ['Gluten', 'Qumësht']
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         },
         {
           name: 'Ham & Cheese Crepe',
@@ -206,7 +234,8 @@ export default function FullMenuScreen() {
           price: '1,000 ALL',
           calories: 750,
           ingredients: ['Proshutë', 'Djathë emmental', 'Krem djathri'],
-          allergens: ['Gluten', 'Qumësht']
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         },
         {
           name: 'Spinach & Feta Crepe',
@@ -215,101 +244,174 @@ export default function FullMenuScreen() {
           calories: 600,
           vegetarian: true,
           ingredients: ['Spinaq i freskët', 'Djathë feta', 'Bimë aromatike'],
-          allergens: ['Gluten', 'Qumësht']
-        },
-        {
-          name: 'Chocolate Banana Crepe',
-          description: t('crepeChocolate'),
-          price: '850 ALL',
-          calories: 700,
-          vegetarian: true,
-          ingredients: ['Çokollatë e errët', 'Banane', 'Krem vanilie'],
-          allergens: ['Gluten', 'Qumësht']
-        },
-        {
-          name: 'Chicken & Mushroom',
-          description: 'Mish pule, kërpudha, djathë krem',
-          price: '1,100 ALL',
-          calories: 800,
-          ingredients: ['Mish pule', 'Kërpudha', 'Djathë krem', 'Bimë'],
-          allergens: ['Gluten', 'Qumësht']
-        },
-        {
-          name: 'Apple Cinnamon',
-          description: 'Mollë, kanellë, mjaltë, krem',
-          price: '750 ALL',
-          calories: 500,
-          vegetarian: true,
-          ingredients: ['Mollë', 'Kanellë', 'Mjaltë', 'Krem'],
-          allergens: ['Gluten', 'Qumësht']
+          allergens: ['Gluten', 'Qumësht'],
+          type: 'food'
         }
       ]
     },
     {
-      id: 'appetizers',
-      title: 'Antipasta & Snacks',
-      icon: '🧀',
-      gradient: 'from-indigo-500 via-purple-500 to-pink-500',
+      id: 'cocktails',
+      title: 'Cocktails',
+      icon: '🍹',
+      gradient: 'from-purple-500 via-pink-500 to-red-500',
       items: [
         {
-          name: 'Bruschetta Trio',
-          description: 'Tri lloje bruschetta me domate, pesto dhe kërpudha',
-          price: '900 ALL',
-          calories: 450,
-          vegetarian: true,
-          ingredients: ['Bukë artizanale', 'Domate', 'Pesto', 'Kërpudha', 'Borzilok'],
-          allergens: ['Gluten', 'Bajame']
+          name: 'Panorama Sunset',
+          description: t('cocktailPanoramaSunset'),
+          price: '800 ALL',
+          popular: true,
+          type: 'drink'
         },
         {
-          name: 'Cheese & Charcuterie Board',
-          description: 'Përzgjedhje djathrash dhe mishërash me mjaltë dhe arra',
-          price: '1,800 ALL',
-          calories: 1200,
-          ingredients: ['Djathëra lokalë', 'Proshutë', 'Sallam', 'Mjaltë', 'Arra', 'Fiq'],
-          allergens: ['Qumësht', 'Arra']
+          name: 'Divjaka Breeze',
+          description: t('cocktailDivjakaBreeze'),
+          price: '750 ALL',
+          type: 'drink'
         },
         {
-          name: 'Mediterranean Olives',
-          description: 'Ullinj të marinuar me bimë dhe spec',
-          price: '600 ALL',
-          calories: 280,
-          vegetarian: true,
-          ingredients: ['Ullinj Kalamata', 'Ullinj jeshilë', 'Bimë', 'Spec', 'Vaj ulliri'],
-          allergens: []
-        },
-        {
-          name: 'Buffalo Wings',
-          description: 'Krahë pule me salcë buffalo dhe ranch',
-          price: '1,200 ALL',
-          calories: 850,
-          spicy: true,
-          ingredients: ['Krahë pule', 'Salcë buffalo', 'Salcë ranch', 'Selino'],
-          allergens: ['Qumësht']
-        },
-        {
-          name: 'Loaded Nachos',
-          description: 'Nachos me djathë, guacamole, salsa dhe jalapeño',
-          price: '1,100 ALL',
-          calories: 950,
-          vegetarian: true,
-          spicy: true,
-          ingredients: ['Tortilla chips', 'Djathë cheddar', 'Guacamole', 'Salsa', 'Jalapeño'],
-          allergens: ['Qumësht']
-        },
-        {
-          name: 'Garlic Bread Supreme',
-          description: 'Bukë me hudhra, djathë dhe bimë',
+          name: 'Rooftop Mojito',
+          description: t('cocktailRooftopMojito'),
           price: '700 ALL',
-          calories: 550,
-          vegetarian: true,
-          ingredients: ['Bukë artizanale', 'Hudhra', 'Djathë mozzarella', 'Borzilok'],
-          allergens: ['Gluten', 'Qumësht']
+          popular: true,
+          type: 'drink'
+        },
+        {
+          name: 'Albanian Spritz',
+          description: t('cocktailAlbanianSpritz'),
+          price: '650 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Forest View',
+          description: t('cocktailForestView'),
+          price: '850 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Coastal Mule',
+          description: t('cocktailCoastalMule'),
+          price: '720 ALL',
+          type: 'drink'
+        }
+      ]
+    },
+    {
+      id: 'coffee',
+      title: 'Coffee & Tea',
+      icon: '☕',
+      gradient: 'from-amber-600 via-yellow-600 to-orange-600',
+      items: [
+        {
+          name: 'Espresso',
+          description: t('coffeeEspresso'),
+          price: '70 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Cappuccino',
+          description: t('coffeeCappuccino'),
+          price: '150 ALL',
+          popular: true,
+          type: 'drink'
+        },
+        {
+          name: 'Latte',
+          description: t('coffeeLatte'),
+          price: '180 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Macchiato',
+          description: t('coffeeMacchiato'),
+          price: '120 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Turkish Coffee',
+          description: t('coffeeTurkish'),
+          price: '100 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Iced Coffee',
+          description: t('coffeeIced'),
+          price: '200 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Green Tea',
+          description: t('teaGreen'),
+          price: '80 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Herbal Tea',
+          description: t('teaHerbal'),
+          price: '90 ALL',
+          type: 'drink'
+        }
+      ]
+    },
+    {
+      id: 'smoothies',
+      title: 'Smoothies & Juices',
+      icon: '🥤',
+      gradient: 'from-green-500 via-teal-500 to-blue-500',
+      items: [
+        {
+          name: 'Tropical Smoothie',
+          description: t('smoothieTropical'),
+          price: '400 ALL',
+          popular: true,
+          type: 'drink'
+        },
+        {
+          name: 'Berry Smoothie',
+          description: t('smoothieBerry'),
+          price: '380 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Green Smoothie',
+          description: t('smoothieGreen'),
+          price: '420 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Orange Juice',
+          description: t('juiceOrange'),
+          price: '250 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Apple Juice',
+          description: t('juiceApple'),
+          price: '230 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Mixed Berry Juice',
+          description: t('juiceBerry'),
+          price: '280 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Lemonade',
+          description: 'Fresh lemon juice with mint and sparkling water',
+          price: '200 ALL',
+          type: 'drink'
+        },
+        {
+          name: 'Iced Tea',
+          description: 'Refreshing iced tea with lemon and mint',
+          price: '180 ALL',
+          type: 'drink'
         }
       ]
     },
     {
       id: 'desserts',
-      title: 'Ëmbëlsira',
+      title: 'Desserts',
       icon: '🍰',
       gradient: 'from-pink-500 via-rose-500 to-red-500',
       items: [
@@ -321,7 +423,8 @@ export default function FullMenuScreen() {
           popular: true,
           vegetarian: true,
           ingredients: ['Mascarpone', 'Kafe espresso', 'Savoiardi', 'Kakao', 'Marsala'],
-          allergens: ['Gluten', 'Qumësht', 'Vezë', 'Alkool']
+          allergens: ['Gluten', 'Qumësht', 'Vezë', 'Alkool'],
+          type: 'food'
         },
         {
           name: 'Panna Cotta Berry',
@@ -330,7 +433,8 @@ export default function FullMenuScreen() {
           calories: 350,
           vegetarian: true,
           ingredients: ['Krem', 'Sheqer', 'Gelatinë', 'Fruta pylli', 'Vanilie'],
-          allergens: ['Qumësht']
+          allergens: ['Qumësht'],
+          type: 'food'
         },
         {
           name: 'Chocolate Lava Cake',
@@ -339,7 +443,8 @@ export default function FullMenuScreen() {
           calories: 650,
           vegetarian: true,
           ingredients: ['Çokollatë e errët', 'Gjalpë', 'Vezë', 'Sheqer', 'Akullore vanilie'],
-          allergens: ['Gluten', 'Qumësht', 'Vezë']
+          allergens: ['Gluten', 'Qumësht', 'Vezë'],
+          type: 'food'
         },
         {
           name: 'Gelato Selection',
@@ -348,16 +453,8 @@ export default function FullMenuScreen() {
           calories: 420,
           vegetarian: true,
           ingredients: ['Qumësht', 'Krem', 'Sheqer', 'Aroma natyrale'],
-          allergens: ['Qumësht']
-        },
-        {
-          name: 'Seasonal Fruit Tart',
-          description: 'Tartë me fruta stinore dhe krem patissier',
-          price: '850 ALL',
-          calories: 380,
-          vegetarian: true,
-          ingredients: ['Brumë i shkurtër', 'Krem patissier', 'Fruta stinore', 'Xhelatin'],
-          allergens: ['Gluten', 'Qumësht', 'Vezë']
+          allergens: ['Qumësht'],
+          type: 'food'
         }
       ]
     }
@@ -386,7 +483,7 @@ export default function FullMenuScreen() {
   const filteredItems = getFilteredItems()
   const activeMenu = menuCategories.find(cat => cat.id === activeCategory)
 
-  const handleCalorieClick = (item: MenuItem, event: React.MouseEvent) => {
+  const handleInfoClick = (item: MenuItem, event: React.MouseEvent) => {
     event.stopPropagation()
     const rect = (event.target as HTMLElement).getBoundingClientRect()
     setCaloriePopup({
@@ -398,7 +495,7 @@ export default function FullMenuScreen() {
     })
   }
 
-  const closeCaloriePopup = () => {
+  const closeInfoPopup = () => {
     setCaloriePopup(null)
   }
 
@@ -408,11 +505,11 @@ export default function FullMenuScreen() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Menu Gourmet
+            {t('fullMenuTitle')}
           </h1>
           <div className="w-24 h-1.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full mx-auto mb-6" />
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Zbuloni përzgjedhjen tonë ekskluzive të ushqimeve të përgatitura me përbërës të freskët dhe teknika kulinare moderne
+            {t('fullMenuDescription')}
           </p>
         </div>
 
@@ -420,7 +517,7 @@ export default function FullMenuScreen() {
         <div className="relative mb-8 max-w-md mx-auto">
           <input
             type="text"
-            placeholder="Kërko në menu..."
+            placeholder="Search menu..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full px-6 py-4 pl-12 bg-white/80 backdrop-blur-sm border-2 border-gray-200 rounded-2xl focus:ring-4 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-lg text-gray-900 placeholder-gray-500"
@@ -458,7 +555,7 @@ export default function FullMenuScreen() {
             <div className="text-center">
               <span className="text-6xl mb-4 block">{activeMenu.icon}</span>
               <h2 className="text-3xl font-bold mb-2">{activeMenu.title}</h2>
-              <p className="text-white/90 text-lg">{filteredItems.length} specialitete të përzgjedhura</p>
+              <p className="text-white/90 text-lg">{filteredItems.length} items available</p>
             </div>
           </div>
         )}
@@ -481,7 +578,7 @@ export default function FullMenuScreen() {
                       {item.popular && (
                         <span className="bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
                           <span>⭐</span>
-                          <span>Popular</span>
+                          <span>{t('popular')}</span>
                         </span>
                       )}
                     </div>
@@ -490,23 +587,23 @@ export default function FullMenuScreen() {
                       {item.vegetarian && (
                         <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full flex items-center gap-1">
                           <span>🌱</span>
-                          <span>Vegetarian</span>
+                          <span>{t('vegetarian')}</span>
                         </span>
                       )}
                       {item.spicy && (
                         <span className="bg-red-100 text-red-700 text-xs font-semibold px-2 py-1 rounded-full flex items-center gap-1">
                           <span>🌶️</span>
-                          <span>Spicy</span>
+                          <span>{t('spicy')}</span>
                         </span>
                       )}
                     </div>
                   </div>
 
-                  {/* Calorie Info Button */}
+                  {/* Info Button - Only show for food items or show different content for drinks */}
                   <button
-                    onClick={(e) => handleCalorieClick(item, e)}
+                    onClick={(e) => handleInfoClick(item, e)}
                     className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold hover:scale-110 transition-transform shadow-lg"
-                    title="Shiko informacionin ushqyes"
+                    title={item.type === 'food' ? "View nutritional info" : "View drink info"}
                   >
                     i
                   </button>
@@ -516,10 +613,10 @@ export default function FullMenuScreen() {
                   {item.description}
                 </p>
 
-                {/* Ingredients */}
-                {item.ingredients && (
+                {/* Ingredients - Only for food items */}
+                {item.type === 'food' && item.ingredients && (
                   <div className="mb-4">
-                    <p className="text-xs font-semibold text-gray-500 mb-2">Përbërësit kryesorë:</p>
+                    <p className="text-xs font-semibold text-gray-500 mb-2">Main ingredients:</p>
                     <div className="flex flex-wrap gap-1">
                       {item.ingredients.slice(0, 4).map((ingredient, idx) => (
                         <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full">
@@ -527,7 +624,7 @@ export default function FullMenuScreen() {
                         </span>
                       ))}
                       {item.ingredients.length > 4 && (
-                        <span className="text-xs text-gray-500">+{item.ingredients.length - 4} më shumë</span>
+                        <span className="text-xs text-gray-500">+{item.ingredients.length - 4} more</span>
                       )}
                     </div>
                   </div>
@@ -539,7 +636,7 @@ export default function FullMenuScreen() {
                     {item.price}
                   </span>
                   <button className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-4 py-2 rounded-xl font-semibold hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200 shadow-md">
-                    Shto në Porosi
+                    {t('addToOrder')}
                   </button>
                 </div>
               </div>
@@ -551,18 +648,40 @@ export default function FullMenuScreen() {
         {filteredItems.length === 0 && (
           <div className="text-center py-16">
             <div className="text-8xl mb-6">🔍</div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Nuk u gjet asgjë</h3>
-            <p className="text-gray-600 text-lg">Provo të kërkosh me fjalë të tjera ose zgjidh një kategori tjetër</p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">No items found</h3>
+            <p className="text-gray-600 text-lg">Try searching with different keywords or select another category</p>
           </div>
         )}
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 max-w-2xl mx-auto border border-white/20">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">{t('readyToOrder')}</h3>
+            <p className="text-gray-600 mb-8 text-lg">{t('contactUsToOrder')}</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-4 rounded-2xl font-semibold hover:from-orange-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200 shadow-lg"
+              >
+                {t('makeReservation')}
+              </a>
+              <a
+                href="tel:+355695687575"
+                className="border-2 border-orange-500 text-orange-600 px-8 py-4 rounded-2xl font-semibold hover:bg-orange-500 hover:text-white transition-all duration-200"
+              >
+                {t('callNow')}
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Calorie Popup */}
+      {/* Info Popup */}
       {caloriePopup && (
         <>
           <div 
             className="fixed inset-0 z-40"
-            onClick={closeCaloriePopup}
+            onClick={closeInfoPopup}
           />
           <div
             className="fixed z-50 bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 max-w-sm w-80"
@@ -574,15 +693,28 @@ export default function FullMenuScreen() {
           >
             <div className="text-center mb-4">
               <h4 className="font-bold text-lg text-gray-900 mb-2">{caloriePopup.item.name}</h4>
-              <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl p-3 mb-4">
-                <div className="text-3xl font-bold">{caloriePopup.item.calories}</div>
-                <div className="text-sm opacity-90">kalori</div>
-              </div>
+              
+              {/* For Food Items - Show Calories */}
+              {caloriePopup.item.type === 'food' && caloriePopup.item.calories && (
+                <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl p-3 mb-4">
+                  <div className="text-3xl font-bold">{caloriePopup.item.calories}</div>
+                  <div className="text-sm opacity-90">calories</div>
+                </div>
+              )}
+
+              {/* For Drinks - Show Just Name */}
+              {caloriePopup.item.type === 'drink' && (
+                <div className="bg-gradient-to-r from-teal-500 to-blue-500 text-white rounded-xl p-4 mb-4">
+                  <div className="text-xl font-bold">{caloriePopup.item.name}</div>
+                  <div className="text-sm opacity-90">Refreshing drink</div>
+                </div>
+              )}
             </div>
 
-            {caloriePopup.item.allergens && caloriePopup.item.allergens.length > 0 && (
+            {/* Show allergens only for food items */}
+            {caloriePopup.item.type === 'food' && caloriePopup.item.allergens && caloriePopup.item.allergens.length > 0 && (
               <div className="mb-4">
-                <p className="text-sm font-semibold text-gray-700 mb-2">⚠️ Alergjene:</p>
+                <p className="text-sm font-semibold text-gray-700 mb-2">⚠️ Allergens:</p>
                 <div className="flex flex-wrap gap-1">
                   {caloriePopup.item.allergens.map((allergen, idx) => (
                     <span key={idx} className="text-xs bg-red-100 text-red-700 px-2 py-1 rounded-full">
@@ -593,9 +725,10 @@ export default function FullMenuScreen() {
               </div>
             )}
 
-            {caloriePopup.item.ingredients && (
+            {/* Show ingredients only for food items */}
+            {caloriePopup.item.type === 'food' && caloriePopup.item.ingredients && (
               <div className="mb-4">
-                <p className="text-sm font-semibold text-gray-700 mb-2">🥘 Përbërësit:</p>
+                <p className="text-sm font-semibold text-gray-700 mb-2">🥘 Ingredients:</p>
                 <div className="text-sm text-gray-600 space-y-1">
                   {caloriePopup.item.ingredients.map((ingredient, idx) => (
                     <div key={idx} className="flex items-center gap-2">
@@ -608,10 +741,10 @@ export default function FullMenuScreen() {
             )}
 
             <button
-              onClick={closeCaloriePopup}
+              onClick={closeInfoPopup}
               className="w-full bg-gradient-to-r from-gray-500 to-gray-600 text-white py-2 rounded-xl font-semibold hover:from-gray-600 hover:to-gray-700 transition-all"
             >
-              Mbyll
+              Close
             </button>
 
             {/* Arrow pointing down */}
@@ -626,7 +759,7 @@ export default function FullMenuScreen() {
       <a
         href="tel:+355695687575"
         className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 flex items-center justify-center z-40"
-        title="Telefono për Porosi"
+        title="Call for Orders"
       >
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
