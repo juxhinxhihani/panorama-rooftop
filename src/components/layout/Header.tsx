@@ -37,7 +37,7 @@ export default function Header() {
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative w-12 h-12 transform group-hover:scale-110 transition-all duration-300">
                 <img
-                  src="/images/image.png"
+                  src="/images/image copy.png"
                   alt="Panorama Rooftop Logo"
                   className="w-full h-full object-cover rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300"
                 />

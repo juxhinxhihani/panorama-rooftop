@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img
-                src="/images/image.png"
+                src="/images/image copy.png"
                 alt="Panorama Rooftop Logo"
                 className="w-8 h-8 object-cover rounded-full"
               />
