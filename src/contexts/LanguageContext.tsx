@@ -155,7 +155,7 @@ const translations: Record<Language, Record<string, string>> = {
   sq: {
     // Navigation
     title: 'Panorama',
-    subtitle: 'Përjetoni magjinë e Divjakës nga lart',
+    subtitle: 'Elegancë dhe shikim i përsosur',
     
     // Hero Section
     viewMenu: 'Shiko Menune',
