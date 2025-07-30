@@ -55,7 +55,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`font-medium transition-colors hover:text-orange-500 ${
+                  className={`font-mono font-medium transition-colors hover:text-orange-500 ${
                     pathname === item.href 
                       ? 'text-orange-500' 
                       : isScrolled || pathname !== '/' 
