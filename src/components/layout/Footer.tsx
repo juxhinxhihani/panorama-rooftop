@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-0.5">
+            <div className="flex items-center space-x-1">
               <div className="w-12 h-12 overflow-hidden rounded-full">
                 <img
                   src="/images/image copy copy.png"
@@ -18,7 +18,7 @@ export default function Footer() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="font-bold text-lg font-serif italic tracking-wide">Panorama Rooftop</span>
+              <span className="font-mono text-base font-bold tracking-normal">Panorama Rooftop</span>
             </div>
             <p className="text-gray-400 text-sm">
               {t('footerDescription')}
