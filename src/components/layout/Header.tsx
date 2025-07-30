@@ -51,7 +51,7 @@ export default function Header() {
                 isScrolled || pathname !== '/' ? 'text-gray-900' : 'text-white'
               } ${
                 isScrolled || pathname !== '/' ? 'block' : 'hidden md:block'
-              }`}>
+              } -ml-3`}>
                 Panorama Rooftop
               </span>
             </Link>
