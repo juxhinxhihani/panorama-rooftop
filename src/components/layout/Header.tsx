@@ -35,11 +35,11 @@ export default function Header() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative w-12 h-12 transform group-hover:scale-110 transition-all duration-300">
+              <div className="relative w-12 h-12 transform group-hover:scale-110 transition-all duration-300 overflow-hidden rounded-full">
                 <img
                   src="/images/image copy.png"
                   alt="Panorama Rooftop Logo"
-                  className="w-full h-full object-cover rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300 p-1"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <span className={`font-bold text-xl transition-colors ${
