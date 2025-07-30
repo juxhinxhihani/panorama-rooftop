@@ -44,7 +44,7 @@ export default function Header() {
               </div>
               <span className={`font-mono text-lg font-bold tracking-normal transition-colors -ml-1 ${
                 isScrolled || pathname !== '/' ? 'text-gray-900' : 'text-white'
-              } -ml-4`}>
+              } -ml-3`}>
                 Panorama Rooftop
               </span>
             </Link>
