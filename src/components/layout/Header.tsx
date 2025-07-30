@@ -39,7 +39,7 @@ export default function Header() {
                 <img
                   src="/images/image copy.png"
                   alt="Panorama Rooftop Logo"
-                  className="w-full h-full object-cover rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300"
+                  className="w-full h-full object-cover rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300 p-1"
                 />
               </div>
               <span className={`font-bold text-xl transition-colors ${

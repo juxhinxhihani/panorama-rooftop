@@ -14,7 +14,7 @@ export default function Footer() {
               <img
                 src="/images/image copy.png"
                 alt="Panorama Rooftop Logo"
-                className="w-8 h-8 object-cover rounded-full"
+                className="w-8 h-8 object-cover rounded-full p-0.5"
               />
               <span className="font-bold text-lg">Panorama Rooftop</span>
             </div>
