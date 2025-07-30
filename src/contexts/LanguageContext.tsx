@@ -291,7 +291,7 @@ const translations: Record<Language, Record<string, string>> = {
     send: 'Dërgo Mesazhin',
     
     // Footer
-    footerDescription: 'Pamja më e mirë në Divjakë - kati i 9-të në qendër.',
+    footerDescription: 'Zbuloni magjinë e Divjakës nga kati i 9-të. Shijoni kokteje të veçanta, pizza artizanale dhe pamje mahnitëse të bregdetit dhe pyllit. Përjetim unik në zemër të qytetit.',
     allRightsReserved: 'Të gjitha të drejtat e rezervuara.'
   },
   it: {
