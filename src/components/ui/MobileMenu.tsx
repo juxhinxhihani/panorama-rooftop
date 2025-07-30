@@ -39,7 +39,7 @@ export default function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProp
               key={item.href}
               href={item.href}
               onClick={onClose}
-              className="block py-3 px-4 text-gray-700 font-mono text-lg font-bold tracking-normal hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors"
+              className="block py-3 px-4 text-gray-700 font-mono text-lg tracking-normal hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors"
             >
               {item.label}
             </Link>
