@@ -47,7 +47,7 @@ export default function Header() {
                   className="object-cover"
                 />
               </div>
-              <span className={`hidden md:block font-mono text-lg font-bold tracking-tight transition-colors -ml-1 ${
+              <span className={`font-mono text-lg font-bold tracking-tight transition-colors -ml-1 ${
                 isScrolled || pathname !== '/' ? 'text-gray-900' : 'text-white'
               } -ml-3`}>
                 Panorama Rooftop
