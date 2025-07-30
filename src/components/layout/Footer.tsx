@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <div className="w-8 h-8 overflow-hidden rounded-full">
+              <div className="w-8 h-8 overflow-hidden rounded-full -ml-1">
                 <Image
                   src="/icon.png/image.png"
                   alt="Panorama Rooftop Logo"
