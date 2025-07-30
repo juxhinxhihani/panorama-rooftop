@@ -32,14 +32,11 @@ export default function Header() {
           : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2 group">
               <div className="relative w-12 h-12 transform group-hover:scale-110 transition-all duration-300">
                 <img
                   src="/images/image.png"
                   alt="Panorama Rooftop Logo"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover rounded-full shadow-lg group-hover:shadow-xl transition-all duration-300"
                 />
               </div>
               <span className={`font-bold text-xl transition-colors ${
