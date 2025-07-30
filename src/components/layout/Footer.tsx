@@ -19,6 +19,7 @@ export default function Footer() {
                 />
               </div>
               <span className="font-mono text-base font-bold tracking-normal -ml-1">Panorama Rooftop</span>
+              <span className="font-mono text-base font-bold tracking-normal -ml-2">Panorama Rooftop</span>
             </div>
             <p className="text-gray-400 text-sm">
               {t('footerDescription')}
