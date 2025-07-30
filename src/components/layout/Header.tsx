@@ -77,7 +77,9 @@ export default function Header() {
 
             {/* Right side - Language selector and mobile menu */}
             <div className="flex items-center space-x-4">
-              <LanguageSelector isScrolled={isScrolled || pathname !== '/'} />
+              <div className="-mr-1">
+                <LanguageSelector isScrolled={isScrolled || pathname !== '/'} />
+              </div>
               
               {/* Mobile menu button */}
               <button
