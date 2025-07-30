@@ -491,16 +491,10 @@ export default function FullMenuScreen() {
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 max-w-2xl mx-auto border border-white/20">
             <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('readyToOrder')}</h3>
             <p className="text-gray-600 mb-6">{t('contactUsToOrder')}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
-              >
-                {t('makeReservation')}
-              </a>
+            <div className="flex justify-center">
               <a
                 href="tel:+355695687575"
-                className="border-2 border-blue-600 text-blue-700 px-6 py-3 rounded-xl font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200"
+                className="border-2 border-amber-600 bg-gradient-to-r from-amber-600/10 via-orange-700/10 to-red-800/10 text-amber-800 px-8 py-4 rounded-xl font-semibold hover:bg-gradient-to-r hover:from-amber-600 hover:via-orange-700 hover:to-red-800 hover:text-amber-50 hover:border-amber-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
               >
                 {t('callNow')}
               </a>
