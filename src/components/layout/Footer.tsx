@@ -12,12 +12,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-1">
-              <div className="w-12 h-12 overflow-hidden rounded-full">
+              <div className="w-8 h-8 overflow-hidden rounded-full">
                 <Image
                   src="/icon.png/image.png"
                   alt="Panorama Rooftop Logo"
-                  width={48}
-                  height={48}
+                  width={32}
+                  height={32}
                   className="object-cover"
                 />
               </div>
