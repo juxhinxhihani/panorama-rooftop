@@ -49,7 +49,7 @@ export default function Header() {
               </div>
               <span className={`font-mono text-lg font-bold tracking-tight transition-colors -ml-1 ${
                 isScrolled || pathname !== '/' ? 'text-gray-900' : 'text-white'
-              } -ml-3 ${
+              } ${
                 isScrolled || pathname !== '/' ? 'block' : 'hidden md:block'
               }`}>
                 Panorama Rooftop
