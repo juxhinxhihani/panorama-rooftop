@@ -291,7 +291,7 @@ const translations: Record<Language, Record<string, string>> = {
     send: 'Dërgo Mesazhin',
     
     // Footer
-    footerDescription: 'Zbuloni magjinë e Divjakës nga kati i 9-të. Shijoni kokteje të veçanta, pizza artizanale dhe pamje mahnitëse të bregdetit dhe pyllit. Përjetim unik në zemër të qytetit.',
+    footerDescription: 'Përjetoni eksperiencen më të mirë në Panorama Rooftop me pamje panoramike të bregdetit dhe pyllit, ushqime te shijshme dhe cocktails qe te ngelin gjate ne mendje. Eja provoje edhe ti',
     allRightsReserved: 'Të gjitha të drejtat e rezervuara.'
   },
   it: {
