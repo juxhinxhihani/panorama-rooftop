@@ -18,7 +18,7 @@ export default function Footer() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="font-bold text-lg font-sans tracking-tight">Panorama Rooftop</span>
+              <span className="font-bold text-lg font-serif italic tracking-wide">Panorama Rooftop</span>
             </div>
             <p className="text-gray-400 text-sm">
               {t('footerDescription')}
