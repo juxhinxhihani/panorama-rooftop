@@ -47,7 +47,7 @@ export default function Header() {
                   className="object-cover"
                 />
               </div>
-              <span className={`font-mono text-lg font-bold tracking-tight transition-colors -ml-1 ${
+              <span className={`font-mono text-sm font-bold tracking-tight transition-colors ${
                 isScrolled || pathname !== '/' ? 'text-gray-900' : 'text-white'
               } ${
                 isScrolled || pathname !== '/' ? 'block' : 'hidden md:block'
