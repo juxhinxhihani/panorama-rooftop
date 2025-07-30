@@ -38,7 +38,7 @@ export default function Header() {
             <Link href="/" className="flex items-center space-x-2 group">
               <div className={`relative w-10 h-10 transform group-hover:scale-110 transition-all duration-300 overflow-hidden rounded-full ${
                 isScrolled || pathname !== '/' ? 'block' : 'hidden md:block'
-              } -ml-1`}>
+              } -ml-2`}>
                 <Image
                   src="/icon.png/image.png"
                   alt="Panorama Rooftop Logo"
