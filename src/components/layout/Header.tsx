@@ -49,6 +49,7 @@ export default function Header() {
                 Panorama Rooftop
               </span>
             </Link>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
