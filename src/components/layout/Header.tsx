@@ -52,7 +52,7 @@ export default function Header() {
               } ${
                 isScrolled || pathname !== '/' ? 'block' : 'hidden md:block'
               }`}>
-               <span className="text-sm">Panorama Rooftop</span>
+               Panorama Rooftop
               </span>
             </Link>
 
