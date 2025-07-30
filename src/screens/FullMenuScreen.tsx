@@ -205,13 +205,6 @@ export default function FullMenuScreen() {
       gradient: 'from-stone-600 via-stone-700 to-stone-800',
       items: [
         {
-          name: 'Pizza Rucola',
-          description: 'Rucola, Crudo, Parmigiano, Pomodorini, Mozzarella, Sauce',
-          price: '700 ALL',
-          popular: true,
-          type: 'food'
-        },
-        {
           name: 'Margherita',
           description: t('pizzaMargherita'),
           price: '500 ALL',
