@@ -35,7 +35,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative w-12 h-12 transform group-hover:scale-110 transition-all duration-300 overflow-hidden rounded-full">
+              <div className="relative w-16 h-16 transform group-hover:scale-110 transition-all duration-300 overflow-hidden rounded-full">
                 <img
                   src="/images/image copy copy.png"
                   alt="Panorama Rooftop Logo"

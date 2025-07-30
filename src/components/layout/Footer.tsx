@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 overflow-hidden rounded-full">
+              <div className="w-12 h-12 overflow-hidden rounded-full">
                 <img
                   src="/images/image copy copy.png"
                   alt="Panorama Rooftop Logo"
