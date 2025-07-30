@@ -291,7 +291,7 @@ const translations: Record<Language, Record<string, string>> = {
     send: 'Dërgo Mesazhin',
     
     // Footer
-    footerDescription: 'Përjetoni darkën më të mirë në çati në Divjakë me pamje panoramike të bregdetit dhe pyllit.',
+    footerDescription: 'Pamja më e mirë në Divjakë - kati i 9-të në qendër.',
     allRightsReserved: 'Të gjitha të drejtat e rezervuara.'
   },
   it: {
