@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Footer() {
@@ -12,10 +13,12 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-1">
               <div className="w-12 h-12 overflow-hidden rounded-full">
-                <img
+                <Image
                   src="/images/image copy copy.png"
                   alt="Panorama Rooftop Logo"
-                  className="w-full h-full object-cover"
+                  width={48}
+                  height={48}
+                  className="object-cover"
                 />
               </div>
               <span className="font-mono text-base font-bold tracking-normal">Panorama Rooftop</span>

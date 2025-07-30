@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
@@ -38,10 +39,12 @@ export default function Header() {
               <div className={`relative w-16 h-16 transform group-hover:scale-110 transition-all duration-300 overflow-hidden rounded-full ${
                 isScrolled || pathname !== '/' ? 'block' : 'hidden'
               }`}>
-                <img
+                <Image
                   src="/images/image copy copy.png"
                   alt="Panorama Rooftop Logo"
-                  className="w-full h-full object-cover"
+                  width={64}
+                  height={64}
+                  className="object-cover"
                 />
               </div>
               <span className={`hidden md:block font-mono text-lg font-bold tracking-tight transition-colors -ml-1 ${

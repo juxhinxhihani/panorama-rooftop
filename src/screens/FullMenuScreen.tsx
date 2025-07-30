@@ -355,7 +355,6 @@ export default function FullMenuScreen() {
   }
 
   const filteredItems = getFilteredItems()
-  const activeMenu = menuCategories.find(cat => cat.id === activeCategory)
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 pt-20">

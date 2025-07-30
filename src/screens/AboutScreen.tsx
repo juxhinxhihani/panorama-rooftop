@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function AboutScreen() {
@@ -36,10 +37,12 @@ export default function AboutScreen() {
           {/* Image */}
           <div className="relative">
             <div className="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                  src="/images/template.png"
-                  alt="Panorama Rooftop View"
-                  className="w-full h-full object-cover"
+              <Image
+                src="/images/template.png"
+                alt="Panorama Rooftop View"
+                width={800}
+                height={600}
+                className="w-full h-full object-cover"
               />
             </div>
             
