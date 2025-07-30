@@ -342,8 +342,14 @@ export default function FullMenuScreen() {
 
   // Filter items based on active category and search term
   const getFilteredItems = () => {
-    let items = activeCategory === 'all' ? allItems : 
-      menuCategories.find(cat => cat.id === activeCategory)?.items.map(item => ({ ...item, category: menuCategories.find(cat => cat.id === activeCategory)?.title })) || []
+    let items
+    
+    if (activeCategory === 'all') {
+      items = allItems
+    } else {
+      const category = menuCategories.find(cat => cat.id === activeCategory)
+      items = category ? category.items.map(item => ({ ...item, category: category.title })) : []
+    }
     
     if (searchTerm) {
       items = items.filter(item =>
@@ -421,7 +427,7 @@ export default function FullMenuScreen() {
 
         {/* Menu Items Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {(activeCategory === 'all' ? allItems : filteredItems).map((item, index) => (
+          {filteredItems.map((item, index) => (
             <div
               key={index}
               className="group bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20 h-full flex flex-col"
