@@ -209,7 +209,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Full Menu Screen
     fullMenuTitle: 'Menuja e Plotë',
-    fullMenuDescription: 'Eksploroni përzgjedhjen tonë të plotë të koktejeve të punuara me dorë, kafesë artizanale, pizzave në dru, burgerëve gourmet dhe krepave të shijshme.',
+    fullMenuDescription: 'Eksploroni përzgjedhjen tonë të plotë të koktejeve të punuara me dorë, kafesë artizanale, pizzave në dru, scacciata të freskëta dhe ëmbëlsirave të shijshme.',
     backToHome: 'Kthehu në Shtëpi',
     popular: 'Popullore',
     vegetarian: 'Vegetariane',
