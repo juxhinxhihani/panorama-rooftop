@@ -40,7 +40,7 @@ export default function Header() {
                 isScrolled || pathname !== '/' ? 'block' : 'hidden md:block'
               }`}>
                 <Image
-                  src="/images/image copy copy.png"
+                  src="/icon.png/image.png"
                   alt="Panorama Rooftop Logo"
                   width={64}
                   height={64}
