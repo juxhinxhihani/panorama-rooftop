@@ -14,18 +14,7 @@ export default function HeroScreen() {
             backgroundImage: "url('/images/hero.jpg')"
           }}
       >
-        {/* Vintage Sunset Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-amber-900/30 via-orange-800/20 to-red-900/50" />
-        {/* Grainy Texture Overlay */}
-        <div 
-          className="absolute inset-0 opacity-20 mix-blend-multiply"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E")`,
-            backgroundSize: '200px 200px'
-          }}
-        />
-        {/* Warm Light Vignette */}
-        <div className="absolute inset-0 bg-gradient-radial from-transparent via-amber-500/5 to-orange-900/40" />
+        <div className="absolute inset-0 bg-black bg-opacity-40" />
       </div>
 
       {/* Content */}
