@@ -343,7 +343,7 @@ export default function FullMenuScreen() {
   // Filter items based on active category and search term
   const getFilteredItems = () => {
     let items = activeCategory === 'all' ? allItems : 
-      menuCategories.find(cat => cat.id === activeCategory)?.items || []
+      menuCategories.find(cat => cat.id === activeCategory)?.items.map(item => ({ ...item, category: menuCategories.find(cat => cat.id === activeCategory)?.title })) || []
     
     if (searchTerm) {
       items = items.filter(item =>
