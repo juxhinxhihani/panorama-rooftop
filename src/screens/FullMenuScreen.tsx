@@ -249,13 +249,13 @@ export default function FullMenuScreen() {
   items: [
     {
       name: 'Schiacciata Classica',
-      description: 'Proshute pule, mozzarella, majonez, kastravec, sallate jeshile',
+      description: 'Proshute pule, mozzarella, majoneze, kastravec, sallate jeshile',
       price: '300 ALL',
       type: 'food'
     },
     {
       name: 'Schiacciata Piccante',
-      description: 'Salam pikant, mozzarella, ullinje te zinj, domate',
+      description: 'Sallam pikant, mozzarella, ullinj te zinj, domate',
       price: '350 ALL',
       spicy: true,
       type: 'food'
