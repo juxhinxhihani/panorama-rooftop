@@ -199,48 +199,54 @@ export default function FullMenuScreen() {
       ]
     },
     {
-      id: 'pizza',
-      title: 'Pizza',
-      icon: '🍕',
-      gradient: 'from-stone-600 via-stone-700 to-stone-800',
-      items: [
-        {
-          name: 'Margherita',
-          description: t('pizzaMargherita'),
-          price: '500 ALL',
-          popular: true,
-          vegetarian: true,
-          type: 'food'
-        },
-        {
-          name: 'Panorama Special',
-          description: t('pizzaPanorama'),
-          price: '800 ALL',
-          popular: true,
-          type: 'food'
-        },
-        {
-          name: 'Quattro Stagioni',
-          description: t('pizzaQuattro'),
-          price: '750 ALL',
-          type: 'food'
-        },
-        {
-          name: 'Vegetariana',
-          description: t('pizzaVegetarian'),
-          price: '650 ALL',
-          vegetarian: true,
-          type: 'food'
-        },
-        {
-          name: 'Diavola',
-          description: t('pizzaDiavola'),
-          price: '700 ALL',
-          spicy: true,
-          type: 'food'
-        }
-      ]
+  id: 'pizza',
+  title: 'Pizza',
+  icon: '🍕',
+  gradient: 'from-stone-600 via-stone-700 to-stone-800',
+  items: [
+    {
+      name: 'Margherita',
+      description: t('pizzaMargherita'),
+      price: '500 ALL',
+      popular: true,
+      vegetarian: true,
+      type: 'food'
     },
+    {
+      name: 'Panorama Special',
+      description: t('pizzaPanorama'),
+      price: '700 ALL',
+      popular: true,
+      type: 'food'
+    },
+    {
+      name: 'Quattro Stagioni',
+      description: t('pizzaQuattro'),
+      price: '600 ALL',
+      type: 'food'
+    },
+    {
+      name: 'Vegetariana',
+      description: t('pizzaVegetarian'),
+      price: '500 ALL',
+      vegetarian: true,
+      type: 'food'
+    },
+    {
+      name: 'Diavola',
+      description: t('pizzaDiavola'),
+      price: '600 ALL',
+      spicy: true,
+      type: 'food'
+    },
+    {
+      name: 'Prosciutto',
+      description: 'Pizza me prosciutto të freskët dhe mozzarella',
+      price: '600 ALL',
+      type: 'food'
+    }
+  ]
+},
     {
   id: 'schiacciata',
   title: 'Schiacciata',
