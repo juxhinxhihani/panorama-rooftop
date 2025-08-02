@@ -110,11 +110,11 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Pizza
     pizzaMargherita: 'Classic tomato sauce, mozzarella, and fresh basil',
-    pizzaPanorama: 'Prosciutto, arugula, cherry tomatoes, and parmesan',
-    pizzaQuattro: 'Four seasons with ham, mushrooms, artichokes, and olives',
-    pizzaProsciutto: 'Prosciutto di Parma and mushrooms',
-    pizzaVegetarian: 'Bell peppers, zucchini, eggplant, and mozzarella',
-    pizzaDiavola: 'Spicy salami, chili peppers, and mozzarella',
+    pizzaPanorama: 'Prosciutto crudo, arugula, cherry tomatoes, parmesan, and mozzarella',
+    pizzaQuattro: 'Four seasons with ham, mushrooms, bell peppers, olives, and mozzarella',
+    pizzaProsciutto: 'Chicken or pork prosciutto with mozzarella',
+    pizzaVegetarian: 'Bell peppers, mushrooms, olives, and mozzarella',
+    pizzaDiavola: 'Spicy salami, tabasco (optional), and mozzarella',
     
     // Burgers
     burgerPanorama: 'Angus beef, caramelized onions, bacon, and special sauce',
@@ -252,11 +252,11 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Pizza
     pizzaMargherita: 'Salcë domatesh klasike, mozzarella dhe borzilok i freskët',
-    pizzaPanorama: 'Proshutë, rucola, domate qershi dhe parmesan',
-    pizzaQuattro: 'Katër stinë me proshutë, kërpudha, anginare dhe ullinj',
-    pizzaProsciutto: 'Prosciutto di Parma dhe kërpudha',
-    pizzaVegetarian: 'Speca, kungull, patëllxhan dhe mozzarella',
-    pizzaDiavola: 'Sallam djegës, spec djegës dhe mozzarella',
+    pizzaPanorama: 'Proshutë krudo, rucola, pomodorini, parmigiano dhe mozzarella',
+    pizzaQuattro: 'Katër stinë me proshutë, kërpudha, speca, ullinj dhe mozzarella',
+    pizzaProsciutto: 'Proshutë pule ose derri me mozzarella',
+    pizzaVegetarian: 'Speca, kërpudha, ullinj dhe mozzarella',
+    pizzaDiavola: 'Sallam pikant, tabasco sipas dëshirës dhe mozzarella',
     
     // Burgers
     burgerPanorama: 'Mish Angus, qepë të karamelizuara, proshutë dhe salcë speciale',
@@ -394,11 +394,11 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Pizza
     pizzaMargherita: 'Salsa di pomodoro classica, mozzarella e basilico fresco',
-    pizzaPanorama: 'Prosciutto, rucola, pomodorini e parmigiano',
-    pizzaQuattro: 'Quattro stagioni con prosciutto, funghi, carciofi e olive',
-    pizzaProsciutto: 'Prosciutto di Parma e funghi',
-    pizzaVegetarian: 'Peperoni, zucchine, melanzane e mozzarella',
-    pizzaDiavola: 'Salame piccante, peperoncini e mozzarella',
+    pizzaPanorama: 'Prosciutto crudo, rucola, pomodorini, parmigiano e mozzarella',
+    pizzaQuattro: 'Quattro stagioni con prosciutto, funghi, peperoni, olive e mozzarella',
+    pizzaProsciutto: 'Prosciutto di pollo o maiale con mozzarella',
+    pizzaVegetarian: 'Peperoni, funghi, olive e mozzarella',
+    pizzaDiavola: 'Salame piccante, tabasco (opzionale) e mozzarella',
     
     // Burgers
     burgerPanorama: 'Manzo Angus, cipolle caramellate, pancetta e salsa speciale',
