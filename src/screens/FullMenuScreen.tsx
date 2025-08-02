@@ -242,39 +242,39 @@ export default function FullMenuScreen() {
       ]
     },
     {
-      id: 'scacciata',
-      title: 'Scacciata',
-      icon: '🥖',
-      gradient: 'from-amber-600 via-amber-700 to-amber-800',
-      items: [
-        {
-          name: 'Scacciata Milano',
-          description: 'Milanese salami, mozzarella, philadelphia, olive cream',
-          price: '300 ALL',
-          popular: true,
-          type: 'food'
-        },
-        {
-          name: 'Scacciata Prosciutto',
-          description: 'Prosciutto di Parma, mozzarella, rucola, pomodorini',
-          price: '350 ALL',
-          type: 'food'
-        },
-        {
-          name: 'Scacciata Vegetariana',
-          description: 'Zucchine grigliate, melanzane, peperoni, mozzarella',
-          price: '280 ALL',
-          vegetarian: true,
-          type: 'food'
-        },
-        {
-          name: 'Scacciata Tonno',
-          description: 'Tonno, mozzarella, pomodorini, olive, capperi',
-          price: '320 ALL',
-          type: 'food'
-        }
-      ]
+  id: 'schiacciata',
+  title: 'Schiacciata',
+  icon: '🥖',
+  gradient: 'from-amber-600 via-amber-700 to-amber-800',
+  items: [
+    {
+      name: 'Schiacciata Classica',
+      description: 'Proshute pule, mozzarella, majonez, kastravec, sallate jeshile',
+      price: '300 ALL',
+      type: 'food'
     },
+    {
+      name: 'Schiacciata Piccante',
+      description: 'Salam pikant, mozzarella, ullinje te zinj, domate',
+      price: '350 ALL',
+      spicy: true,
+      type: 'food'
+    },
+    {
+      name: 'Schiacciata Crudo',
+      description: 'Proshute krudo, mozzarella, rukola, pesto, pomodorini, philadelphia',
+      price: '400 ALL',
+      type: 'food'
+    },
+    {
+      name: 'Schiacciata Vegetariana',
+      description: 'Domate, djathe i bardhe, vaj ulliri, rigon',
+      price: '250 ALL',
+      vegetarian: true,
+      type: 'food'
+    }
+  ]
+},
     {
       id: 'desserts',
       title: 'Desserts',
