@@ -2,6 +2,7 @@ import Header from '../components/layout/Header'
 import HeroScreen from '../screens/HeroScreen'
 import AboutScreen from '../screens/AboutScreen'
 import Footer from '../components/layout/Footer'
+import DeliveryPopup from '../components/ui/DeliveryPopup'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <AboutScreen />
       </main>
       <Footer />
+      <DeliveryPopup />
     </div>
   )
 }

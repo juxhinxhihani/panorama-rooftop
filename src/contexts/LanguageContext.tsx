@@ -246,7 +246,17 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     footerDescription: 'Experience the best rooftop dining in Divjaka with panoramic views of the coastline and forest.',
-    allRightsReserved: 'All rights reserved.'
+    allRightsReserved: 'All rights reserved.',
+    
+    // Delivery Popup
+    deliveryAnnouncementTitle: 'New Delivery Service!',
+    deliveryAnnouncementSubtitle: 'Now delivering to your door',
+    deliveryAnnouncementMessage: 'Great news! Panorama Rooftop now offers delivery service. Enjoy our delicious food and drinks from the comfort of your home.',
+    deliveryCallToOrder: 'Call to place your delivery order',
+    deliveryHours: 'Delivery: 11:00 AM - 10:00 PM',
+    deliveryArea: 'Delivery available in Divjaka area',
+    orderNow: 'Order Now',
+    closeLater: 'Maybe Later'
   },
   sq: {
     // Navigation
@@ -460,7 +470,17 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     footerDescription: 'Përjetoni eksperiencen më të mirë në Panorama Rooftop me pamje panoramike të bregdetit dhe pyllit, ushqime te shijshme dhe cocktails qe te ngelin gjate ne mendje. Eja provoje edhe ti',
-    allRightsReserved: 'Të gjitha të drejtat e rezervuara.'
+    allRightsReserved: 'Të gjitha të drejtat e rezervuara.',
+    
+    // Delivery Popup
+    deliveryAnnouncementTitle: 'Shërbim i Ri Dërgese!',
+    deliveryAnnouncementSubtitle: 'Tani dërgojmë në shtëpinë tuaj',
+    deliveryAnnouncementMessage: 'Lajm i mirë! Panorama Rooftop tani ofron shërbim dërgese. Shijoni ushqimet dhe pijet tona të shijshme nga rehatia e shtëpisë suaj.',
+    deliveryCallToOrder: 'Telefononi për të bërë porosinë tuaj',
+    deliveryHours: 'Dërgesa: 11:00 AM - 10:00 PM',
+    deliveryArea: 'Dërgesa e disponueshme në zonën e Divjakës',
+    orderNow: 'Porosit Tani',
+    closeLater: 'Më Vonë'
   },
   it: {
     // Navigation
@@ -666,7 +686,17 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     footerDescription: 'Vivi la migliore esperienza culinaria sul tetto a Divjaka con viste panoramiche della costa e della foresta.',
-    allRightsReserved: 'Tutti i diritti riservati.'
+    allRightsReserved: 'Tutti i diritti riservati.',
+    
+    // Delivery Popup
+    deliveryAnnouncementTitle: 'Nuovo Servizio di Consegna!',
+    deliveryAnnouncementSubtitle: 'Ora consegniamo a casa tua',
+    deliveryAnnouncementMessage: 'Ottime notizie! Panorama Rooftop ora offre servizio di consegna. Goditi il nostro cibo e le nostre bevande deliziose dal comfort di casa tua.',
+    deliveryCallToOrder: 'Chiama per effettuare il tuo ordine di consegna',
+    deliveryHours: 'Consegna: 11:00 - 22:00',
+    deliveryArea: 'Consegna disponibile nella zona di Divjaka',
+    orderNow: 'Ordina Ora',
+    closeLater: 'Forse Dopo'
   }
 }
 
