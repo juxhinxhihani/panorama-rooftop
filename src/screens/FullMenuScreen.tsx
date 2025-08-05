@@ -574,9 +574,6 @@ export default function FullMenuScreen() {
                                         <div className={`inline-flex items-center gap-3 bg-gradient-to-r ${category.gradient} text-white px-6 py-3 rounded-full shadow-lg`}>
                                             <span className="text-2xl">{category.icon}</span>
                                             <h2 className="text-xl font-bold">{category.title}</h2>
-                                            <span className="bg-white/20 text-white text-sm px-2 py-1 rounded-full">
-                                                {categoryItems.length} items
-                                            </span>
                                         </div>
                                     </div>
                                     
