@@ -477,6 +477,26 @@ const translations: Record<Language, Record<string, string>> = {
     menuBeetBoost: 'Beet Boost',
     menuBeetBoostDesc: 'Panxhar, mollë, karrotë, limon',
     
+    // New Smoothies & Juices - English
+    menuDetoxDelight: 'Detox Delight',
+    menuDetoxDelightDesc: 'Celery, green apple, pineapple, cucumber, lemon, mint',
+    menuTropicalBliss: 'Tropical Bliss',
+    menuTropicalBlissDesc: 'Pineapple, mango, banana, almond milk, honey',
+    menuAntioxidantPower: 'Antioxidant Power',
+    menuAntioxidantPowerDesc: 'Blueberries, blackberries, banana, almond milk, chia seeds',
+    menuPeanutPower: 'Peanut Power',
+    menuPeanutPowerDesc: 'Banana, peanut butter, cocoa, almond milk',
+    menuBlueberryBananaCrunch: 'Blueberry Banana Crunch',
+    menuBlueberryBananaCrunchDesc: 'Blueberries, banana, white yogurt, crushed cookies',
+    menuGreenReset: 'Green Reset',
+    menuGreenResetDesc: 'Celery, pineapple, cucumber, lemon',
+    menuPureOrange: 'Pure Orange',
+    menuPureOrangeDesc: 'Fresh squeezed orange juice',
+    menuSunriseMix: 'Sunrise Mix',
+    menuSunriseMixDesc: 'Orange, apple, carrot, lemon, ginger',
+    menuBeetBoost: 'Beet Boost',
+    menuBeetBoostDesc: 'Beetroot, apple, carrot, lemon',
+
     // Contact Section
     contact: 'Na Kontaktoni',
     contactDescription: 'Kontaktoni me ne për të bërë një rezervim ose për të bërë çdo pyetje.',
