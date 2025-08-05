@@ -7,23 +7,16 @@ export default function DeliveryPopup() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    // Check if user has already seen the popup
-    const hasSeenPopup = localStorage.getItem('panorama-delivery-popup-seen')
+    // Show popup after a short delay on every visit
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 2000)
     
-    if (!hasSeenPopup) {
-      // Show popup after a short delay
-      const timer = setTimeout(() => {
-        setIsVisible(true)
-      }, 2000)
-      
-      return () => clearTimeout(timer)
-    }
+    return () => clearTimeout(timer)
   }, [])
 
   const handleClose = () => {
     setIsVisible(false)
-    // Mark as seen so it doesn't show again
-    localStorage.setItem('panorama-delivery-popup-seen', 'true')
   }
 
   const handleOrderNow = () => {
