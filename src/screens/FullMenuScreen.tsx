@@ -694,9 +694,6 @@ export default function FullMenuScreen() {
 
                                     {/* Price */}
                                     <div className="flex items-center justify-between mt-auto">
-                                        <span className="text-xl font-bold text-blue-700">
-                                            {item.price}
-                                        </span>
                                     </div>
                                 </div>
                             </div>
