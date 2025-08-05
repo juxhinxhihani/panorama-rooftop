@@ -533,6 +533,7 @@ export default function FullMenuScreen() {
                         <div className="text-center">
                             <span className="text-2xl block mb-1">📋</span>
                             <h3 className="text-sm font-bold mb-1">All Menu</h3>
+                            <p className="text-white/90 text-xs">{allItems.length} items available</p>
                         </div>
                     </button>
 
