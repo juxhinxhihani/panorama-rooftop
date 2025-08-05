@@ -45,116 +45,116 @@ export default function FullMenuScreen() {
       gradient: 'from-amber-700 via-amber-800 to-amber-900',
       items: [
         {
-          name: 'Ekspres',
+          name: t('menuEkspres'),
           description: 'Rich, full-bodied espresso',
           price: '70 ALL',
           type: 'drink'
         },
         {
-          name: 'Macchiato',
+          name: t('menuMacchiato'),
           description: 'Espresso with a dollop of foamed milk',
           price: '70 ALL',
           type: 'drink'
         },
         {
-          name: 'Macchiato e madhe',
+          name: t('menuMacchiatoLarge'),
           description: 'Large macchiato with extra foam',
           price: '120 ALL',
           type: 'drink'
         },
         {
-          name: 'Cappuccino',
+          name: t('menuCappuccino'),
           description: 'Perfect balance of espresso and steamed milk',
           price: '150 ALL',
           popular: true,
           type: 'drink'
         },
         {
-          name: 'Cappuccino Kafe',
+          name: t('menuCappuccinoKafe'),
           description: 'Coffee cappuccino with extra coffee flavor',
           price: '150 ALL',
           type: 'drink'
         },
         {
-          name: 'Freddo Cappuccino',
+          name: t('menuFreddoCappuccino'),
           description: 'Cold cappuccino perfect for warm days',
           price: '200 ALL',
           type: 'drink'
         },
         {
-          name: 'Çokollate e ftohtë',
+          name: t('menuChocolateCold'),
           description: 'Cold chocolate drink',
           price: '200 ALL',
           type: 'drink'
         },
         {
-          name: 'Çokollate e zezë',
+          name: t('menuChocolateBlack'),
           description: 'Rich dark chocolate drink',
           price: '150 ALL',
           type: 'drink'
         },
         {
-          name: 'Çokollate e bardhë',
+          name: t('menuChocolateWhite'),
           description: 'Creamy white chocolate drink',
           price: '150 ALL',
           type: 'drink'
         },
         {
-          name: 'Milkshake',
+          name: t('menuMilkshake'),
           description: 'Creamy milkshake with various flavors',
           price: '250 ALL',
           type: 'drink'
         },
         {
-          name: 'Frappe',
+          name: t('menuFrappe'),
           description: 'Iced coffee drink',
           price: '150 ALL',
           type: 'drink'
         },
         {
-          name: 'Freddo kafe',
+          name: t('menuFreddoKafe'),
           description: 'Cold coffee drink',
           price: '200 ALL',
           type: 'drink'
         },
         {
-          name: 'Fredoccino',
+          name: t('menuFredoccino'),
           description: 'Cold coffee with chocolate',
           price: '200 ALL',
           type: 'drink'
         },
         {
-          name: 'Kafe Cremoso',
+          name: t('menuKafeKremoso'),
           description: 'Creamy coffee drink',
           price: '120 ALL',
           type: 'drink'
         },
         {
-          name: 'Kafe Latte',
+          name: t('menuKafeLatte'),
           description: 'Coffee with steamed milk',
           price: '100 ALL',
           type: 'drink'
         },
         {
-          name: 'Kakao',
+          name: t('menuKakao'),
           description: 'Hot cocoa drink',
           price: '150 ALL',
           type: 'drink'
         },
         {
-          name: 'Caj i ngrohtë',
+          name: t('menuHotTea'),
           description: 'Hot tea selection',
           price: '80 ALL',
           type: 'drink'
         },
         {
-          name: 'Kakao e ftohtë',
+          name: t('menuKakaoCold'),
           description: 'Cold cocoa drink',
           price: '150 ALL',
           type: 'drink'
         },
         {
-          name: 'Frappe Oreo',
+          name: t('menuFrappeOreo'),
           description: 'Oreo flavored frappe',
           price: '200 ALL',
           type: 'drink'
@@ -168,50 +168,50 @@ export default function FullMenuScreen() {
       gradient: 'from-teal-600 via-cyan-700 to-blue-800',
       items: [
         {
-          name: 'Leng Portokalli',
+          name: t('menuOrangeJuice'),
           description: 'Fresh orange juice',
           price: '200 ALL',
           type: 'drink'
         },
         {
-          name: 'Leng Portokalli-M',
+          name: t('menuOrangeJuiceMedium'),
           description: 'Medium fresh orange juice',
           price: '250 ALL',
           type: 'drink'
         },
         {
-          name: 'Lengu i jetës',
+          name: t('menuLifeJuice'),
           description: 'Life juice blend',
           price: '300 ALL',
           popular: true,
           type: 'drink'
         },
         {
-          name: 'Leng Detox',
+          name: t('menuDetoxJuice'),
           description: 'Detox juice blend',
           price: '300 ALL',
           type: 'drink'
         },
         {
-          name: 'Smoothie Protein',
+          name: t('menuProteinSmoothie'),
           description: 'Protein-rich smoothie',
           price: '300 ALL',
           type: 'drink'
         },
         {
-          name: 'Smoothie Ananas',
+          name: t('menuPineappleSmoothie'),
           description: 'Pineapple smoothie',
           price: '300 ALL',
           type: 'drink'
         },
         {
-          name: 'Smoothie Banane',
+          name: t('menuBananaSmoothie'),
           description: 'Banana smoothie',
           price: '250 ALL',
           type: 'drink'
         },
         {
-          name: 'Smoothie (Generic)',
+          name: t('menuGenericSmoothie'),
           description: 'Various smoothie flavors available',
           price: '300 ALL',
           type: 'drink'
@@ -225,105 +225,105 @@ export default function FullMenuScreen() {
       gradient: 'from-blue-700 via-indigo-800 to-slate-800',
       items: [
         {
-          name: 'Negroni',
+          name: t('menuNegroni'),
           description: 'Classic Italian cocktail with gin, vermouth, and Campari',
           price: '500 ALL',
           type: 'drink'
         },
         {
-          name: 'Martini',
+          name: t('menuMartini'),
           description: 'Classic martini with gin or vodka',
           price: '500 ALL',
           type: 'drink'
         },
         {
-          name: 'Mojito',
+          name: t('menuMojito'),
           description: 'Refreshing rum cocktail with mint and lime',
           price: '500 ALL',
           popular: true,
           type: 'drink'
         },
         {
-          name: 'Aperol Spritz',
+          name: t('menuAperolSpritz'),
           description: 'Italian aperitif with Aperol, prosecco, and soda',
           price: '500 ALL',
           type: 'drink'
         },
         {
-          name: 'Vodka Sour',
+          name: t('menuVodkaSour'),
           description: 'Vodka-based sour cocktail',
           price: '500 ALL',
           type: 'drink'
         },
         {
-          name: 'Sex on the Beach',
+          name: t('menuSexOnTheBeach'),
           description: 'Fruity cocktail with vodka and peach schnapps',
           price: '500 ALL',
           type: 'drink'
         },
         {
-          name: 'Tequila Sunrise',
+          name: t('menuTequilaSunrise'),
           description: 'Tequila cocktail with orange juice and grenadine',
           price: '500 ALL',
           type: 'drink'
         },
         {
-          name: 'Pina Colada',
+          name: t('menuPinaColada'),
           description: 'Tropical cocktail with rum, coconut, and pineapple',
           price: '500 ALL',
           type: 'drink'
         },
         {
-          name: 'Gin Tonic',
+          name: t('menuGinTonic'),
           description: 'Classic gin and tonic',
           price: '500 ALL',
           type: 'drink'
         },
         {
-          name: 'Caipiroska',
+          name: t('menuCaipiroska'),
           description: 'Brazilian cocktail with vodka and lime',
           price: '600 ALL',
           type: 'drink'
         },
         {
-          name: 'Cosmopolitan',
+          name: t('menuCosmopolitan'),
           description: 'Vodka cocktail with cranberry and lime',
           price: '600 ALL',
           type: 'drink'
         },
         {
-          name: 'Analcolic',
+          name: t('menuAnalcolic'),
           description: 'Non-alcoholic cocktail',
           price: '400 ALL',
           type: 'drink'
         },
         {
-          name: 'Panorama',
+          name: t('menuPanorama'),
           description: 'Our signature house cocktail',
           price: '500 ALL',
           popular: true,
           type: 'drink'
         },
         {
-          name: 'AMF',
+          name: t('menuAMF'),
           description: 'Adios Mother F***er - strong mixed cocktail',
           price: '800 ALL',
           type: 'drink'
         },
         {
-          name: 'Gin Lemon',
+          name: t('menuGinLemon'),
           description: 'Gin with fresh lemon',
           price: '450 ALL',
           type: 'drink'
         },
         {
-          name: 'Cuba Libre',
+          name: t('menuCubaLibre'),
           description: 'Rum with cola and lime',
           price: '500 ALL',
           type: 'drink'
         },
         {
-          name: 'Margarita',
+          name: t('menuMargarita'),
           description: 'Tequila cocktail with lime and triple sec',
           price: '500 ALL',
           type: 'drink'
@@ -420,69 +420,69 @@ export default function FullMenuScreen() {
       gradient: 'from-rose-700 via-rose-800 to-rose-900',
       items: [
         {
-          name: 'Zupa',
+          name: t('menuZupa'),
           description: 'Traditional Albanian dessert',
           price: '150 ALL',
           type: 'food'
         },
         {
-          name: 'Cheesecake',
+          name: t('menuCheesecake'),
           description: 'Creamy cheesecake with berry topping',
           price: '200 ALL',
           popular: true,
           type: 'food'
         },
         {
-          name: 'Trilece',
+          name: t('menuTrilece'),
           description: 'Three milk cake - Albanian specialty',
           price: '150 ALL',
           type: 'food'
         },
         {
-          name: 'Tiramisu',
+          name: t('menuTiramisu'),
           description: 'Classic Italian coffee-flavored dessert',
           price: '200 ALL',
           popular: true,
           type: 'food'
         },
         {
-          name: 'Trigone',
+          name: t('menuTrigone'),
           description: 'Traditional pastry dessert',
           price: '150 ALL',
           type: 'food'
         },
         {
-          name: 'Myfile',
+          name: t('menuMyfile'),
           description: 'Layered pastry dessert',
           price: '150 ALL',
           type: 'food'
         },
         {
-          name: 'Pastashu',
+          name: t('menuPastashu'),
           description: 'Cream-filled pastry',
           price: '150 ALL',
           type: 'food'
         },
         {
-          name: 'Briosh Cokollat',
+          name: t('menuBrioshChocolate'),
           description: 'Chocolate brioche',
           price: '120 ALL',
           type: 'food'
         },
         {
-          name: 'Briosh Pistachio',
+          name: t('menuBrioshPistachio'),
           description: 'Pistachio brioche',
           price: '150 ALL',
           type: 'food'
         },
         {
-          name: 'Donut',
+          name: t('menuDonut'),
           description: 'Fresh glazed donut',
           price: '120 ALL',
           type: 'food'
         },
         {
-          name: 'Bigusto',
+          name: t('menuBigusto'),
           description: 'Double flavor pastry',
           price: '120 ALL',
           type: 'food'
