@@ -149,43 +149,56 @@ export default function FullMenuScreen() {
       gradient: 'from-teal-600 via-cyan-700 to-blue-800',
       items: [
         {
-          name: t('menuOrangeJuice'),
-          price: '200 ALL',
+          name: t('menuDetoxDelight'),
+          description: t('menuDetoxDelightDesc'),
+          price: '300 ALL',
           type: 'drink'
         },
         {
-          name: t('menuOrangeJuiceMedium'),
+          name: t('menuTropicalBliss'),
+          description: t('menuTropicalBlissDesc'),
+          price: '300 ALL',
+          type: 'drink'
+        },
+        {
+          name: t('menuAntioxidantPower'),
+          description: t('menuAntioxidantPowerDesc'),
+          price: '300 ALL',
+          type: 'drink'
+        },
+        {
+          name: t('menuPeanutPower'),
+          description: t('menuPeanutPowerDesc'),
+          price: '300 ALL',
+          type: 'drink'
+        },
+        {
+          name: t('menuBlueberryBananaCrunch'),
+          description: t('menuBlueberryBananaCrunchDesc'),
+          price: '300 ALL',
+          type: 'drink'
+        },
+        {
+          name: t('menuGreenReset'),
+          description: t('menuGreenResetDesc'),
+          price: '300 ALL',
+          type: 'drink'
+        },
+        {
+          name: t('menuPureOrange'),
+          description: t('menuPureOrangeDesc'),
           price: '250 ALL',
           type: 'drink'
         },
         {
-          name: t('menuLifeJuice'),
-          price: '300 ALL',
-          popular: true,
-          type: 'drink'
-        },
-        {
-          name: t('menuDetoxJuice'),
+          name: t('menuSunriseMix'),
+          description: t('menuSunriseMixDesc'),
           price: '300 ALL',
           type: 'drink'
         },
         {
-          name: t('menuProteinSmoothie'),
-          price: '300 ALL',
-          type: 'drink'
-        },
-        {
-          name: t('menuPineappleSmoothie'),
-          price: '300 ALL',
-          type: 'drink'
-        },
-        {
-          name: t('menuBananaSmoothie'),
-          price: '250 ALL',
-          type: 'drink'
-        },
-        {
-          name: t('menuGenericSmoothie'),
+          name: t('menuBeetBoost'),
+          description: t('menuBeetBoostDesc'),
           price: '300 ALL',
           type: 'drink'
         }
