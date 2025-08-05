@@ -39,146 +39,6 @@ export default function FullMenuScreen() {
       items: []
     },
     {
-      id: 'desserts',
-      title: 'Desserts',
-      icon: '🍰',
-      gradient: 'from-rose-700 via-rose-800 to-rose-900',
-      items: [
-        {
-          name: t('menuZupa'),
-          price: '150 ALL',
-          type: 'food'
-        },
-        {
-          name: t('menuCheesecake'),
-          price: '200 ALL',
-          popular: true,
-          type: 'food'
-        },
-        {
-          name: t('menuTrilece'),
-          price: '150 ALL',
-          type: 'food'
-        },
-        {
-          name: t('menuTiramisu'),
-          price: '200 ALL',
-          popular: true,
-          type: 'food'
-        },
-        {
-          name: t('menuTrigone'),
-          price: '150 ALL',
-          type: 'food'
-        },
-        {
-          name: t('menuMyfile'),
-          price: '150 ALL',
-          type: 'food'
-        },
-        {
-          name: t('menuPastashu'),
-          price: '150 ALL',
-          type: 'food'
-        },
-        {
-          name: t('menuBrioshChocolate'),
-          price: '120 ALL',
-          type: 'food'
-        },
-        {
-          name: t('menuBrioshPistachio'),
-          price: '150 ALL',
-          type: 'food'
-        },
-        {
-          name: t('menuDonut'),
-          price: '120 ALL',
-          type: 'food'
-        },
-        {
-          name: t('menuBigusto'),
-          price: '120 ALL',
-          type: 'food'
-        }
-      ]
-    },
-    {
-      id: 'pizza',
-      title: 'Pizza & Schiacciata',
-      icon: '🍕',
-      gradient: 'from-stone-600 via-stone-700 to-stone-800',
-      items: [
-        {
-          name: 'Margherita',
-          description: t('pizzaMargherita'),
-          price: '500 ALL',
-          popular: true,
-          vegetarian: true,
-          type: 'food'
-        },
-        {
-          name: 'Panorama Special',
-          description: t('pizzaPanorama'),
-          price: '700 ALL',
-          popular: true,
-          type: 'food'
-        },
-        {
-          name: 'Quattro Stagioni',
-          description: t('pizzaQuattro'),
-          price: '600 ALL',
-          type: 'food'
-        },
-        {
-          name: 'Vegetariana',
-          description: t('pizzaVegetarian'),
-          price: '500 ALL',
-          vegetarian: true,
-          type: 'food'
-        },
-        {
-          name: 'Diavola',
-          description: t('pizzaDiavola'),
-          price: '600 ALL',
-          spicy: true,
-          type: 'food'
-        },
-        {
-          name: 'Prosciutto',
-          description: 'Pizza me prosciutto të freskët dhe mozzarella',
-          price: '600 ALL',
-          type: 'food'
-        },
-        {
-          name: 'Schiacciata Classica',
-          description: 'Proshute pule, mozzarella, majoneze, kastravec, sallate jeshile',
-          price: '300 ALL',
-          type: 'food'
-        },
-        {
-          name: 'Schiacciata Piccante',
-          description: 'Sallam pikant, mozzarella, ullinj te zinj, domate',
-          price: '350 ALL',
-          spicy: true,
-          type: 'food'
-        },
-        {
-          name: 'Schiacciata Crudo',
-          description: 'Proshute krudo, mozzarella, rukola, pesto, pomodorini, philadelphia',
-          price: '400 ALL',
-          type: 'food'
-        },
-        {
-          name: 'Schiacciata Vegetariana',
-          description: 'Domate, djathe i bardhe, vaj ulliri, rigon',
-          price: '250 ALL',
-          vegetarian: true,
-          type: 'food'
-        }
-      ]
-    },
-    {
       id: 'coffee',
       title: 'Coffee & Tea',
       icon: '☕',
@@ -423,6 +283,154 @@ export default function FullMenuScreen() {
           name: t('menuMargarita'),
           price: '500 ALL',
           type: 'drink'
+        }
+      ]
+    },
+    {
+  id: 'pizza',
+  title: 'Pizza',
+  icon: '🍕',
+  gradient: 'from-stone-600 via-stone-700 to-stone-800',
+  items: [
+    {
+      name: 'Margherita',
+      description: t('pizzaMargherita'),
+      price: '500 ALL',
+      popular: true,
+      vegetarian: true,
+      type: 'food'
+    },
+    {
+      name: 'Panorama Special',
+      description: t('pizzaPanorama'),
+      price: '700 ALL',
+      popular: true,
+      type: 'food'
+    },
+    {
+      name: 'Quattro Stagioni',
+      description: t('pizzaQuattro'),
+      price: '600 ALL',
+      type: 'food'
+    },
+    {
+      name: 'Vegetariana',
+      description: t('pizzaVegetarian'),
+      price: '500 ALL',
+      vegetarian: true,
+      type: 'food'
+    },
+    {
+      name: 'Diavola',
+      description: t('pizzaDiavola'),
+      price: '600 ALL',
+      spicy: true,
+      type: 'food'
+    },
+    {
+      name: 'Prosciutto',
+      description: 'Pizza me prosciutto të freskët dhe mozzarella',
+      price: '600 ALL',
+      type: 'food'
+    }
+  ]
+},
+    {
+  id: 'schiacciata',
+  title: 'Schiacciata',
+  icon: '🥖',
+  gradient: 'from-amber-600 via-amber-700 to-amber-800',
+  items: [
+    {
+      name: 'Schiacciata Classica',
+      description: 'Proshute pule, mozzarella, majoneze, kastravec, sallate jeshile',
+      price: '300 ALL',
+      type: 'food'
+    },
+    {
+      name: 'Schiacciata Piccante',
+      description: 'Sallam pikant, mozzarella, ullinj te zinj, domate',
+      price: '350 ALL',
+      spicy: true,
+      type: 'food'
+    },
+    {
+      name: 'Schiacciata Crudo',
+      description: 'Proshute krudo, mozzarella, rukola, pesto, pomodorini, philadelphia',
+      price: '400 ALL',
+      type: 'food'
+    },
+    {
+      name: 'Schiacciata Vegetariana',
+      description: 'Domate, djathe i bardhe, vaj ulliri, rigon',
+      price: '250 ALL',
+      vegetarian: true,
+      type: 'food'
+    }
+  ]
+},
+    {
+      id: 'desserts',
+      title: 'Desserts',
+      icon: '🍰',
+      gradient: 'from-rose-700 via-rose-800 to-rose-900',
+      items: [
+        {
+          name: t('menuZupa'),
+          price: '150 ALL',
+          type: 'food'
+        },
+        {
+          name: t('menuCheesecake'),
+          price: '200 ALL',
+          popular: true,
+          type: 'food'
+        },
+        {
+          name: t('menuTrilece'),
+          price: '150 ALL',
+          type: 'food'
+        },
+        {
+          name: t('menuTiramisu'),
+          price: '200 ALL',
+          popular: true,
+          type: 'food'
+        },
+        {
+          name: t('menuTrigone'),
+          price: '150 ALL',
+          type: 'food'
+        },
+        {
+          name: t('menuMyfile'),
+          price: '150 ALL',
+          type: 'food'
+        },
+        {
+          name: t('menuPastashu'),
+          price: '150 ALL',
+          type: 'food'
+        },
+        {
+          name: t('menuBrioshChocolate'),
+          price: '120 ALL',
+          type: 'food'
+        },
+        {
+          name: t('menuBrioshPistachio'),
+          price: '150 ALL',
+          type: 'food'
+        },
+        {
+          name: t('menuDonut'),
+          price: '120 ALL',
+          type: 'food'
+        },
+        {
+          name: t('menuBigusto'),
+          price: '120 ALL',
+          type: 'food'
         }
       ]
     },
