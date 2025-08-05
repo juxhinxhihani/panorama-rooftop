@@ -169,50 +169,50 @@ export default function FullMenuScreen() {
       items: [
         {
           name: t('menuOrangeJuice'),
-          description: 'Fresh orange juice',
+          description: t('menuOrangeJuiceDesc'),
           price: '200 ALL',
           type: 'drink'
         },
         {
           name: t('menuOrangeJuiceMedium'),
-          description: 'Medium fresh orange juice',
+          description: t('menuOrangeJuiceMediumDesc'),
           price: '250 ALL',
           type: 'drink'
         },
         {
           name: t('menuLifeJuice'),
-          description: 'Life juice blend',
+          description: t('menuLifeJuiceDesc'),
           price: '300 ALL',
           popular: true,
           type: 'drink'
         },
         {
           name: t('menuDetoxJuice'),
-          description: 'Detox juice blend',
+          description: t('menuDetoxJuiceDesc'),
           price: '300 ALL',
           type: 'drink'
         },
         {
           name: t('menuProteinSmoothie'),
-          description: 'Protein-rich smoothie',
+          description: t('menuProteinSmoothieDesc'),
           price: '300 ALL',
           type: 'drink'
         },
         {
           name: t('menuPineappleSmoothie'),
-          description: 'Pineapple smoothie',
+          description: t('menuPineappleSmoothieDesc'),
           price: '300 ALL',
           type: 'drink'
         },
         {
           name: t('menuBananaSmoothie'),
-          description: 'Banana smoothie',
+          description: t('menuBananaSmoothieDesc'),
           price: '250 ALL',
           type: 'drink'
         },
         {
           name: t('menuGenericSmoothie'),
-          description: 'Various smoothie flavors available',
+          description: t('menuGenericSmoothieDesc'),
           price: '300 ALL',
           type: 'drink'
         }
