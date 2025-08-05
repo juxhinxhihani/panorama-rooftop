@@ -577,7 +577,7 @@ export default function FullMenuScreen() {
                 </div>
 
                 <p className="text-gray-600 leading-relaxed mb-4 text-sm flex-1 line-clamp-2">
-                  {item.description || ''}
+                  {item.description}
                 </p>
 
                 {/* Price */}
