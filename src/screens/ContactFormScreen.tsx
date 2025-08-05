@@ -66,7 +66,7 @@ export default function ContactFormScreen() {
                 </a>
 
                 <a
-                  href="tel:+355695687575"
+                  href="tel:+355696068669"
                   className="flex items-start space-x-4 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 group"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -74,7 +74,7 @@ export default function ContactFormScreen() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1 text-gray-900 group-hover:text-orange-600 transition-colors">{t('phone')}</h3>
-                    <p className="text-gray-600">+355 69 568 7575</p>
+                    <p className="text-gray-600">+355 69 606 8669</p>
                   </div>
                 </a>
 

@@ -43,7 +43,7 @@ export default function Footer() {
               </a>
               </p>
               <p>
-                📞 <a href="tel:+355695687575" className="hover:underline">+355 69 568 7575</a>
+                📞 <a href="tel:+355696068669" className="hover:underline">+355 69 606 8669</a>
               </p>
               <p>
                 ✉️ <a href="mailto:panoramadivjake@gmail.com" className="hover:underline">panoramadivjake@gmail.com</a>

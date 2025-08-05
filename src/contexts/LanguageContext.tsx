@@ -81,33 +81,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Menu Categories
     coffeeAndTea: 'Coffee & Tea',
     smoothiesAndJuices: 'Smoothies & Juices',
-    
-    // Cocktails
-    cocktailPanoramaSunset: 'Our signature cocktail with rum, passion fruit, and a sunset gradient',
-    cocktailDivjakaBreeze: 'Refreshing gin-based cocktail with cucumber and mint',
-    cocktailRooftopMojito: 'Classic mojito with a rooftop twist and fresh herbs',
-    cocktailAlbanianSpritz: 'Local aperitif with prosecco and Albanian herbs',
-    cocktailForestView: 'Whiskey-based cocktail with forest berry infusion',
-    cocktailCoastalMule: 'Moscow mule variation with coastal herbs',
-    
-    // Coffee & Tea
-    coffeeEspresso: 'Rich, full-bodied espresso from locally roasted beans',
-    coffeeCappuccino: 'Perfect balance of espresso, steamed milk, and foam',
-    coffeeLatte: 'Smooth espresso with steamed milk and light foam',
-    coffeeMacchiato: 'Espresso "marked" with a dollop of foamed milk',
-    coffeeTurkish: 'Traditional Turkish coffee, finely ground and aromatic',
-    coffeeIced: 'Cold brew coffee served over ice with milk',
-    teaGreen: 'Premium green tea with antioxidants',
-    teaHerbal: 'Relaxing herbal blend with chamomile and mint',
-    
-    // Smoothies & Juices
-    smoothieTropical: 'Mango, pineapple, coconut milk, and banana',
-    smoothieBerry: 'Mixed berries, yogurt, and honey',
-    smoothieGreen: 'Spinach, apple, banana, and ginger',
-    juiceOrange: 'Freshly squeezed orange juice',
-    juiceApple: 'Pure apple juice from local orchards',
-    juiceBerry: 'Mixed berry juice with natural sweetness',
-    
+
     // Pizza
     pizzaMargherita: 'Classic tomato sauce, mozzarella, and fresh basil',
     pizzaPanorama: 'Prosciutto crudo, arugula, cherry tomatoes, parmesan, and mozzarella',
@@ -122,13 +96,7 @@ const translations: Record<Language, Record<string, string>> = {
     burgerBBQ: 'BBQ sauce, bacon, onion rings, and cheddar cheese',
     burgerChicken: 'Grilled chicken breast, avocado, and herb mayo',
     burgerVeggie: 'Plant-based patty with fresh vegetables',
-    
-    // Crepes
-    crepeNutella: 'Classic crepe with Nutella and powdered sugar',
-    crepeFruit: 'Seasonal fresh fruits with whipped cream',
-    crepeHamCheese: 'Savory crepe with ham and melted cheese',
-    crepeSpinach: 'Spinach, feta cheese, and herbs',
-    crepeChocolate: 'Dark chocolate and sliced banana',
+
     
     // Menu Items - Desserts
     menuZupa: 'Zupa',
@@ -231,7 +199,33 @@ const translations: Record<Language, Record<string, string>> = {
     menuFrappeOreoDesc: 'Indulgent frappe blended with crushed Oreo cookies and vanilla cream',
     
     // Menu Items - Smoothies & Juices
-    
+    // New Smoothies & Juices
+    menuDetoxDelight: 'Detox Delight',
+    menuDetoxDelightDesc: 'Celery, green apple, pineapple, cucumber, lemon, mint',
+    menuTropicalBliss: 'Tropical Bliss',
+    menuTropicalBlissDesc: 'Pineapple, mango, banana, almond milk, honey',
+    menuAntioxidantPower: 'Antioxidant Power',
+    menuAntioxidantPowerDesc: 'Blueberries, blackberries, banana, almond milk, chia seeds',
+    menuPeanutPower: 'Peanut Power',
+    menuPeanutPowerDesc: 'Banana, peanut butter, cocoa, almond milk',
+    menuBlueberryBananaCrunch: 'Blueberry Banana Crunch',
+    menuBlueberryBananaCrunchDesc: 'Blueberries, banana, white yogurt, crushed cookies',
+    menuGreenReset: 'Green Reset',
+    menuGreenResetDesc: 'Celery, pineapple, cucumber, lemon',
+    menuPureOrange: 'Pure Orange',
+    menuPureOrangeDesc: 'Fresh squeezed orange juice',
+    menuSunriseMix: 'Sunrise Mix',
+    menuSunriseMixDesc: 'Orange, apple, carrot, lemon, ginger',
+    menuBeetBoost: 'Beet Boost',
+    menuBeetBoostDesc: 'Beetroot, apple, carrot, lemon',
+
+
+    // Schiacciata
+    schiacciataClassica: "Chicken ham, mozzarella, mayonnaise, cucumber, green lettuce",
+    schiacciataPiccante: "Spicy salami, mozzarella, black olives, tomatoes",
+    schiacciataCrudo: "Cured ham, mozzarella, arugula, pesto, cherry tomatoes, philadelphia",
+    schiacciataVegetariana: "Tomato, white cheese, olive oil, oregano",
+
     // Contact Section
     contact: 'Contact Us',
     contactDescription: 'Get in touch with us to make a reservation or ask any questions.',
@@ -344,14 +338,6 @@ const translations: Record<Language, Record<string, string>> = {
     teaGreen: 'Çaj jeshil premium me antioksidantë',
     teaHerbal: 'Përzierje qetësuese bimore me kamomil dhe mente',
     
-    // Smoothies & Juices
-    smoothieTropical: 'Mango, ananas, qumësht kokosi dhe banane',
-    smoothieBerry: 'Mjedra të përziera, kos dhe mjaltë',
-    smoothieGreen: 'Spinaq, mollë, banane dhe xhenxhefil',
-    juiceOrange: 'Lëng portokalli i sapo shtrydh',
-    juiceApple: 'Lëng molle i pastër nga kopshtet lokale',
-    juiceBerry: 'Lëng mjedrash të përziera me ëmbëlsi natyrale',
-    
     // Pizza
     pizzaMargherita: 'Salcë domatesh klasike, mozzarella dhe borzilok i freskët',
     pizzaPanorama: 'Proshutë krudo, rucola, pomodorini, parmigiano dhe mozzarella',
@@ -426,37 +412,8 @@ const translations: Record<Language, Record<string, string>> = {
     menuHotTea: 'Çaj i Ngrohtë',
     menuKakaoCold: 'Kakao e Ftohtë',
     menuFrappeOreo: 'Frappe Oreo',
-    
-    // Menu Items - Smoothies & Juices
-    menuOrangeJuice: 'Lëng Portokalli',
-    menuOrangeJuiceMedium: 'Lëng Portokalli-M',
-    menuLifeJuice: 'Lëngu i Jetës',
-    menuDetoxJuice: 'Lëng Detox',
-    menuProteinSmoothie: 'Smoothie Protein',
-    menuPineappleSmoothie: 'Smoothie Ananas',
-    menuBananaSmoothie: 'Smoothie Banane',
-    menuGenericSmoothie: 'Smoothie',
-    
-    // New Smoothies & Juices
-    menuDetoxDelight: 'Detox Delight',
-    menuDetoxDelightDesc: 'Sedano, mela verde, ananas, cetriolo, limone, menta',
-    menuTropicalBliss: 'Tropical Bliss',
-    menuTropicalBlissDesc: 'Ananas, mango, banana, latte di mandorle, miele',
-    menuAntioxidantPower: 'Antioxidant Power',
-    menuAntioxidantPowerDesc: 'Mirtilli, more, banana, latte di mandorle, semi di chia',
-    menuPeanutPower: 'Peanut Power',
-    menuPeanutPowerDesc: 'Banana, burro di arachidi, cacao, latte di mandorle',
-    menuBlueberryBananaCrunch: 'Blueberry Banana Crunch',
-    menuBlueberryBananaCrunchDesc: 'Mirtilli, banana, yogurt bianco, biscotti sbriciolati',
-    menuGreenReset: 'Green Reset',
-    menuGreenResetDesc: 'Sedano, ananas, cetriolo, limone',
-    menuPureOrange: 'Pure Orange',
-    menuPureOrangeDesc: 'Succo d\'arancia fresco spremuto',
-    menuSunriseMix: 'Sunrise Mix',
-    menuSunriseMixDesc: 'Arancia, mela, carota, limone, zenzero',
-    menuBeetBoost: 'Beet Boost',
-    menuBeetBoostDesc: 'Barbabietola, mela, carota, limone',
-    
+
+
     // New Smoothies & Juices
     menuDetoxDelight: 'Detox Delight',
     menuDetoxDelightDesc: 'Selino, mollë jeshile, ananas, kastravec, limon, mente',
@@ -476,7 +433,13 @@ const translations: Record<Language, Record<string, string>> = {
     menuSunriseMixDesc: 'Portokall, mollë, karrotë, limon, xhenxhefil',
     menuBeetBoost: 'Beet Boost',
     menuBeetBoostDesc: 'Panxhar, mollë, karrotë, limon',
-    
+
+    //Schiacciata
+    schiacciataClassica: "Proshutë pule, mozzarella, majonezë, kastravec, sallatë jeshile",
+    schiacciataPiccante: "Sallam pikant, mozzarella, ullinj të zinj, domate",
+    schiacciataCrudo: "Proshutë krudo, mozzarella, rukola, pesto, pomodorini, philadelphia",
+    schiacciataVegetariana: "Domate, djathë i bardhë, vaj ulliri, rigon",
+
     // Contact Section
     contact: 'Na Kontaktoni',
     contactDescription: 'Kontaktoni me ne për të bërë një rezervim ose për të bërë çdo pyetje.',
@@ -570,32 +533,26 @@ const translations: Record<Language, Record<string, string>> = {
     // Menu Categories
     coffeeAndTea: 'Caffè & Tè',
     smoothiesAndJuices: 'Frullati & Succhi',
-    
-    // Cocktails
-    cocktailPanoramaSunset: 'Il nostro cocktail speciale con rum, frutto della passione e gradiente tramonto',
-    cocktailDivjakaBreeze: 'Cocktail rinfrescante a base gin con cetriolo e menta',
-    cocktailRooftopMojito: 'Mojito classico con un tocco da terrazza e erbe fresche',
-    cocktailAlbanianSpritz: 'Aperitivo locale con prosecco ed erbe albanesi',
-    cocktailForestView: 'Cocktail a base whiskey con infusione di frutti di bosco',
-    cocktailCoastalMule: 'Variazione del Moscow mule con erbe costiere',
-    
-    // Coffee & Tea
-    coffeeEspresso: 'Espresso ricco e corposo da chicchi tostati localmente',
-    coffeeCappuccino: 'Perfetto equilibrio di espresso, latte montato e schiuma',
-    coffeeLatte: 'Espresso morbido con latte montato e schiuma leggera',
-    coffeeMacchiato: 'Espresso "macchiato" con una goccia di schiuma di latte',
-    coffeeTurkish: 'Caffè turco tradizionale, finemente macinato e aromatico',
-    coffeeIced: 'Caffè freddo servito su ghiaccio con latte',
-    teaGreen: 'Tè verde premium con antiossidanti',
-    teaHerbal: 'Miscela rilassante di erbe con camomilla e menta',
-    
-    // Smoothies & Juices
-    smoothieTropical: 'Mango, ananas, latte di cocco e banana',
-    smoothieBerry: 'Frutti di bosco misti, yogurt e miele',
-    smoothieGreen: 'Spinaci, mela, banana e zenzero',
-    juiceOrange: 'Succo d\'arancia appena spremuto',
-    juiceApple: 'Succo di mela puro da frutteti locali',
-    juiceBerry: 'Succo di frutti di bosco misti con dolcezza naturale',
+
+    // New Smoothies & Juices
+    menuDetoxDelight: 'Detox Delight',
+    menuDetoxDelightDesc: 'Sedano, mela verde, ananas, cetriolo, limone, menta',
+    menuTropicalBliss: 'Tropical Bliss',
+    menuTropicalBlissDesc: 'Ananas, mango, banana, latte di mandorle, miele',
+    menuAntioxidantPower: 'Antioxidant Power',
+    menuAntioxidantPowerDesc: 'Mirtilli, more, banana, latte di mandorle, semi di chia',
+    menuPeanutPower: 'Peanut Power',
+    menuPeanutPowerDesc: 'Banana, burro di arachidi, cacao, latte di mandorle',
+    menuBlueberryBananaCrunch: 'Blueberry Banana Crunch',
+    menuBlueberryBananaCrunchDesc: 'Mirtilli, banana, yogurt bianco, biscotti sbriciolati',
+    menuGreenReset: 'Green Reset',
+    menuGreenResetDesc: 'Sedano, ananas, cetriolo, limone',
+    menuPureOrange: 'Pure Orange',
+    menuPureOrangeDesc: 'Succo d\'arancia fresco spremuto',
+    menuSunriseMix: 'Sunrise Mix',
+    menuSunriseMixDesc: 'Arancia, mela, carota, limone, zenzero',
+    menuBeetBoost: 'Beet Boost',
+    menuBeetBoostDesc: 'Barbabietola, mela, carota, limone',
     
     // Pizza
     pizzaMargherita: 'Salsa di pomodoro classica, mozzarella e basilico fresco',
@@ -611,13 +568,6 @@ const translations: Record<Language, Record<string, string>> = {
     burgerBBQ: 'Salsa BBQ, pancetta, anelli di cipolla e formaggio cheddar',
     burgerChicken: 'Petto di pollo grigliato, avocado e maionese alle erbe',
     burgerVeggie: 'Hamburger vegetale con verdure fresche',
-    
-    // Crepes
-    crepeNutella: 'Crepe classica con Nutella e zucchero a velo',
-    crepeFruit: 'Frutta fresca di stagione con panna montata',
-    crepeHamCheese: 'Crepe salata con prosciutto e formaggio fuso',
-    crepeSpinach: 'Spinaci, formaggio feta ed erbe',
-    crepeChocolate: 'Cioccolato fondente e banana a fette',
     
     // Menu Items - Desserts
     menuZupa: 'Zuppa Inglese',
@@ -689,27 +639,13 @@ const translations: Record<Language, Record<string, string>> = {
     menuBananaSmoothieDesc: 'Smoothie cremoso con banane mature e latte',
     menuGenericSmoothie: 'Smoothie',
     menuGenericSmoothieDesc: 'Smoothie di frutta fresca - chiedi i gusti di oggi',
-    
-    // New Smoothies & Juices
-    menuDetoxDelight: 'Detox Delight',
-    menuDetoxDelightDesc: 'Celery, green apple, pineapple, cucumber, lemon, mint',
-    menuTropicalBliss: 'Tropical Bliss',
-    menuTropicalBlissDesc: 'Pineapple, mango, banana, almond milk, honey',
-    menuAntioxidantPower: 'Antioxidant Power',
-    menuAntioxidantPowerDesc: 'Blueberries, blackberries, banana, almond milk, chia seeds',
-    menuPeanutPower: 'Peanut Power',
-    menuPeanutPowerDesc: 'Banana, peanut butter, cocoa, almond milk',
-    menuBlueberryBananaCrunch: 'Blueberry Banana Crunch',
-    menuBlueberryBananaCrunchDesc: 'Blueberries, banana, white yogurt, crushed cookies',
-    menuGreenReset: 'Green Reset',
-    menuGreenResetDesc: 'Celery, pineapple, cucumber, lemon',
-    menuPureOrange: 'Pure Orange',
-    menuPureOrangeDesc: 'Fresh squeezed orange juice',
-    menuSunriseMix: 'Sunrise Mix',
-    menuSunriseMixDesc: 'Orange, apple, carrot, lemon, ginger',
-    menuBeetBoost: 'Beet Boost',
-    menuBeetBoostDesc: 'Beetroot, apple, carrot, lemon',
-    
+
+    //Schiacciata
+    "schiacciataClassica": "Prosciutto di pollo, mozzarella, maionese, cetriolo, lattuga",
+    "schiacciataPiccante": "Salame piccante, mozzarella, olive nere, pomodoro",
+    "schiacciataCrudo": "Prosciutto crudo, mozzarella, rucola, pesto, pomodorini, philadelphia",
+    "schiacciataVegetariana": "Pomodori, formaggio bianco, olio d'oliva, origano",
+
     // Contact Section
     contact: 'Contattaci',
     contactDescription: 'Mettiti in contatto con noi per fare una prenotazione o fare qualsiasi domanda.',
