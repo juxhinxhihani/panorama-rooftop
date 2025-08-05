@@ -10,7 +10,7 @@ export default function DeliveryPopup() {
     // Show popup after a short delay on every visit
     const timer = setTimeout(() => {
       setIsVisible(true)
-    }, 2000)
+    }, 500)
     
     return () => clearTimeout(timer)
   }, [])
