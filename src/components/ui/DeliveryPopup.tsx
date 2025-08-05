@@ -24,6 +24,11 @@ export default function DeliveryPopup() {
     window.location.href = 'tel:+355696068669'
   }
 
+  const handleViewMenu = () => {
+    handleClose()
+    window.location.href = '/menu'
+  }
+
   if (!isVisible) return null
 
   return (
@@ -68,10 +73,10 @@ export default function DeliveryPopup() {
             {t('orderNow')}
           </button>
           <button
-            onClick={handleClose}
+            onClick={handleViewMenu}
             className="flex-1 border border-gray-300 text-gray-700 py-2 px-4 rounded font-medium hover:bg-gray-50 transition-colors"
           >
-            {t('closeLater')}
+            Shiko menune
           </button>
         </div>
       </div>
