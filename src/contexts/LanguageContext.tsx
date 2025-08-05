@@ -634,20 +634,28 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Menu Items - Smoothies & Juices
     menuOrangeJuice: 'Succo d\'Arancia',
+    menuOrangeJuiceDesc: 'Succo d\'arancia appena spremuto ricco di vitamina C e dolcezza naturale',
     menuOrangeJuiceDesc: 'Succo d\'arancia appena spremuto ricco di vitamina C',
     menuOrangeJuiceMedium: 'Succo d\'Arancia (Medio)',
+    menuOrangeJuiceMediumDesc: 'Succo d\'arancia fresco in porzione media, perfetto da condividere',
     menuOrangeJuiceMediumDesc: 'Succo d\'arancia fresco in formato medio',
     menuLifeJuice: 'Succo della Vita',
+    menuLifeJuiceDesc: 'Miscela energizzante di superfood con frutta e verdura fresca per vitalità',
     menuLifeJuiceDesc: 'Miscela energizzante di frutta e verdura fresca per vitalità',
     menuDetoxJuice: 'Succo Detox',
+    menuDetoxJuiceDesc: 'Succo verde purificante con spinaci, cetriolo, mela, e limone',
     menuDetoxJuiceDesc: 'Succo purificante con verdure verdi e agrumi',
     menuProteinSmoothie: 'Smoothie Proteico',
+    menuProteinSmoothieDesc: 'Smoothie energetico con proteine in polvere, banana, e frutti di bosco',
     menuProteinSmoothieDesc: 'Smoothie nutriente con proteine in polvere e frutta fresca',
     menuPineappleSmoothie: 'Smoothie Ananas',
+    menuPineappleSmoothieDesc: 'Smoothie paradiso tropicale con ananas fresco, cocco, e mango',
     menuPineappleSmoothieDesc: 'Smoothie tropicale con ananas fresco e cocco',
     menuBananaSmoothie: 'Smoothie Banana',
+    menuBananaSmoothieDesc: 'Smoothie cremoso e naturalmente dolce con banane mature e latte',
     menuBananaSmoothieDesc: 'Smoothie cremoso con banane mature e latte',
     menuGenericSmoothie: 'Smoothie',
+    menuGenericSmoothieDesc: 'Smoothie personalizzato di frutta fresca - chiedi i gusti stagionali di oggi',
     menuGenericSmoothieDesc: 'Smoothie di frutta fresca - chiedi i gusti di oggi',
     
     // Contact Section
