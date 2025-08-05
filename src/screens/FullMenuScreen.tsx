@@ -694,9 +694,6 @@ export default function FullMenuScreen() {
                                         <span className="text-xl font-bold text-blue-700">
                                             {item.price}
                                         </span>
-                                        <span className="text-xl font-bold text-blue-700">
-                                            {item.price}
-                                        </span>
                                     </div>
                                 </div>
                             </div>
