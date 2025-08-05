@@ -47,14 +47,14 @@ export default function DeliveryPopup() {
 
         {/* Content */}
         <div className="mb-4">
-          <div className="text-3xl mb-2">🚚</div>
-          <h2 className="text-lg font-bold text-gray-900 mb-2">
-            {t('deliveryAnnouncementTitle')}
+          <div className="text-3xl mb-3">🛵</div>
+          <h2 className="text-lg font-bold text-gray-900 mb-3">
+            Panorama Rooftop tani ofron shërbim delivery!
           </h2>
-          <p className="text-gray-600 text-sm mb-4">
-            {t('deliveryAnnouncementMessage')}
+          <p className="text-gray-600 text-sm mb-2">
+            Telefononi për porosi:
           </p>
-          <p className="text-orange-600 font-semibold">
+          <p className="text-orange-600 font-semibold text-lg">
             📞 +355 69 606 8669
           </p>
         </div>
