@@ -469,7 +469,7 @@ export default function FullMenuScreen() {
     if (searchTerm) {
       items = items.filter(item =>
         item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase())
+        (item.description && item.description.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     }
     
