@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 interface MenuItem {
   name: string
-  description: string
+  description?: string
   price: string
   calories?: number
   popular?: boolean
