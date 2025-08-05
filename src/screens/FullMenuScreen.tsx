@@ -547,6 +547,7 @@ export default function FullMenuScreen() {
                             <div className="text-center">
                                 <span className="text-2xl block mb-1">{category.icon}</span>
                                 <h3 className="text-sm font-bold mb-1">{category.title}</h3>
+                                <p className="text-white/90 text-xs">{category.items.length} items available</p>
                             </div>
                         </button>
                     ))}
@@ -721,8 +722,7 @@ export default function FullMenuScreen() {
                         <div className="flex justify-center">
                             <a
                                 href="tel:+355696068669"
-                                className="border-2 border-amber-600 bg-gradient-to-r from-amber-600/10 via-orange-700/10 to-red-800/10 text-amber-800 px-8 py-4 rounded-xl font-semibold hover:bg-gradient-to-r hover:from-amber-600 hover:via-orange-700 hover:to-red-800 hover:text-amber-50 hover:border-amber-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
-                            >
+                                className="border-2 border-amber-600 bg-gradient-to-r from-amber-600/10 via-orange-700/10 to-red-800/10 text-amber-800 px-8 py-4 rounded-xl font-semibold hover:bg-gradient-to-r hover:from-amber-600 hover:via-orange-700 hover:to-red-800 hover:text-amber-50 hover:border-amber-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
                                 {t('callNow')}
                             </a>
                         </div>
