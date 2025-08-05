@@ -554,60 +554,155 @@ export default function FullMenuScreen() {
                     ))}
                 </div>
 
-                {/* Menu Items Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {filteredItems.map((item, index) => (
-                        <div
-                            key={index}
-                            className="group bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20 h-full flex flex-col"
-                        >
-                            {/* Item Header */}
-                            <div className="relative p-4 flex-1 flex flex-col">
-                                <div className="flex items-start justify-between mb-2">
-                                    <div className="flex-1">
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <h3 className="text-lg font-bold text-gray-900 group-hover:text-orange-600 transition-colors line-clamp-1">
-                                                {item.name}
-                                            </h3>
-                                            {item.popular && (
-                                                <span
-                                                    className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1 flex-shrink-0">
-                          <span>⭐</span>
-                        </span>
-                                            )}
-                                        </div>
-
-                                        <div className="flex items-center gap-1 mb-2">
-                                            {item.vegetarian && (
-                                                <span
-                                                    className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
-                          <span>🌱</span>
-                        </span>
-                                            )}
-                                            {item.spicy && (
-                                                <span
-                                                    className="bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
-                          <span>🌶️</span>
-                        </span>
-                                            )}
+                {/* Menu Items by Category */}
+                {activeCategory === 'all' ? (
+                    // Show all categories with separators
+                    <div className="space-y-12">
+                        {menuCategories.slice(1).map((category) => {
+                            const categoryItems = category.items.filter(item =>
+                                !searchTerm || 
+                                item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                                (item.description && item.description.toLowerCase().includes(searchTerm.toLowerCase()))
+                            )
+                            
+                            if (categoryItems.length === 0) return null
+                            
+                            return (
+                                <div key={category.id} className="space-y-6">
+                                    {/* Category Header */}
+                                    <div className="text-center">
+                                        <div className={`inline-flex items-center gap-3 bg-gradient-to-r ${category.gradient} text-white px-6 py-3 rounded-full shadow-lg`}>
+                                            <span className="text-2xl">{category.icon}</span>
+                                            <h2 className="text-xl font-bold">{category.title}</h2>
+                                            <span className="bg-white/20 text-white text-sm px-2 py-1 rounded-full">
+                                                {categoryItems.length} items
+                                            </span>
                                         </div>
                                     </div>
+                                    
+                                    {/* Category Items Grid */}
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        {categoryItems.map((item, index) => (
+                                            <div
+                                                key={index}
+                                                className="group bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20 h-full flex flex-col"
+                                            >
+                                                {/* Item Header */}
+                                                <div className="relative p-4 flex-1 flex flex-col">
+                                                    <div className="flex items-start justify-between mb-2">
+                                                        <div className="flex-1">
+                                                            <div className="flex items-center gap-2 mb-1">
+                                                                <h3 className="text-lg font-bold text-gray-900 group-hover:text-orange-600 transition-colors line-clamp-1">
+                                                                    {item.name}
+                                                                </h3>
+                                                                {item.popular && (
+                                                                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1 flex-shrink-0">
+                                                                        <span>⭐</span>
+                                                                    </span>
+                                                                )}
+                                                            </div>
+
+                                                            <div className="flex items-center gap-1 mb-2">
+                                                                {item.vegetarian && (
+                                                                    <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                                                        <span>🌱</span>
+                                                                    </span>
+                                                                )}
+                                                                {item.spicy && (
+                                                                    <span className="bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                                                        <span>🌶️</span>
+                                                                    </span>
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    {item.description && (
+                                                        <p className="text-gray-600 leading-relaxed mb-4 text-sm flex-1 line-clamp-2">
+                                                            {item.description}
+                                                        </p>
+                                                    )}
+
+                                                    {/* Price */}
+                                                    <div className="flex items-center justify-between mt-auto">
+                                                        <span className="text-xl font-bold text-blue-700">
+                                                            {item.price}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    
+                                    {/* Category Separator */}
+                                    <div className="flex items-center justify-center py-4">
+                                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+                                        <div className="mx-4 text-gray-400">
+                                            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+                                    </div>
                                 </div>
+                            )
+                        })}
+                    </div>
+                ) : (
+                    // Show single category
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {filteredItems.map((item, index) => (
+                            <div
+                                key={index}
+                                className="group bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-white/20 h-full flex flex-col"
+                            >
+                                {/* Item Header */}
+                                <div className="relative p-4 flex-1 flex flex-col">
+                                    <div className="flex items-start justify-between mb-2">
+                                        <div className="flex-1">
+                                            <div className="flex items-center gap-2 mb-1">
+                                                <h3 className="text-lg font-bold text-gray-900 group-hover:text-orange-600 transition-colors line-clamp-1">
+                                                    {item.name}
+                                                </h3>
+                                                {item.popular && (
+                                                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1 flex-shrink-0">
+                                                        <span>⭐</span>
+                                                    </span>
+                                                )}
+                                            </div>
 
-                                <p className="text-gray-600 leading-relaxed mb-4 text-sm flex-1 line-clamp-2">
-                                    {item.description}
-                                </p>
+                                            <div className="flex items-center gap-1 mb-2">
+                                                {item.vegetarian && (
+                                                    <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                                        <span>🌱</span>
+                                                    </span>
+                                                )}
+                                                {item.spicy && (
+                                                    <span className="bg-red-100 text-red-700 text-xs font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                                        <span>🌶️</span>
+                                                    </span>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                {/* Price */}
-                                <div className="flex items-center justify-between mt-auto">
-                  <span className="text-xl font-bold text-blue-700">
-                    {item.price}
-                  </span>
+                                    {item.description && (
+                                        <p className="text-gray-600 leading-relaxed mb-4 text-sm flex-1 line-clamp-2">
+                                            {item.description}
+                                        </p>
+                                    )}
+
+                                    {/* Price */}
+                                    <div className="flex items-center justify-between mt-auto">
+                                        <span className="text-xl font-bold text-blue-700">
+                                            {item.price}
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
 
                 {/* No Results */}
                 {filteredItems.length === 0 && (
