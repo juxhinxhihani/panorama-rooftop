@@ -250,11 +250,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Delivery Popup
     deliveryAnnouncementTitle: 'New Delivery Service!',
-    deliveryAnnouncementSubtitle: 'Now delivering to your door',
-    deliveryAnnouncementMessage: 'Great news! Panorama Rooftop now offers delivery service. Enjoy our delicious food and drinks from the comfort of your home.',
-    deliveryCallToOrder: 'Call to place your delivery order',
-    deliveryHours: 'Delivery: 11:00 AM - 10:00 PM',
-    deliveryArea: 'Delivery available in Divjaka area',
+    deliveryAnnouncementMessage: 'We now deliver to your door! Call to order.',
     orderNow: 'Order Now',
     closeLater: 'Maybe Later'
   },
@@ -474,11 +470,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Delivery Popup
     deliveryAnnouncementTitle: 'Shërbim i Ri Dërgese!',
-    deliveryAnnouncementSubtitle: 'Tani dërgojmë në shtëpinë tuaj',
-    deliveryAnnouncementMessage: 'Lajm i mirë! Panorama Rooftop tani ofron shërbim dërgese. Shijoni ushqimet dhe pijet tona të shijshme nga rehatia e shtëpisë suaj.',
-    deliveryCallToOrder: 'Telefononi për të bërë porosinë tuaj',
-    deliveryHours: 'Dërgesa: 11:00 AM - 10:00 PM',
-    deliveryArea: 'Dërgesa e disponueshme në zonën e Divjakës',
+    deliveryAnnouncementMessage: 'Tani dërgojmë në shtëpi! Telefononi për porosi.',
     orderNow: 'Porosit Tani',
     closeLater: 'Më Vonë'
   },
@@ -690,11 +682,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Delivery Popup
     deliveryAnnouncementTitle: 'Nuovo Servizio di Consegna!',
-    deliveryAnnouncementSubtitle: 'Ora consegniamo a casa tua',
-    deliveryAnnouncementMessage: 'Ottime notizie! Panorama Rooftop ora offre servizio di consegna. Goditi il nostro cibo e le nostre bevande deliziose dal comfort di casa tua.',
-    deliveryCallToOrder: 'Chiama per effettuare il tuo ordine di consegna',
-    deliveryHours: 'Consegna: 11:00 - 22:00',
-    deliveryArea: 'Consegna disponibile nella zona di Divjaka',
+    deliveryAnnouncementMessage: 'Ora consegniamo a domicilio! Chiama per ordinare.',
     orderNow: 'Ordina Ora',
     closeLater: 'Forse Dopo'
   }
