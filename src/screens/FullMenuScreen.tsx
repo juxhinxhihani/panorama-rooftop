@@ -46,116 +46,97 @@ export default function FullMenuScreen() {
       items: [
         {
           name: t('menuEkspres'),
-          description: t('menuEkspresDesc'),
           price: '70 ALL',
           type: 'drink'
         },
         {
           name: t('menuMacchiato'),
-          description: t('menuMacchiatoDesc'),
           price: '70 ALL',
           type: 'drink'
         },
         {
           name: t('menuMacchiatoLarge'),
-          description: t('menuMacchiatoLargeDesc'),
           price: '120 ALL',
           type: 'drink'
         },
         {
           name: t('menuCappuccino'),
-          description: t('menuCappuccinoDesc'),
           price: '150 ALL',
           popular: true,
           type: 'drink'
         },
         {
           name: t('menuCappuccinoKafe'),
-          description: t('menuCappuccinoKafeDesc'),
           price: '150 ALL',
           type: 'drink'
         },
         {
           name: t('menuFreddoCappuccino'),
-          description: t('menuFreddoCappuccinoDesc'),
           price: '200 ALL',
           type: 'drink'
         },
         {
           name: t('menuChocolateCold'),
-          description: t('menuChocolateColdDesc'),
           price: '200 ALL',
           type: 'drink'
         },
         {
           name: t('menuChocolateBlack'),
-          description: t('menuChocolateBlackDesc'),
           price: '150 ALL',
           type: 'drink'
         },
         {
           name: t('menuChocolateWhite'),
-          description: t('menuChocolateWhiteDesc'),
           price: '150 ALL',
           type: 'drink'
         },
         {
           name: t('menuMilkshake'),
-          description: t('menuMilkshakeDesc'),
           price: '250 ALL',
           type: 'drink'
         },
         {
           name: t('menuFrappe'),
-          description: t('menuFrappeDesc'),
           price: '150 ALL',
           type: 'drink'
         },
         {
           name: t('menuFreddoKafe'),
-          description: t('menuFreddoKafeDesc'),
           price: '200 ALL',
           type: 'drink'
         },
         {
           name: t('menuFredoccino'),
-          description: t('menuFredoccinoDesc'),
           price: '200 ALL',
           type: 'drink'
         },
         {
           name: t('menuKafeKremoso'),
-          description: t('menuKafeKremosoDesc'),
           price: '120 ALL',
           type: 'drink'
         },
         {
           name: t('menuKafeLatte'),
-          description: t('menuKafeLatteDesc'),
           price: '100 ALL',
           type: 'drink'
         },
         {
           name: t('menuKakao'),
-          description: t('menuKakaoDesc'),
           price: '150 ALL',
           type: 'drink'
         },
         {
           name: t('menuHotTea'),
-          description: t('menuHotTeaDesc'),
           price: '80 ALL',
           type: 'drink'
         },
         {
           name: t('menuKakaoCold'),
-          description: t('menuKakaoColdDesc'),
           price: '150 ALL',
           type: 'drink'
         },
         {
           name: t('menuFrappeOreo'),
-          description: t('menuFrappeOreoDesc'),
           price: '200 ALL',
           type: 'drink'
         }
@@ -169,50 +150,42 @@ export default function FullMenuScreen() {
       items: [
         {
           name: t('menuOrangeJuice'),
-          description: t('menuOrangeJuiceDesc'),
           price: '200 ALL',
           type: 'drink'
         },
         {
           name: t('menuOrangeJuiceMedium'),
-          description: t('menuOrangeJuiceMediumDesc'),
           price: '250 ALL',
           type: 'drink'
         },
         {
           name: t('menuLifeJuice'),
-          description: t('menuLifeJuiceDesc'),
           price: '300 ALL',
           popular: true,
           type: 'drink'
         },
         {
           name: t('menuDetoxJuice'),
-          description: t('menuDetoxJuiceDesc'),
           price: '300 ALL',
           type: 'drink'
         },
         {
           name: t('menuProteinSmoothie'),
-          description: t('menuProteinSmoothieDesc'),
           price: '300 ALL',
           type: 'drink'
         },
         {
           name: t('menuPineappleSmoothie'),
-          description: t('menuPineappleSmoothieDesc'),
           price: '300 ALL',
           type: 'drink'
         },
         {
           name: t('menuBananaSmoothie'),
-          description: t('menuBananaSmoothieDesc'),
           price: '250 ALL',
           type: 'drink'
         },
         {
           name: t('menuGenericSmoothie'),
-          description: t('menuGenericSmoothieDesc'),
           price: '300 ALL',
           type: 'drink'
         }
@@ -226,105 +199,88 @@ export default function FullMenuScreen() {
       items: [
         {
           name: t('menuNegroni'),
-          description: t('menuNegroniDesc'),
           price: '500 ALL',
           type: 'drink'
         },
         {
           name: t('menuMartini'),
-          description: t('menuMartiniDesc'),
           price: '500 ALL',
           type: 'drink'
         },
         {
           name: t('menuMojito'),
-          description: t('menuMojitoDesc'),
           price: '500 ALL',
           popular: true,
           type: 'drink'
         },
         {
           name: t('menuAperolSpritz'),
-          description: t('menuAperolSpritzDesc'),
           price: '500 ALL',
           type: 'drink'
         },
         {
           name: t('menuVodkaSour'),
-          description: t('menuVodkaSourDesc'),
           price: '500 ALL',
           type: 'drink'
         },
         {
           name: t('menuSexOnTheBeach'),
-          description: t('menuSexOnTheBeachDesc'),
           price: '500 ALL',
           type: 'drink'
         },
         {
           name: t('menuTequilaSunrise'),
-          description: t('menuTequilaSunriseDesc'),
           price: '500 ALL',
           type: 'drink'
         },
         {
           name: t('menuPinaColada'),
-          description: t('menuPinaColadaDesc'),
           price: '500 ALL',
           type: 'drink'
         },
         {
           name: t('menuGinTonic'),
-          description: t('menuGinTonicDesc'),
           price: '500 ALL',
           type: 'drink'
         },
         {
           name: t('menuCaipiroska'),
-          description: t('menuCaipiroskaDesc'),
           price: '600 ALL',
           type: 'drink'
         },
         {
           name: t('menuCosmopolitan'),
-          description: t('menuCosmopolitanDesc'),
           price: '600 ALL',
           type: 'drink'
         },
         {
           name: t('menuAnalcolic'),
-          description: t('menuAnalcolicDesc'),
           price: '400 ALL',
           type: 'drink'
         },
         {
           name: t('menuPanorama'),
-          description: t('menuPanoramaDesc'),
           price: '500 ALL',
           popular: true,
           type: 'drink'
         },
         {
           name: t('menuAMF'),
-          description: t('menuAMFDesc'),
           price: '800 ALL',
           type: 'drink'
         },
         {
           name: t('menuGinLemon'),
-          description: t('menuGinLemonDesc'),
           price: '450 ALL',
           type: 'drink'
         },
         {
           name: t('menuCubaLibre'),
-          description: t('menuCubaLibreDesc'),
           price: '500 ALL',
           type: 'drink'
         },
         {
           name: t('menuMargarita'),
-          description: t('menuMargaritaDesc'),
           price: '500 ALL',
           type: 'drink'
         }
@@ -421,69 +377,58 @@ export default function FullMenuScreen() {
       items: [
         {
           name: t('menuZupa'),
-          description: t('menuZupaDesc'),
           price: '150 ALL',
           type: 'food'
         },
         {
           name: t('menuCheesecake'),
-          description: t('menuCheesecakeDesc'),
           price: '200 ALL',
           popular: true,
           type: 'food'
         },
         {
           name: t('menuTrilece'),
-          description: t('menuTrileceDesc'),
           price: '150 ALL',
           type: 'food'
         },
         {
           name: t('menuTiramisu'),
-          description: t('menuTiramisuDesc'),
           price: '200 ALL',
           popular: true,
           type: 'food'
         },
         {
           name: t('menuTrigone'),
-          description: t('menuTrigoneDesc'),
           price: '150 ALL',
           type: 'food'
         },
         {
           name: t('menuMyfile'),
-          description: t('menuMyfileDesc'),
           price: '150 ALL',
           type: 'food'
         },
         {
           name: t('menuPastashu'),
-          description: t('menuPastashuDesc'),
           price: '150 ALL',
           type: 'food'
         },
         {
           name: t('menuBrioshChocolate'),
-          description: t('menuBrioshChocolateDesc'),
           price: '120 ALL',
           type: 'food'
         },
         {
           name: t('menuBrioshPistachio'),
-          description: t('menuBrioshPistachioDesc'),
           price: '150 ALL',
           type: 'food'
         },
         {
           name: t('menuDonut'),
-          description: t('menuDonutDesc'),
           price: '120 ALL',
           type: 'food'
         },
         {
           name: t('menuBigusto'),
-          description: t('menuBigustoDesc'),
           price: '120 ALL',
           type: 'food'
         }
@@ -632,7 +577,7 @@ export default function FullMenuScreen() {
                 </div>
 
                 <p className="text-gray-600 leading-relaxed mb-4 text-sm flex-1 line-clamp-2">
-                  {item.description}
+                  {item.description || ''}
                 </p>
 
                 {/* Price */}
