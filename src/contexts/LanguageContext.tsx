@@ -252,7 +252,14 @@ const translations: Record<Language, Record<string, string>> = {
     deliveryAnnouncementTitle: 'New Delivery Service!',
     deliveryAnnouncementMessage: 'We now deliver to your door! Call to order.',
     orderNow: 'Order Now',
-    closeLater: 'Maybe Later'
+    closeLater: 'Maybe Later',
+    
+    // Popup Content
+    deliveryPopupTitle: 'Panorama Rooftop now offers delivery service!',
+    deliveryPopupSubtitle: 'Call to order:',
+    deliveryPopupPhone: '+355 69 606 8669',
+    deliveryPopupOrderButton: 'Order Now',
+    deliveryPopupMenuButton: 'View Menu'
   },
   sq: {
     // Navigation
@@ -472,7 +479,14 @@ const translations: Record<Language, Record<string, string>> = {
     deliveryAnnouncementTitle: 'Shërbim i Ri Dërgese!',
     deliveryAnnouncementMessage: 'Tani dërgojmë në shtëpi! Telefononi për porosi.',
     orderNow: 'Porosit Tani',
-    closeLater: 'Më Vonë'
+    closeLater: 'Më Vonë',
+    
+    // Popup Content
+    deliveryPopupTitle: 'Panorama Rooftop tani ofron shërbim delivery!',
+    deliveryPopupSubtitle: 'Telefononi për porosi:',
+    deliveryPopupPhone: '+355 69 606 8669',
+    deliveryPopupOrderButton: 'Porosit Tani',
+    deliveryPopupMenuButton: 'Shiko menune'
   },
   it: {
     // Navigation
@@ -684,7 +698,14 @@ const translations: Record<Language, Record<string, string>> = {
     deliveryAnnouncementTitle: 'Nuovo Servizio di Consegna!',
     deliveryAnnouncementMessage: 'Ora consegniamo a domicilio! Chiama per ordinare.',
     orderNow: 'Ordina Ora',
-    closeLater: 'Forse Dopo'
+    closeLater: 'Forse Dopo',
+    
+    // Popup Content
+    deliveryPopupTitle: 'Panorama Rooftop ora offre servizio di consegna!',
+    deliveryPopupSubtitle: 'Chiama per ordinare:',
+    deliveryPopupPhone: '+355 69 606 8669',
+    deliveryPopupOrderButton: 'Ordina Ora',
+    deliveryPopupMenuButton: 'Vedi Menu'
   }
 }
 
